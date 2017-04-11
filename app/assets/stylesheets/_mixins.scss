@@ -1,0 +1,145 @@
+@@mixin center-block () {
+    float:none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin sec-default () {
+    width: 100%;
+    float: left;
+}
+
+@mixin sec-bgimage () {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+}
+
+@mixin sec-bghlf ($pos) {
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: $pos;
+}
+
+@mixin sec-parallax () {
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+
+@mixin tshadow ($glow) {
+    text-shadow: 0px 1px 2px $glow;
+}
+
+@mixin tshadowl ($glow) {
+    text-shadow: 0px 1px 1px $glow;
+}
+
+@mixin grayscale () {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+@mixin before () {
+    content: "";
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+}
+
+@mixin after () {
+    content: "";
+    right: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height:100%;
+    z-index: -1;
+}
+
+@mixin ease() {
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    transition: 0.5s;
+}
+
+@mixin ease2() {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    transition: 0.2s;
+}
+
+@mixin lg-skew($bg) {
+    content: "";
+    position: absolute;
+    background-color: $bg;
+    width: 70%;
+    // width: 70%;
+    height: 100%;
+    left: -35%;
+    top:0;
+    z-index: -1;
+    -ms-transform: skewX(-40deg);
+    -webkit-transform: skewX(-40deg);
+    transform: skewX(-40deg);
+}
+
+@mixin skew($skew) {
+    -ms-transform: skew($skew);
+    -webkit-transform: skew($skew);
+    transform: skew($skew);
+}
+@mixin skew-txt($skew) {
+    -ms-transform: skew($skew);
+    -webkit-transform: skew($skew);
+    transform: skew($skew);
+}
+
+// Breakpoints
+@mixin bp($point) {
+
+// Breakpoints
+@mixin bp($point) {
+    @if $point == tb {
+        @media (max-width: 1025px) { @content ; }
+    }
+
+    @else if $point == ip {
+        @media (max-width: 992px) { @content ; }
+    }
+
+    @else if $point == md {
+        @media (max-width: 768px)  { @content ; }
+    }
+
+    @else if $point == mb {
+        @media (max-width: 670px)  { @content ; }
+    }
+
+    @else if $point == sm {
+        @media (max-width: 640px)  { @content ; }
+    }
+
+    @else if $point == ph {
+        @media (max-width: 570px)  { @content ; }
+    }
+
+    @else if $point == xs {
+        @media (max-width: 420px)  { @content ; }
+    }
+
+    @else if $point == xl {
+        @media (min-width: 1025px) { @content ; }
+    }
+}
+
+}
+
