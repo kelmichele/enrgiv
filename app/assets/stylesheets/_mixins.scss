@@ -103,8 +103,6 @@
     transform: skew($skew);
 }
 
-// Breakpoints
-@mixin bp($point) {
 
 // Breakpoints
 @mixin bp($point) {
@@ -139,7 +137,5 @@
     @else if $point == xl {
         @media (min-width: 1025px) { @content ; }
     }
-}
-
 }
 
