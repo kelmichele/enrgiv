@@ -1,0 +1,88 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "mixins";
+@import "variables";
+
+::selection{background-color: $blue;}
+
+.pages-header{
+	@include sec-default();
+	@include sec-bgimage();
+	h1 {font-size: 45px;font-weight: bold; }
+}
+
+.pages-wrap{
+	@include sec-default();
+	padding: $padd;
+
+	&.full {padding: $full-padd;}
+}
+
+
+.home {
+	header {height: auto;}
+	.home-hero{
+		@include sec-default();
+		height:800px;
+		@include sec-bgimage();
+
+		.bg-video {@include sec-default(); position: relative; z-index: 0;
+			&.gray{@include grayscale(); }
+		}
+		.over-frame {@include sec-default(); position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center;}
+		h1, h2, h3 {font-weight: bold;}
+		h2 {@include tshadowl(rgba($black, .5));}
+		h1 {font-size: 100px; color: $blue; @include tshadow($black); }
+		h3{font-size: 28px;}
+	}
+
+	.faqs {@include sec-default();background-color: $lt-blue;
+		background-repeat: no-repeat; background-position: right top; background-size: 15%;
+		background-image: url(image_path('bag-nobg.png'));
+		.left, .right {display: inline-block; float: left; padding: 30px 60px; }
+		.left{width:60%;background-color: $offwhite}
+		.right{float: right; width:39%; }
+		h3 {color: $black; font-weight: bold;}
+
+		p  {padding-left: 10px;
+			span {font-size: 15px; font-style: italic;}
+		}
+
+		ul {padding-left:10px; margin-top:10px;
+			li{margin-bottom: 8px; font-size: 16px; font-weight: bold;}
+		}
+	}
+
+	.banner {
+		@include sec-default(); background-color: $white; padding: $padd;
+		.banner-left, .banner-right {display: inline-block; float: left;}
+		.banner-left{width:28%;
+			.box{width:90%; float: left;}
+			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; text-align: center; letter-spacing: 5px;}
+		}
+		.banner-right{float:right; width:70%;}
+
+
+		span {font-weight: bold; color: rgba($lt-blue, .3); font-size: 30px; text-transform: uppercase;}
+	}
+}
+
+
+.contact {
+	.pages-header {
+		height:200px;
+		background-color: $blue;
+		text-align: center;
+		padding-top: 25px;
+
+		h2{margin-bottom: 5px; font-weight: bold; letter-spacing: 5px;}
+		h1 {margin-top: 0}
+	}
+
+	ul.social {padding: 10px 40px;
+		li {display: inline-block; font-size: 25px; margin-left: 15px;}
+	}
+
+}

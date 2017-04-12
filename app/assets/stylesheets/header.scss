@@ -1,0 +1,39 @@
+@import "mixins";
+@import "variables";
+
+header {@include sec-default(); height:120px;}
+#nav {
+    // position: absolute;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 555;
+
+    .logo-block {display: inline-block;float: left; width: 40%;}
+    .logo {@include ease(); width: 325px;padding: 5px 0;}
+
+    nav { display: inline-block; float: right;
+        ul {margin-top:55px}
+        li  {
+            color: $black;
+            display: inline-block;
+            margin-right: 30px;
+            font-size: 17px;
+        }
+        a {color: $black;}
+    }
+
+    &.stuck {
+        background: $white;
+        border-bottom: 0;
+        box-shadow: 0 1px 33px rgba(26, 37, 46, .1), inset 0 1px 0 hsla(0, 0%, 100%, .35);
+    }
+
+    &.stick {
+        position: fixed;
+    }
+    @include bp(sm) {
+        position: fixed;
+    }
+}
