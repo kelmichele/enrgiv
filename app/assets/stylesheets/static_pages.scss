@@ -34,7 +34,9 @@
 		.over-frame {@include sec-default(); position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center;}
 		h1, h2, h3 {font-weight: bold;}
 		h2 {@include tshadowl(rgba($black, .5));}
-		h1 {font-size: 100px; color: $blue; @include tshadow($black); }
+		h1 {font-size: 110px; color: $blue; @include tshadow($black); letter-spacing: 4px;
+			// span {font-size: 150px; line-height: .9em;}
+		}
 		h3{font-size: 28px;}
 	}
 
@@ -57,12 +59,13 @@
 
 	.banner {
 		@include sec-default(); background-color: $white; padding: $padd;
+		.inner {width:90%;@include center-block();}
 		.banner-left, .banner-right {display: inline-block; float: left;}
-		.banner-left{width:28%;
+		.banner-left{width:30%;
 			.box{width:90%; float: left;}
 			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; text-align: center; letter-spacing: 5px;}
 		}
-		.banner-right{float:right; width:70%;}
+		.banner-right{float:right; width:65%;}
 
 
 		span {font-weight: bold; color: rgba($lt-blue, .3); font-size: 30px; text-transform: uppercase;}
@@ -71,11 +74,19 @@
 
 
 .contact {
+	.pages-wrap{
+		@include sec-bgimage();
+		background-image: url(image_path('lobby.jpg'));
+		background-size: 55%;
+		background-position: top right;
+	}
+
 	.pages-header {
 		height:200px;
 		background-color: $blue;
 		text-align: center;
 		padding-top: 25px;
+		background-image: url(image_path('iv-bag.jpg'));
 
 		h2{margin-bottom: 5px; font-weight: bold; letter-spacing: 5px;}
 		h1 {margin-top: 0}
