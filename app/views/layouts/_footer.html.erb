@@ -1,3 +1,42 @@
 <footer>
-  <p class="copy">Copyright <%= Time.now.year %>. All rights reserved. Design by <%= link_to "High Seas Design House.", hsdh_path, :target => "_blank" %> </p>
+	<div class="top">
+		<div class="col-md-6">
+			<ul class="social">
+				<li class="title">Follow Us:</li>
+				<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
+				<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
+			</ul>
+		</div>
+
+		<div class="col-md-6">
+			<ul class="contact">
+				<li><%= number_to_phone(2057900323, delimiter: '.') %></li>
+				<li>info@enrgiv.com</li>
+				<!-- <li>3099 Loop Rd <span><i class="fa fa-circle"></i></span> Unit 4 <span><i class="fa fa-circle"></i></span> Orange Beach, Al 36561</li> -->
+			</ul>
+		</div>
+	</div>
+
+	<div class="blue-block">
+		<div class="container">
+			<ul class="ft-menu">
+		    <%= render 'layouts/nav' %>
+			</ul>
+
+			<div class="cta">
+				<h4>Book Now</h4>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom">
+		<div class="container">
+			<p class="copy">Copyright <%= Time.now.year %>. All rights reserved. Design by <%= link_to "High Seas Design House.", hsdh_path, :target => "_blank" %> </p>
+			<!-- <p class="hs">Design by <%= link_to "High Seas Design House.", hsdh_path, :target => "_blank" %> </p> -->
+			<p class="loc">3099 Loop Rd <span><i class="fa fa-circle"></i></span> Unit 4 <span><i class="fa fa-circle"></i></span> Orange Beach, Al 36561</p>
+		</div>
+	</div>
 </footer>
+			<!--
+			<h3>Thursday through Monday 10am-6pm</h3>
+ -->

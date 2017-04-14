@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,800);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600,800|Lora:400,700);
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -9,6 +9,8 @@
 
 ul {list-style-type: none; padding-left:0;}
 a:hover {text-decoration: none;}
+
+// body{padding: 0px 30px;}
 
 p, h5, h4, h3, h2, h1, li, a, span {font-family: $open;
     &.black {color:$black;}
@@ -90,6 +92,39 @@ p{font-size: 16px; line-height: 1.4em;}
 }
 
 footer {
-    @include sec-default(); background-color: $blue; padding: 20px 0 0;
-    p.copy {text-align: center;}
+    @include sec-default(); background-color: $white; padding: 40px 40px 20px;
+    .blue-block{padding:20px 0 10px;}
+    .top, .bottom {@include sec-default();}
+
+    ul {
+        li {display: inline-block; }
+
+        &.social { text-align: center; li { font-size: 18px; font-weight: bold; margin-right: 20px;}}
+
+        &.ft-menu, &.contact { display: inline-block; float: left;
+            li {margin-right: 20px; position: relative;
+                &.noft {display: none;}
+                &::after{content: ""; position: absolute; height: 20px; width:1px; background-color: $white; margin-left: 10px;}
+                &:last-child::after {display: none;}
+                a {color: $white;}
+            }
+        }
+
+        &.contact { float: right; margin-right: 10%;
+            li::after {top:40%; width:4px; height: 4px; border-radius: 50%; background-color: rgba($gray, .8);}
+            li span { color: rgba($gray, .6);; margin:0 3px; font-size: 5px; vertical-align: middle;}
+        }
+    }
+
+
+    .cta {display: inline-block; float: right; h4 {margin-top: 0; color: $white;}}
+
+    .bottom { padding-top:10px;
+        p {display: inline-block; font-size: 14px;
+            &.loc {float: right;}
+            i { color: rgba($gray, .8);; margin:0 3px; font-size: 5px; vertical-align: middle;}
+        }
+    }
+
+
 }

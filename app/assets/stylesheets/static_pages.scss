@@ -20,8 +20,119 @@
 	&.full {padding: $full-padd;}
 }
 
+img.icon { width:10%; @include center-block();}
 
-.home {
+.blue-block{ @include sec-default(); background-color: $blue; padding: 5px 0;
+	h2, h3 {color: $white; }
+}
+
+.home { padding: 0 30px; background-color: $white;
+	header {height: auto;}
+	.home-hero{
+		@include sec-default();
+		height:770px;
+		.bg-video {@include sec-default(); position: relative; z-index: 0;
+			&.gray{@include grayscale(); }
+		}
+		.over-frame { position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center;}
+		h1, h2, h3 {font-weight: bold;}
+		h2 {@include tshadowl(rgba($black, .5));}
+		h1 {font-size: 110px; color: $blue; @include tshadow($black); letter-spacing: 4px;}
+		h3{font-size: 28px;}
+	}
+
+	// .cbp-caption-active .cbp-caption-activeWrap {position: relative;}
+	// .cbp-caption { width: 80%; float: right;
+	// 	&.second{float: left;}
+	// }
+
+	.faqs-sec {@include sec-default();background-color: $offwhite; padding: 60px 20px 100px 35px;
+		.inner {width:80%; @include center-block();}
+		.faq-box {display: inline-block;float: left; width:30%; height:415px; background-color: $white; padding: 10px 20px 0 30px;
+			p{padding:15px 10px 0; color: $font;}
+			h3 {font-weight: bold; font-family: $lora; width:90%; padding: 10px 0; border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf;}
+			&.one {@include sec-bgimage(); background-image: url(image_path('waterfall-action.jpg'));}
+			&.two {margin: 0 3.5%;}
+			.image-margin {margin-top: 25px;}
+		}
+	}
+
+	.why-sec {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('jump.jpg')); background-position: bottom right; position: relative; z-index: 0;
+		&::before{@include before(); background-color: rgba($black, .3);}
+		padding: 0 40px;
+		.left, .right {display: inline-block; float: left;}
+		.left { width: 20%; height:100%; text-align: center; padding: 60px 0;  background-color: rgba($gray, .55);}
+		.right {width: 75%; float: right; padding: 100px 0 20px;}
+		h3 {font-weight: 800; color: $white;@include tshadow($gray); }
+
+			li {display: inline-block; float: left; margin-top:20px;
+			 width:45%;
+				font-size: 19px;
+				color: $offwhite; @include tshadow($gray); text-align: center; font-weight: bold;
+
+			}
+	}
+
+	.banner1 {
+		@include sec-default();background-color: $blue; padding: $padd;
+		.banner-left, .banner-right {display: inline-block; float: left;}
+		.banner-right {float: right;}
+	}
+
+	.banner2 {
+		@include sec-default(); background-color: $offwhite; padding: $padd;
+		.inner {width:95%;@include center-block();}
+		.banner-left, .banner-right {display: inline-block; float: left;}
+		.banner-left{width:35%;
+			.img-responsive {width:80%; @include center-block();}
+			.box{width:90%; float: left; margin-bottom: 10px;}
+			.op-box{width:75%; float: right;}
+			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; text-align: center; letter-spacing: 5px;}
+		}
+		span {font-weight: bold; color: rgba($gray, .3); font-size: 20px; text-transform: uppercase;}
+
+		.banner-right{width:60%; padding:0 20px 20px;
+			.content {border: 1px solid rgba($gray, .3); border-top: none; padding:0 30px 30px; @include sec-default();}
+		}
+		h4 {text-align: center; margin:0 0 30px; position: relative; font-weight: bold; color: darken($blue, 5%);
+			&::before, &::after {content: ""; width: 8%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
+			&::before{left:0;}
+			&::after{right:0;}
+		}
+		.text-box{background-color: $gray; @include sec-default(); padding: 30px 45px;color: $white; border-top-right-radius: 50px; border-bottom-left-radius: 50px;}
+	}
+}
+
+
+.contact {
+	.pages-wrap{
+		@include sec-bgimage();
+		background-image: url(image_path('lobby.jpg'));
+		background-size: 55%;
+		background-position: top right;
+	}
+
+	.pages-header {
+		height:200px;
+		background-color: $blue;
+		text-align: center;
+		padding-top: 25px;
+
+		h2{margin-bottom: 5px; font-weight: bold; letter-spacing: 5px;}
+		h1 {margin-top: 0}
+	}
+
+	ul.social {padding: 10px 40px;
+		li {display: inline-block; font-size: 25px; margin-left: 15px;}
+	}
+}
+
+
+
+
+
+
+.page {
 	header {height: auto;}
 	.home-hero{
 		@include sec-default();
@@ -72,28 +183,124 @@
 	}
 }
 
-
-.contact {
-	.pages-wrap{
+.home2 {
+	header {height: auto;}
+	.home-hero{
+		@include sec-default();
+		height:800px;
 		@include sec-bgimage();
-		background-image: url(image_path('lobby.jpg'));
-		background-size: 55%;
-		background-position: top right;
+
+		.bg-video {@include sec-default(); position: relative; z-index: 0;
+			&.gray{@include grayscale(); }
+		}
+		.over-frame {@include sec-default(); position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center;}
+		h1, h2, h3 {font-weight: bold;}
+		h2 {@include tshadowl(rgba($black, .5));}
+		h1 {font-size: 110px; color: $blue; @include tshadow($black); letter-spacing: 4px;
+			// span {font-size: 150px; line-height: .9em;}
+		}
+		h3{font-size: 28px;}
 	}
 
-	.pages-header {
-		height:200px;
-		background-color: $blue;
-		text-align: center;
-		padding-top: 25px;
-		background-image: url(image_path('iv-bag.jpg'));
+	.cbp-caption-active .cbp-caption-activeWrap {position: relative;}
+	.cbp-caption { width: 80%; float: right;
+		// &.first{width:60%; @include center-block();}
+		// &.second{width:55%;float: none;}
+		&.second{float: left;}
+	}
+	.faqs-1 {@include sec-default();background-color: $white;
+		// padding: $padd;
+		// .inner {@include sec-default(); position: relative;z-index: 0;
+		// 		&::before {@include before(); width:60%; background-color: $gray;}
+		// }
 
-		h2{margin-bottom: 5px; font-weight: bold; letter-spacing: 5px;}
-		h1 {margin-top: 0}
+		.left, .right {display: inline-block; float: left; padding: 20px 60px; }
+		.left{width:60%;}
+		.right{float: none; width:39%; }
+
+		h3 {font-weight: bold;}
+
+		p  {padding-left: 10px; color: $gray;
+			span {font-size: 15px; font-style: italic;}
+		}
+
+		ul {padding-left:10px; margin-top:10px;
+			li{margin-bottom: 8px; font-size: 16px; font-weight: bold;}
+		}
+
+		ul.ben {
+			li {width:150px; height: 150px; border-radius: 50%; background-color: $blue; display: inline-block; float: left;
+				@include sec-bgimage(); background-image: url(image_path('fountain.png')); background-position: center center; background-size:90%;
+				text-align: center;}
+		}
 	}
 
-	ul.social {padding: 10px 40px;
-		li {display: inline-block; font-size: 25px; margin-left: 15px;}
+
+	.faqs-b {@include sec-default();background-color: $blue; padding-bottom: 40px;
+		.blue-block {  border-bottom: 8px inset rgba($gray, .3); text-align: center;
+			h2, h3 {font-weight: bold;}
+		}
+
+		.left, .right{width:50%;float: left; background-color: $white; padding:30px; height: 250px;
+		  vertical-align: middle;
+		  position: relative;
+			&:before {
+			  pointer-events: none;
+			  position: absolute;
+			  content: '';
+			  top: 0;
+			  background: $blue;
+			  width: 20px;
+			  height: 20px;
+			}
+		}
+
+		.left{padding: 40px;
+			&:before {right: 0; background: linear-gradient(230deg, darken($blue, 11%) 45%, #eee 50%, #eee 56%, white 80%);;box-shadow: -5px 3px 4px rgba($gray, .2);}
+		}
+		.right{float: right;border-left:1px solid  darken($blue, 11%);
+			&:before {left: 0;background: linear-gradient(135deg, darken($blue, 11%) 45%, #ccc 50%, #eee 56%, white 80%);box-shadow: 5px 3px 5px rgba($gray, .2);}
+		}
+
+		h3 {font-weight: bold;}
+
+		p  {padding-left: 10px; color: $gray;
+			span {font-size: 15px; font-style: italic;}
+		}
+
+		ul {padding-left:10px; margin-top:10px;
+			li{margin-bottom: 8px; font-size: 16px; font-weight: bold;}
+		}
+
+		ul.ben {padding:0 15px;
+			li {width:18%; height:150px; padding-top:50px;margin: 0 5px;
+				// border-radius: 50%;
+				@include sec-bgimage();
+				background-color: $blue; text-align: center;
+				 display: inline-block; float: left;
+			}
+		}
 	}
 
+
+
+	.banner1 {
+		@include sec-default();background-color: $blue; padding: $padd;
+		.banner-left, .banner-right {display: inline-block; float: left;}
+		.banner-right {float: right;}
+	}
+
+	.banner2 {
+		@include sec-default(); background-color: $white; padding: $padd;
+		.inner {width:90%;@include center-block();}
+		.banner-left, .banner-right {display: inline-block; float: left;}
+		.banner-left{width:30%;
+			.box{width:90%; float: left;}
+			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; text-align: center; letter-spacing: 5px;}
+		}
+		.banner-right{float:right; width:65%;}
+
+
+		span {font-weight: bold; color: rgba($lt-blue, .3); font-size: 30px; text-transform: uppercase;}
+	}
 }

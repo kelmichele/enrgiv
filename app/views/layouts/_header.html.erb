@@ -4,11 +4,7 @@
 	    <div class="logo-block"><%= link_to(image_tag( 'enrg-logo.png', alt: 'Logo', class: 'img-responsive logo'), root_path ) %></div>
 			<nav>
 				<ul>
-					<li class="menu-item"><%= link_to "Home", root_path %></li>
-					<li class="menu-item"><%= link_to "Vita-Menu", root_path %></li>
-					<li class="menu-item"><%= link_to "ENRG Nutrients", root_path %></li>
-					<li class="menu-item"><%= link_to "Book Now", root_path %></li>
-					<li class="menu-item"><%= link_to "Contact", contact_path %></li>
+			    <%= render 'layouts/nav' %>
 				</ul>
 			</nav>
 		</div>
