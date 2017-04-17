@@ -34,7 +34,7 @@ img.icon { width:10%; @include center-block();}
 		.bg-video {@include sec-default(); position: relative; z-index: 0;
 			&.gray{@include grayscale(); }
 		}
-		.over-frame { position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center;}
+		.over-frame { position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center; left:22%;}
 		h1, h2, h3 {font-weight: bold;}
 		h2 {@include tshadowl(rgba($black, .5));}
 		h1 {font-size: 110px; color: $blue; @include tshadow($black); letter-spacing: 4px;}
@@ -51,8 +51,9 @@ img.icon { width:10%; @include center-block();}
 		.faq-box {display: inline-block;float: left; width:30%; height:415px; background-color: $white; padding: 10px 20px 0 30px;
 			p{padding:15px 10px 0; color: $font;}
 			h3 {font-weight: bold; font-family: $lora; width:90%; padding: 10px 0; border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf;}
-			&.one {@include sec-bgimage(); background-image: url(image_path('waterfall-action.jpg'));}
-			&.two {margin: 0 3.5%;}
+			&.one {@include sec-bgimage(); background-image: url(image_path('jump-pool.jpg'));}
+			&.two {margin-left:5%;}
+			&.three {float: right;}
 			.image-margin {margin-top: 25px;}
 		}
 	}
@@ -71,6 +72,7 @@ img.icon { width:10%; @include center-block();}
 				color: $offwhite; @include tshadow($gray); text-align: center; font-weight: bold;
 
 			}
+		padding-bottom: 100px;
 	}
 
 	.banner1 {
@@ -83,23 +85,61 @@ img.icon { width:10%; @include center-block();}
 		@include sec-default(); background-color: $offwhite; padding: $padd;
 		.inner {width:95%;@include center-block();}
 		.banner-left, .banner-right {display: inline-block; float: left;}
-		.banner-left{width:35%;
-			.img-responsive {width:80%; @include center-block();}
-			.box{width:90%; float: left; margin-bottom: 10px;}
+
+		.banner-left {width:33%; padding-top:50px;
+			.img-responsive {width:85%; @include center-block();}
+			.box{width:95%; float: left; margin-bottom: 10px;}
 			.op-box{width:75%; float: right;}
 			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; text-align: center; letter-spacing: 5px;}
 		}
-		span {font-weight: bold; color: rgba($gray, .3); font-size: 20px; text-transform: uppercase;}
+		span {font-weight: bold; color: rgba($gray, .3); font-size: 25px; text-transform: uppercase;}
 
-		.banner-right{width:60%; padding:0 20px 20px;
-			.content {border: 1px solid rgba($gray, .3); border-top: none; padding:0 30px 30px; @include sec-default();}
-		}
-		h4 {text-align: center; margin:0 0 30px; position: relative; font-weight: bold; color: darken($blue, 5%);
-			&::before, &::after {content: ""; width: 8%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
+		.banner-right {width:65%; float: right;}
+
+		h4 {text-align: center; margin:30px 0; position: relative; font-weight: bold; color: darken($blue, 5%);
+			&::before, &::after {content: ""; width: 12%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
 			&::before{left:0;}
 			&::after{right:0;}
 		}
-		.text-box{background-color: $gray; @include sec-default(); padding: 30px 45px;color: $white; border-top-right-radius: 50px; border-bottom-left-radius: 50px;}
+		.text-box{background-color: $gray; @include sec-default(); padding: 30px; text-align: center; color: $white; border-top-right-radius: 50px; border-bottom-left-radius: 50px; box-shadow: 0px 5px 10px rgba($gray, .4)}
+	}
+
+
+	.banner3 {
+		@include sec-default(); background-color: $offwhite; padding: 60px 0 30px;
+		@include sec-bgimage(); background-image: url(image_path('bag-nobg.png')); background-size: 20%;  position: relative; z-index: 0;
+		&::before {@include before(); background-color: rgba($offwhite, .65);}
+		.inner {width:95%;@include center-block();}
+		.top {@include sec-default(); margin-bottom:35px; }
+		.banner-mid {width:35%; @include center-block(); position: relative; z-index: 5;
+			.img-responsive {width:55%; @include center-block();}
+			.box{@include sec-default(); margin-bottom: 10px; background-color: $offwhite; text-align: center;border-radius: 50%; padding-top: 35px; margin-top: -120px; height:200px;}
+			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; letter-spacing: 5px;}
+		}
+
+		.banner-left, .banner-right {display: inline-block; float: left;}
+		.banner-left {width:30%; height: 400px; margin-left: 30px; background-color: rgba($offwhite, .3); margin-top: 20px;}
+
+		span {font-weight: bold; color:$blue; font-size: 20px; text-transform: uppercase;line-height: 1.5em}
+
+		.op-box {@include sec-default(); text-align: center;}
+		.cta {@include sec-default(); text-align: center; margin: 20px 0 0;
+			padding:20px; border: 1px solid rgba($gray, .2);
+			.inner {@include sec-default(); background-color: $blue; padding:10px 10px 20px;}
+			h4, .book {font-weight: bold; margin-bottom: 15px; font-family: $lora; font-size: 22px;}
+			.book {color: $blue; background-color: $white; padding: 5px 10px; }
+		}
+
+		.text-box{background-color: $gray; display: inline-block; width: 48%; float: left; padding: 20px 30px; text-align: center; color: $white; border-top-right-radius: 50px; border-bottom-left-radius: 50px; box-shadow: 0px 5px 10px rgba($gray, .4);
+			&.fr{float: right;}
+		}
+		.banner-right {width:60%; float: right; margin-right:30px;
+			h4 {text-align: center; margin:30px 0; position: relative; font-weight: bold; color: darken($blue, 5%);
+				&::before, &::after {content: ""; width: 12%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
+				&::before{left:0;}
+				&::after{right:0;}
+			}
+		}
 	}
 }
 
