@@ -135,18 +135,69 @@ img.icon { width:10%; @include center-block();}
 }
 
 .menu {
-	.treatment-content{ @include sec-default(); padding: $padd; text-align: center; background-color: $offwhite;}
+	.treatment-content{ @include sec-default(); padding: $padd; }
 
 	.treatment {display: inline-block; float: left; margin:10px; @include sec-bgimage(); background-image: url(image_path('iv-icon.png')); background-size: 20%; width: 30%; height: 190px; background-color: $blue;
 		padding-left: 35px;
 		p{display: none;}
 	}
 
-	.cbp-item {
-		h3{font-weight: bold; text-transform: uppercase;}
+	// #solo, #accordeon, #acc2 {display: inline-block; width:30%; float: left;}
+	#solo, #accordeon {display: inline-block; width:45%; float: left; }
+	#solo{float: right;}
+	.cbp-item {@include sec-default();
+		// @include sec-bgimage(); background-image: url(image_path('ivbag-icon.png'));
+		h3{font-weight: 800; font-family: $open; text-transform: uppercase;}
+		h4 { text-transform: uppercase; color: $blue;}
+		.cbp-caption {  margin-bottom:20px; }
+		p span {color: $blue; font-weight: bold;}
+		// .cbp-caption-activeWrap {width: 85%; @include center-block();}
+		// .cbp-caption-defaultWrap { @include sec-bgimage(); background-size: 8%; background-image: url(image_path('ivcon.png'));}
+			// position: relative; z-index: 0;
+			// 	&::after {
+			// 		content: "";
+			//     right: 0;
+			//     position: absolute;
+			//     bottom: 0px;
+			//     width: 100%;
+			//     height:16px;
+			//     z-index: -1;
+			// 		background-size: 90%;
+			//     background-image: url(image_path('water-div.png'));
+			//   }
+			// }
 	}
+}
 
+.plus {
+	.pages-header {background-image: url(image_path('rolling.jpg')); background-position: bottom right;}
+	.logo-plus { width:35%; @include center-block();}
 
+	.main {@include sec-default(); padding: 30px 50px; background-color: $offwhite;
+		.top {@include sec-default();}
+		h4 {text-transform: uppercase;text-align: center;
+			span{text-transform: none; font-weight: bold; color: $blue;}
+		}
+		hr {border-top: 1px solid rgba($gray, .15);}
+
+		.block1, .block2 {display: inline-block; float: left; width: 49%; padding: 15px 5px 0 15px; }
+		.block2 {float: right;}
+		.left, .right {width: 52%; float: left; display: inline-block; padding: 0 15px;}
+		.right { width: 46%; float: right; padding: 20px 30px;}
+	}
+	.final {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('jump.jpg')); background-position: bottom center;padding: $padd; position: relative; z-index: 0;
+		&::before {@include before(); background-color: rgba($black, .5);}
+		.block1, .block2, .block3 {display: inline-block; float: left; width: 30%; padding: 5px 20px; color:$white;}
+		.block2, .block3 {background-color: $blue; padding: 15px;  border-top-right-radius: 50px; border-bottom-left-radius: 50px;
+			.inner {@include sec-default(); border: 1px solid $white; padding: 15px; text-align: center;height:175px; border-top-right-radius: 50px; border-bottom-left-radius: 50px;}
+			.link { @include sec-default(); color: $white; font-weight: bold; margin-top: 15%; font-size: 20px; @include ease2();
+				&:hover {color: $comp}
+			}
+		}
+		.block2{margin-left: 4%;}
+		.block3 {background-color: $gray; float: right;}
+
+	}
 }
 
 .contact {
@@ -163,180 +214,3 @@ img.icon { width:10%; @include center-block();}
 	}
 }
 
-
-
-
-
-
-.page {
-	header {height: auto;}
-	.home-hero{
-		@include sec-default();
-		height:800px;
-		@include sec-bgimage();
-
-		.bg-video {@include sec-default(); position: relative; z-index: 0;
-			&.gray{@include grayscale(); }
-		}
-		.over-frame {@include sec-default(); position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center;}
-		h1, h2, h3 {font-weight: bold;}
-		h2 {@include tshadowl(rgba($black, .5));}
-		h1 {font-size: 110px; color: $blue; @include tshadow($black); letter-spacing: 4px;
-			// span {font-size: 150px; line-height: .9em;}
-		}
-		h3{font-size: 28px;}
-	}
-
-	.faqs {@include sec-default();background-color: $lt-blue;
-		background-repeat: no-repeat; background-position: right top; background-size: 15%;
-		background-image: url(image_path('bag-nobg.png'));
-		.left, .right {display: inline-block; float: left; padding: 30px 60px; }
-		.left{width:60%;background-color: $offwhite}
-		.right{float: right; width:39%; }
-		h3 {color: $black; font-weight: bold;}
-
-		p  {padding-left: 10px;
-			span {font-size: 15px; font-style: italic;}
-		}
-
-		ul {padding-left:10px; margin-top:10px;
-			li{margin-bottom: 8px; font-size: 16px; font-weight: bold;}
-		}
-	}
-
-	.banner {
-		@include sec-default(); background-color: $white; padding: $padd;
-		.inner {width:90%;@include center-block();}
-		.banner-left, .banner-right {display: inline-block; float: left;}
-		.banner-left{width:30%;
-			.box{width:90%; float: left;}
-			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; text-align: center; letter-spacing: 5px;}
-		}
-		.banner-right{float:right; width:65%;}
-
-
-		span {font-weight: bold; color: rgba($lt-blue, .3); font-size: 30px; text-transform: uppercase;}
-	}
-}
-
-.home2 {
-	header {height: auto;}
-	.home-hero{
-		@include sec-default();
-		height:800px;
-		@include sec-bgimage();
-
-		.bg-video {@include sec-default(); position: relative; z-index: 0;
-			&.gray{@include grayscale(); }
-		}
-		.over-frame {@include sec-default(); position: absolute; z-index: 10; margin-top: 80px; padding: 100px;text-align: center;}
-		h1, h2, h3 {font-weight: bold;}
-		h2 {@include tshadowl(rgba($black, .5));}
-		h1 {font-size: 110px; color: $blue; @include tshadow($black); letter-spacing: 4px;
-			// span {font-size: 150px; line-height: .9em;}
-		}
-		h3{font-size: 28px;}
-	}
-
-	.cbp-caption-active .cbp-caption-activeWrap {position: relative;}
-	.cbp-caption { width: 80%; float: right;
-		// &.first{width:60%; @include center-block();}
-		// &.second{width:55%;float: none;}
-		&.second{float: left;}
-	}
-	.faqs-1 {@include sec-default();background-color: $white;
-		// padding: $padd;
-		// .inner {@include sec-default(); position: relative;z-index: 0;
-		// 		&::before {@include before(); width:60%; background-color: $gray;}
-		// }
-
-		.left, .right {display: inline-block; float: left; padding: 20px 60px; }
-		.left{width:60%;}
-		.right{float: none; width:39%; }
-
-		h3 {font-weight: bold;}
-
-		p  {padding-left: 10px; color: $gray;
-			span {font-size: 15px; font-style: italic;}
-		}
-
-		ul {padding-left:10px; margin-top:10px;
-			li{margin-bottom: 8px; font-size: 16px; font-weight: bold;}
-		}
-
-		ul.ben {
-			li {width:150px; height: 150px; border-radius: 50%; background-color: $blue; display: inline-block; float: left;
-				@include sec-bgimage(); background-image: url(image_path('fountain.png')); background-position: center center; background-size:90%;
-				text-align: center;}
-		}
-	}
-
-
-	.faqs-b {@include sec-default();background-color: $blue; padding-bottom: 40px;
-		.blue-block {  border-bottom: 8px inset rgba($gray, .3); text-align: center;
-			h2, h3 {font-weight: bold;}
-		}
-
-		.left, .right{width:50%;float: left; background-color: $white; padding:30px; height: 250px;
-		  vertical-align: middle;
-		  position: relative;
-			&:before {
-			  pointer-events: none;
-			  position: absolute;
-			  content: '';
-			  top: 0;
-			  background: $blue;
-			  width: 20px;
-			  height: 20px;
-			}
-		}
-
-		.left{padding: 40px;
-			&:before {right: 0; background: linear-gradient(230deg, darken($blue, 11%) 45%, #eee 50%, #eee 56%, white 80%);;box-shadow: -5px 3px 4px rgba($gray, .2);}
-		}
-		.right{float: right;border-left:1px solid  darken($blue, 11%);
-			&:before {left: 0;background: linear-gradient(135deg, darken($blue, 11%) 45%, #ccc 50%, #eee 56%, white 80%);box-shadow: 5px 3px 5px rgba($gray, .2);}
-		}
-
-		h3 {font-weight: bold;}
-
-		p  {padding-left: 10px; color: $gray;
-			span {font-size: 15px; font-style: italic;}
-		}
-
-		ul {padding-left:10px; margin-top:10px;
-			li{margin-bottom: 8px; font-size: 16px; font-weight: bold;}
-		}
-
-		ul.ben {padding:0 15px;
-			li {width:18%; height:150px; padding-top:50px;margin: 0 5px;
-				// border-radius: 50%;
-				@include sec-bgimage();
-				background-color: $blue; text-align: center;
-				 display: inline-block; float: left;
-			}
-		}
-	}
-
-
-
-	.banner1 {
-		@include sec-default();background-color: $blue; padding: $padd;
-		.banner-left, .banner-right {display: inline-block; float: left;}
-		.banner-right {float: right;}
-	}
-
-	.banner2 {
-		@include sec-default(); background-color: $white; padding: $padd;
-		.inner {width:90%;@include center-block();}
-		.banner-left, .banner-right {display: inline-block; float: left;}
-		.banner-left{width:30%;
-			.box{width:90%; float: left;}
-			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; text-align: center; letter-spacing: 5px;}
-		}
-		.banner-right{float:right; width:65%;}
-
-
-		span {font-weight: bold; color: rgba($lt-blue, .3); font-size: 30px; text-transform: uppercase;}
-	}
-}
