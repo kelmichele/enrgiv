@@ -1,38 +1,27 @@
 <% @page_title = "Contact Us" %>
 <% @page_description = "New Subject" %>
 
-<!-- <section class="pages-header contact">
-	<div class="container">
-		<div class="title-box">
-			<h2>enrG-IV</h2>
-			<h1>Contact Us</h1>
-		</div>
-	</div>
-</section> -->
-
 <div class="pages-wrap">
-	<div class="container">
-		<div class="col-md-6">
+	<div class="pages-header blue">
+		<div class="container"><h1>Contact <span>enrG-IV</span></h1></div>
+	</div>
+
+	<div class="contact-sec">
+		<div class="container">
+			<div class="col-md-6">
 				<div class="title-box">
-						<h2>enrG-IV</h2>
-						<h1>Contact Us</h1>
 				</div>
-				<div class="clearfix"></div><br><br><br>
 
-			<h3><%= number_to_phone(2057900323, delimiter: '.') %></h3>
-			<h3>info@enrgiv.com</h3>
-			<h3>3099 Loop Rd<br>Unit 4<br> Orange Beach, Al 36561</h3>
-			<h3>Thursday through Monday 10am-6pm</h3>
-			<ul class="social">
-				<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
-				<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
-			</ul>
+				<h4><%= number_to_phone(2057900323, delimiter: '.') %></h4>
+				<h4>info@enrgiv.com</h4>
+				<h4>3099 Loop Rd<br>Unit 4<br> Orange Beach, Al 36561</h4>
+				<h4>Open Thursday - Monday: 10am-6pm</h4>
+				<ul class="social">
+					<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
+					<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
+				</ul>
+			</div>
 		</div>
-
-		<!-- <div class="col-md-5 col-md-offset-1">
-			<%=image_tag('lobby.jpg', class: 'img-responsive') %>
-		</div> -->
-				<div class="clearfix"></div><br><br><br>
 	</div>
 </div>
 

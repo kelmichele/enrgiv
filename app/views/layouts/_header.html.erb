@@ -1,12 +1,26 @@
+<!-- <div class="book-bar">
+	<div class="container-fluid">
+		<h4><%= number_to_phone(2057900323, delimiter: '.') %></h4>
+		<h4>Book Online</h4>
+	</div>
+</div> -->
 <header>
 	<div id="nav" class="stick">
 		<div class="container">
 	    <div class="logo-block"><%= link_to(image_tag( 'enrg-logo.png', alt: 'Logo', class: 'img-responsive logo'), root_path ) %></div>
 			<nav>
-				<ul>
+				<ul class="megamenu-parent menu-zoom hidden-xs">
 			    <%= render 'layouts/nav' %>
 				</ul>
 			</nav>
+
+				<div>
+			    <a href="#" id="offcanvas-toggler">
+			        <span></span>
+			        <span></span>
+			        <span></span>
+			    </a>
+			  </div>
 		</div>
 	</div>
 </header>

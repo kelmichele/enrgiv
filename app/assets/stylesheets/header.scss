@@ -1,31 +1,51 @@
 @import "mixins";
 @import "variables";
 
-header {@include sec-default(); height:120px;}
+
+
+.book-bar {@include sec-default(); background-color: $lt-blue; padding: 5px;}
+header {@include sec-default(); height:120px; background-color: $white;}
 #nav {
+    background-color: $white;
     // position: absolute;
     position: relative;
     top: 0;
     right: 0;
     width: 100%;
     z-index: 555;
+    padding-bottom: 10px;
 
     .logo-block {display: inline-block;float: left; width: 40%;}
-    .logo {@include ease(); width: 325px;padding: 5px 0;}
+    .logo {@include ease2(); width: 230px;padding: 10px 0;}
 
     nav { display: inline-block; float: right;
-        ul {margin-top:55px}
+        ul.megamenu-parent {margin-top:55px}
         li  {
             color: $black;
             display: inline-block;
             margin-right: 30px;
             font-size: 17px;
+            text-transform: uppercase;
+
+            a {color: $black; text-transform: uppercase;}
+            &:hover a{color: $blue}
+
+
+
+            .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none; background-color: $offwhite; padding: 15px 0;
+
+                li.menu-item{margin-left:10px; display:block; padding:0;position:relative; @include sec-default(); line-height: 2em;
+                    a{color: $black; }
+                    &:hover a{color: $blue}
+                }
+            }
+            &.has-child:hover >.dropdown{display:block; width:175px}
         }
-        a {color: $black;}
     }
 
     &.stuck {
         background: $white;
+        padding-bottom: 5px;
         border-bottom: 0;
         box-shadow: 0 1px 33px rgba(26, 37, 46, .1), inset 0 1px 0 hsla(0, 0%, 100%, .35);
     }
@@ -36,4 +56,71 @@ header {@include sec-default(); height:120px;}
     @include bp(sm) {
         position: fixed;
     }
+}
+
+
+
+#offcanvas-toggler {
+    width: 40px;
+    float:right;
+    background-color:$blue;
+    padding: 10px 0 5px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid $black;
+    display:none;
+
+    h4 {color:$white; line-height:2em; padding-top:10px; }
+    h4:hover {color:$black; text-decoration:none; }
+
+    span {
+        content: '';
+        @include center-block ();
+        display: block;
+        margin-bottom: 4px;
+        width: 25px;
+        height: 3px;
+        border-radius: 4px;
+        background-color: $black;
+    }
+
+}
+.offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white; background:$black}
+.offcanvas-menu .offcanvas-inner .module .menu .nav-child a{padding:4px 25px}
+.offcanvas-menu .menu ul li{position:relative}
+
+.close-offcanvas{position:absolute; top:15px; right:15px; z-index:1; color:$white; border:2px solid #eee; border-radius:100%; width:22px; height:22px; line-height:18px; text-align:center; font-size:12px}
+.close-offcanvas:hover{background:$black; color:$white}
+
+.offcanvas-menu{width:240px; height:100%; background:darken($blue, 10%); color:$white; position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll;
+    .offcanvas-inner{padding:20px;}
+    .module{margin-top:20px;
+        ul{margin:0 0 0 -20px;
+            li { margin-bottom:15px; padding-bottom:5px; padding-left: 15px; border-bottom:1px solid rgba($white, .4);
+                a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:7px 0; padding-left:0px; color: $white; font-size: 16px; line-height: 1.5em;}
+                a:hover{background:transparent;}
+                &:first-child{margin-top:0}
+                &.has-child{ font-size: 14px; color: #333; margin-left: 15px;}
+                .dropdown li:last-child{border-bottom:none;}
+            }
+        }
+    }
+}
+
+.offcanvas-menu{-webkit-transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1); transition:opacity 400ms cubic-bezier(0.7,0,0.3,1),right 400ms cubic-bezier(0.7,0,0.3,1)}
+.body-innerwrapper:after{right:0}
+.offcanvas-menu{right:-280px}
+.offcanvas .offcanvas-menu{right:0}
+.body-innerwrapper:after{position:absolute; top:0; width:0; height:0; background:rgba($black, 0.8); content:''; opacity:0; -webkit-transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; transition:opacity 0.5s,width 0.1s 0.5s,height 0.1s 0.5s; z-index:999}
+.offcanvas{width:100%; height:100%; position:relative}
+.offcanvas .body-innerwrapper:after{width:100%; height:100%; opacity:1; -webkit-transition:opacity 0.5s; transition:opacity 0.5s}
+.offcanvas .offcanvas-menu{opacity:1}
+.menu .nav-child.small{font-size:inherit}
+h3.module-title{color: $white;}
+.menu .nav-child.small{font-size:inherit}
+
+
+@include bp(md) {
+    #offcanvas-toggler { display:inline-block; }
+    nav {display: none;}
 }
