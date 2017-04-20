@@ -10,18 +10,49 @@
 .pages-header{
 	@include sec-default();
 	@include sec-bgimage();
+	padding: 40px 0;
+
 	h1 {font-size: 45px;font-weight: bold; color: $white;text-transform: uppercase;}
 
+	&.img {background-image: url(image_path('rolling.jpg')); background-position: bottom right; position: relative;z-index: 0;
+		&::before {@include before(); background-color: rgba($white, .3);}
+	}
 	&.blue {
-		background-color: $blue; padding: 40px 0;
+		background-color: $blue;
 	}
 }
 
 .pages-wrap{
 	// @include sec-default();
 	// padding: $padd;
-	background-color: $offwhite;
+	// background-color: $offwhite;
 	width: 95%; @include center-block();
+}
+
+.logo-plus { width:35%; @include center-block();}
+.layout-main {@include sec-default(); padding: 30px 50px; background-color: $offwhite;
+		.top {@include sec-default();}
+		h4 {text-transform: uppercase;text-align: center;
+			span{text-transform: none; font-weight: bold; color: $blue;}
+		}
+		hr {border-top: 1px solid rgba($gray, .15);}
+
+		.block1, .block2 {display: inline-block; float: left; width: 49%; padding: 15px 5px 0 15px; }
+		.block2 {float: right;}
+		.left, .right {width: 52%; float: left; display: inline-block; padding: 0 15px;}
+		.right { width: 46%; float: right; padding: 20px 30px;}
+}
+.layout-final-sec {@include sec-default();background-color: $blue; padding: $padd;
+	.block1, .block2, .block3 {display: inline-block; float: left; width: 30%; padding: 5px 20px; color:$white;}
+	.block2, .block3 {background-color: $white; padding: 15px;  border-top-right-radius: 50px; border-bottom-left-radius: 50px;
+		.inner {@include sec-default(); border: 1px solid $white; padding: 15px; text-align: center;height:175px; border-top-right-radius: 50px; border-bottom-left-radius: 50px;}
+		.link { @include sec-default(); color: $white; font-weight: bold; margin-top: 15%; font-size: 20px; @include ease2();
+			&.light{color: $gray;}
+			&:hover {color: $blue}
+		}
+	}
+	.block2{margin-left: 4%; .inner {border: 1px solid $gray; }}
+	.block3 {background-color: $gray; float: right;}
 }
 
 img.icon { width:10%; @include center-block();}
@@ -169,37 +200,48 @@ img.icon { width:10%; @include center-block();}
 	}
 }
 
-.plus {
-	.pages-header {background-image: url(image_path('rolling.jpg')); background-position: bottom right;}
-	.logo-plus { width:35%; @include center-block();}
+.iv-therapy {
+	.pages-header::before {background-color: rgba($gray, .2);}
+	h1 { @include tshadow($gray); text-align: center;}
 
-	.main {@include sec-default(); padding: 30px 50px; background-color: $offwhite;
-		.top {@include sec-default();}
-		h4 {text-transform: uppercase;text-align: center;
-			span{text-transform: none; font-weight: bold; color: $blue;}
+	.layout-main {
+		.left{ width: 62%; padding-left:0; padding-top:20px;
+				p { margin-bottom:40px; text-align: center;
+					span {color: $blue; font-weight: bold;}
+				}
 		}
-		hr {border-top: 1px solid rgba($gray, .15);}
+		.boxed {padding: 25px; background-image: url(image_path('drip1.png'));}
+		.right { width: 35%; padding-top:0; p{ color: $comp;}}
+		ul {padding-left: 15px;}
+		li {font-size: 16px; margin-bottom: 7px;}
+		h4 {line-height: 1.4em;}
 
-		.block1, .block2 {display: inline-block; float: left; width: 49%; padding: 15px 5px 0 15px; }
-		.block2 {float: right;}
-		.left, .right {width: 52%; float: left; display: inline-block; padding: 0 15px;}
-		.right { width: 46%; float: right; padding: 20px 30px;}
-	}
-	.final {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('jump.jpg')); background-position: bottom center;padding: $padd; position: relative; z-index: 0;
-		&::before {@include before(); background-color: rgba($black, .5);}
-		.block1, .block2, .block3 {display: inline-block; float: left; width: 30%; padding: 5px 20px; color:$white;}
-		.block2, .block3 {background-color: $blue; padding: 15px;  border-top-right-radius: 50px; border-bottom-left-radius: 50px;
-			.inner {@include sec-default(); border: 1px solid $white; padding: 15px; text-align: center;height:175px; border-top-right-radius: 50px; border-bottom-left-radius: 50px;}
-			.link { @include sec-default(); color: $white; font-weight: bold; margin-top: 15%; font-size: 20px; @include ease2();
-				&:hover {color: $comp}
-			}
+		.inner {width:65%; @include center-block();
+			.left{@include sec-default();}
+			.block1, .block2 {width: 45%; padding:0;}
 		}
-		.block2{margin-left: 4%;}
-		.block3 {background-color: $gray; float: right;}
-
 	}
+	.lead{@include sec-default(); @include sec-bgimage(); background-image: url(image_path('pool-day.jpg')); padding: 100px 120px 0; margin-bottom:0;
+		.inner {@include sec-default(); background-color: $offwhite; padding: 40px 0 0px; text-align: center;}
+			p{text-transform: uppercase; width: 50%; @include center-block();}
+			h2 {color: $comp; font-size: 40px; font-weight: bold; font-family: $lora;}
+	}
+
+	.layout-final-sec {background-color: $offwhite; padding: 0px 0 50px;
+		.block1 {height: 280px; margin-left: 20px;}
+		.content {@include sec-default();}
+		p {color: $gray; }
+		h3 { color: $blue; font-weight: bold;}
+		h4 {display: inline-block; float: left; text-align: center; margin-left: 15px;}
+	}
+
+	#accordeon, #solo {display: inline-block; float: left; width: 40%;}
+	#accordeon {margin-left: 14%;}
+	#solo {float: right;}
+	.inline {position: absolute; width: 220px; height: 500px; right: 10%; top: 10%; display: none;}
 }
 
+// #7fbdec;
 .contact {
 	.contact-sec {@include sec-default(); text-align: center; padding: $padd;background-color: $offwhite;
 		@include sec-bgimage();
