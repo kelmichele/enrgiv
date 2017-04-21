@@ -243,16 +243,21 @@ img.icon { width:10%; @include center-block();}
 
 // #7fbdec;
 .contact {
+	.pages-header{background-image:url(image_path('placeholder.jpg'));background-position: top right; height:250px;&::before {background-color:rgba($black, .7);}}
 	.contact-sec {@include sec-default(); text-align: center; padding: $padd;background-color: $offwhite;
-		@include sec-bgimage();
-		background-image: url(image_path('iv-bagbw.jpg'));
-		background-size: 50%;
-		background-position: top right;}
-		h4 {margin-left: 15px; margin-bottom:20px; line-height: 1.6em;}
+		@include sec-bgimage();background-size: 50%;background-position: top right;
+			h4 {margin-left: 15px; margin-bottom:20px; line-height: 1.6em; font-family: $lora;}
 
 
-	ul.social {padding: 10px 40px;
-		li {display: inline-block; font-size: 25px; margin-left: 15px;}
+		.link-box {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('placeholder.jpg')); position: relative; z-index: 0; margin: 15px 0 20px; padding: 20px;
+			&::before {@include before(); background-color: rgba($black, .7);}
+			.inside {@include sec-default(); text-align: center; padding: 15px 0 0; border: 1px dotted $white;}
+			h4 {color: $white; margin-top:0; span{font-weight: bold; color: $blue; font-family: inherit;}}
+		}
+
+		ul.social {padding: 10px 40px;
+			li {display: inline-block; font-size: 25px; margin-left: 15px;}
+		}
 	}
 }
 

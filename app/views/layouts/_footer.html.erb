@@ -24,13 +24,12 @@
     		<li class="menu-item"><%= link_to "Why IV Therapy Works", root_path %></li>
     		<li class="menu-item"><%= link_to "Our IV Menu", menu_path %></li>
 		    <li class="menu-item"><%= link_to "enrG+", enrg_plus_path %></li>
-		    <li class="menu-item noft"><%= link_to "Book Now", root_path %></li>
 		    <li class="menu-item"><%= link_to "Contact", contact_path %></li>
 
 			</ul>
 
 			<div class="cta">
-				<h4>Book Now</h4>
+				<a data-uk-modal="{center:true}" class="modal3" href="#appt"><h4>Book Now</h4></a>
 			</div>
 		</div>
 	</div>
@@ -44,10 +43,9 @@
 	</div>
   <a href="#" class="scroll-up">Scroll</a>
 </footer>
-			<!--
-			<h3>Thursday through Monday 10am-6pm</h3>
- -->
 
+
+<%= render 'static_pages/book-now' %>
 
 <div class="offcanvas-menu">
     <a class="close-offcanvas" href="#"><i class="fa fa-close"></i></a>

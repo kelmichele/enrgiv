@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   get 'enrG+', to: 'static_pages#enrG+', as: 'enrg-plus'
   get 'menu' => 'static_pages#menu'
   get 'iv-therapy' => 'static_pages#iv-therapy'
-  get 'book-appt' => 'static_pages#book-appt'
   get 'page' => 'static_pages#page'
 
 
