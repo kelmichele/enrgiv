@@ -303,55 +303,60 @@ img.icon { width:10%; @include center-block();}
 
 .plus {
 	.layout-main {
+		.icon {width:24%; margin-bottom: 0px;}
 		.content-box {width: 80%; @include center-block();
+			h4 span {font-size: 24px}
 			.block1, .block2, .block3, .block4 {padding: 0 5px; display: inline-block;}
 			.block1{width: 35%; }
 			.block2 {width: 64%; float: right;}
 			.block3 {width: 63%; float: left; margin-top: 25px;}
-			.block4{width: 36%; float: right; background-color: $comp; color: $white; padding: 5px 20px 20px; text-align: center; h3{line-height: 1.2em; font-size: 21px;}}
+			.block4{width: 30%; float: none; padding-top:25px; margin-left:20px;}
 
-			.link-btn { @include sec-default(); width:90%; background-color: $blue; padding: 5px 20px 0; text-align: right; border: 1px solid #dfdfdf;
-				.inner {@include sec-default(); padding:15px 0;
-					@include sec-bgimage(); background-image: url(image_path('bag-icon.png')); background-size: 18%;
+			.link-btn { @include sec-default(); padding:20px 10px ; background-color: $comp2;@include sec-bgimage(); background-image: url(image_path('bag-iconflow-comp.png')); background-size: 19%; border: 1px solid #dfdfdf;
+				.inner{width:80%; float: right; text-align: center;}
+
+				h5{color: $white; @include tshadowl(rgba($gray, .4)); font-size: 19px; font-weight: bold; line-height: 1.2em; @include ease();
+					&:hover{color: $comp;}
 				}
-
-				h5{color: $white; @include tshadowl(rgba($gray, .4)); margin-right: 30px; font-size: 16px; font-weight: bold; line-height: 1.4em;padding-left:15px; @include ease();
-					span {font-size: 17px;}}
-					&:hover {h5{color: $gray;}}
 			}
 		}
 		p {font-size: 16px;}
 	}
 
+	#clinic.uk-modal {
+		text-align: center;
+		h2 {font-weight: bold; color: $blue;}
+		.left{width: 50%; float: left;}
+		h4{text-transform: none; font-weight: bold; color: $comp;}
+	}
+
 	.layout-final-sec {
-		// @include sec-bgimage(); background-image: url(image_path('bag-icon.png')); background-size: 10%;
 		@include sec-bgimage(); background-image: url(image_path('temp-cover2.png')); background-size: 40%; background-position: top right;
 
-		.membership {width: 60%; display: inline-block; float: left;}
+		.membership {width: 60%; display: inline-block; float: left; }
 			p {color: $white; font-weight: bold;}
 
 			.intro  {text-align: center; margin-bottom: 30px;
-				// width: 100%; @include center-block();
 				@include sec-default();
-				h2 {color: $white; font-weight: bold; @include tshadowl ($gray); text-transform: uppercase; font-size: 35px; margin-top: 0}
+				h2 {color: $white; font-weight: bold; @include tshadowl ($gray); text-transform: uppercase; font-size: 35px; margin-top: 0; margin-bottom: 0;}
 				h4{color: $white; line-height: 1.4em; font-weight: bold;
 					&.lh0 {line-height: 1em;}}
 			}
 
-			.mem-box {width: 60%; display: inline-block; float: left;
-			 // @include center-block();padding: 1px 0px 0px;
-				// background-color: $lt-blue;
-				// border: 1px solid $light;
-				// box-shadow: 0px 5px 8px rgba($gray, .2);
-				// .pleft{width: 60%;text-align: left; @include center-block();}
-				p {color: $gray;}
-				h3 {color: $gray; font-weight: bold; @include tshadowl ($gray); text-transform: uppercase;}
+			.mem-box {width: 55%; display: inline-block; float: left; background-color: $white; padding:5px 15px 10px; text-align: center;
+				.title-line {@include center-block(); width: 45%;}
+				b {color:$blue}
+				p {color: $gray;
+					&.pleft {color: $blue;}
+					span {font-weight: bold; text-transform: uppercase; color: $comp; @include tshadowl($gray); font-size: 18px}
+				}
+				i {font-size: 14px;}
+				h3 {color: $gray; font-weight: bold; text-align: center;text-transform: uppercase;}
 			}
 
-			.right{width:25%; display: inline-block; float: none;}
-			.monthly {display: inline-block; width: 100%;  margin-top: 10px; margin-left: 20px; padding: 5px; text-align: center;
-				@include sec-bgimage(); background-image: url(image_path('drip1.png')); background-size: 20%;
-				h4{font-weight: bold; color: $white;}
+			.right{width:40%; display: inline-block; float: none; padding: 20px 0 19px; background-color: $offwhite; p{text-align: center; color: $gray; margin-bottom: 0;}}
+			.monthly {display: inline-block; width: 100%; padding: 5px; text-align: center;
+				h4{font-weight: bold; color: $blue; span{font-weight: normal; color:$gray}}
 			}
 	}
 }
