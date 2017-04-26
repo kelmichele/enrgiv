@@ -7,7 +7,7 @@ header {@include sec-default(); height:120px; background-color: $white;}
 
 .book-bar {@include sec-default(); background-color: $blue; padding: 5px; @include ease();
     .contact-info {width:45%; float: right;}
-    h4 {display: inline-block; margin: 0 30px; color: $white; font-weight: bold; @include tshadowl($gray); }
+    h4, a {display: inline-block; margin: 0 30px; color: $white; font-weight: bold; @include tshadowl($gray); }
 }
 #nav {
     background-color: $white;

@@ -99,63 +99,80 @@ img.icon { width:10%; @include center-block();}
 			p{padding-left:10px; color: $font;}
 			h3 {font-weight: bold; font-family: $lora; padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; margin-bottom: 20px;}
 			.faq-link {width: 80%; @include center-block(); background-color: $comp; color: $white; font-weight: bold; font-size: 16px; text-align: center; font-family: $karla; margin-top: 20px; padding: 10px;}
-
+			b{color: $blue}
 			&.title{@include sec-bgimage(); background-image: url(image_path('feet.jpg')); padding: 0;
 				.overlay{ @include sec-default(); height:100%; background-color: rgba($black, .3); padding: 15px 30px; color: $white;}
 				h3 {@include tshadow($black);}
 			}
 			&.one { float: none; margin-left: 5%; }
 			&.two {float: right;}
+
+			&.full {@include sec-default(); height: auto;}
 		}
 	}
 
-	.why-sec {@include sec-default();
-		background-color: $gray;
-		// @include sec-bgimage(); background-image: url(image_path('nacl.jpg')); background-position: center center; position: relative;z-index: 0;
-		// &::before {@include before(); background-color: rgba($black, .7);}
+	.cta-banner {@include sec-default(); background-color: $blue; padding:45px 0 60px;
+		.intro {text-align: center; margin-bottom: 30px; display: inline-block; width:50%; float: left;}
+			p {color: $white;}
 
-		.top{@include sec-default(); text-align: center; padding:20px 0 40px;}
-		.left {width: 33%; float: left; display: inline-block; padding: 50px 0 0 30px;}
-		.right {width: 65%; float: right; display: inline-block;}
+		h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); color: $white;}
+		h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;}
+		h4 {font-size: 25px; margin-bottom: 0px;}
+
+		.cta {display: inline-block; width:40%; float: left; margin-left:5%; margin-top: 10px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
+			@include tshadowl(rgba($gray, .4));
+			span {color: $gray; font-size: 18px;}
+		}
+
+		.content {width: 40%; display: inline-block; float: right; text-align: center; margin-top: 20px; padding:30px; background-color: $white;
+			// @include sec-bgimage(); background-image: url(image_path('bag-iconflow-comp.png')); background-size: 18%; background-position: left center;
+			h3 {font-size: 35px; color: $gray; margin-bottom: 5px; text-shadow:none;}
+			h4{margin-bottom: 15px; color: $gray; text-shadow:none; font-size: 18px;}
+			p {line-height: 1.6em; font-size: 18px; color: $blue;
+				span {font-weight: bold; }}
+		}
+
 	}
 
 	.banner3 {
-		@include sec-default(); background-color: $offwhite; padding: 60px 0 30px;
+		@include sec-default(); background-color: $offwhite; padding: 60px 30px 30px;
 		@include sec-bgimage(); background-image: url(image_path('bag-nobg.png')); background-size: 20%;  position: relative; z-index: 0;
 		&::before {@include before(); background-color: rgba($offwhite, .65);}
 		.inner {width:95%;@include center-block();}
-		.top {@include sec-default(); margin-bottom:35px; }
+		.top {@include sec-default(); margin-bottom:10px; }
 		.banner-mid {width:35%; @include center-block(); position: relative; z-index: 5;
 			.img-responsive {width:55%; @include center-block();}
 			.box{@include sec-default(); margin-bottom: 10px; background-color: $offwhite; text-align: center;border-radius: 50%; padding-top: 35px; margin-top: -90px; height:200px;}
 			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; letter-spacing: 5px;}
 		}
 
-		// &.first {.box {margin-top: -120px;}}
+
+		.content {width: 40%; display: inline-block; float: right; text-align: center; margin-top: 20px; padding:30px; background-color: $white;
+			// @include sec-bgimage(); background-image: url(image_path('bag-iconflow-comp.png')); background-size: 18%; background-position: left center;
+			h3 {font-size: 35px; color: $gray; margin-bottom: 5px; text-shadow:none;}
+			h4{margin-bottom: 15px; color: $gray; text-shadow:none;}
+			p {line-height: 1.6em; font-size: 18px; color: $blue;
+				span {font-weight: bold; }}
+		}
 
 		.banner-left, .banner-right {display: inline-block; float: left;}
-		.banner-left {width:30%; height: 400px; margin-left: 30px; background-color: rgba($offwhite, .3); margin-top: 20px;}
+		.banner-left {width:40%; background-color: rgba($offwhite, .3);}
 
 		span {font-weight: bold; color:$blue; font-size: 20px; text-transform: uppercase;line-height: 1.5em}
 
-		.op-box {@include sec-default(); text-align: center;}
-		.cta {@include sec-default(); text-align: center; margin: 20px 0 0;
-			padding:20px; border: 1px solid rgba($gray, .2);
-			.inner {@include sec-default(); background-color: $blue; padding:10px 10px 20px;}
-			h4, .book {font-weight: bold; margin-bottom: 15px; font-family: $lora; font-size: 22px;}
-			.book {color: $blue; background-color: $white; padding: 5px 10px; }
+		.banner-right {width:55%; float: right;}
+
+		h4 {text-align: center; margin:30px 0; position: relative; font-weight: bold; color: darken($blue, 5%);
+			&::before, &::after {content: ""; width: 12%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
+			&::before{left:0;}
+			&::after{right:0;}
 		}
 
-		.text-box{background-color: $gray; display: inline-block; width: 48%; float: left; padding: 20px 30px; text-align: center; color: $white; border-top-right-radius: 50px; border-bottom-left-radius: 50px; box-shadow: 0px 5px 10px rgba($gray, .4);
-			&.fr{float: right;}
+		.drip {display: inline-block; float: none; margin:10px 5px; width: 30%; height: 110px; text-align: center; @include sec-bgimage(); position: relative; z-index: 0;
+			&::before{@include before(); background-color: rgba($black, .55);}
+			p{font-size: 18px; font-weight: bold; color: $white; @include tshadow($gray); margin-top: 16%;}
 		}
-		.banner-right {width:60%; float: right; margin-right:30px;
-			h4 {text-align: center; margin:30px 0; position: relative; font-weight: bold; color: darken($blue, 5%);
-				&::before, &::after {content: ""; width: 12%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
-				&::before{left:0;}
-				&::after{right:0;}
-			}
-		}
+
 	}
 
 
