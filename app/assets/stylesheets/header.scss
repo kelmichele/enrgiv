@@ -7,7 +7,9 @@ header {@include sec-default(); height:120px; background-color: $white;}
 
 .book-bar {@include sec-default(); background-color: $blue; padding: 5px; @include ease();
     .contact-info {width:45%; float: right;}
-    h4, a {display: inline-block; margin: 0 30px; color: $white; font-weight: bold; @include tshadowl($gray); }
+    h4, a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
+        &.wiw {color: $comp; @include tshadowl(rgba($gray, .1));}
+    }
 }
 #nav {
     background-color: $white;
@@ -36,7 +38,7 @@ header {@include sec-default(); height:120px; background-color: $white;}
 
 
 
-            .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none; background-color: $offwhite; padding: 15px 0;
+            .dropdown{width:auto;margin:0;margin-top:-1px;position:absolute;z-index:999;display:none; background-color: lighten($lt-blue, 25%); padding: 15px 0;
 
                 li.menu-item{margin-left:10px; display:block; padding:0;position:relative; @include sec-default(); line-height: 2em;
                     a{color: $black; }

@@ -3,14 +3,14 @@
 
 <div class="pages-wrap less">
 			<section class="home-hero hero-img">
-				<!-- <div class="bg-video gray">
-			    <%= video_tag "medical-ivs.mp4", width: "100%", height: "100%", autoplay: true, loop: "loop" %>
-			  </div> -->
-
-			  <div class="over-frame">
-			  	<h1>enrG IV</h1>
-					<h2>Optimal Health through Natural Means</h2>
-					<h3><span class="blue">IV Lounge.</span> Oxygen Bar. <span class="blue">Functional Medicine.</span></h3>
+			  <!-- <div class="over-frame"> -->
+			  <div class="title-block">
+					<!-- <h3>Optimal Health through Natural Means</h3> -->
+					<h3>Optimal Health through Natural Means</h3>
+					<h1><%= image_tag('logo-whitetext.png', alt: 'Enrg-IV logo text in white - name only', class: 'img-responsive') %></h1>
+			  	<!-- <h1>enrG<br><span>IV</span></h1> -->
+					<!-- <h3><span class="blue">IV Lounge.</span> Oxygen Bar. <span class="blue">Functional Medicine.</span></h3> -->
+					<h3>IV Lounge. Oxygen Bar. Functional Medicine.</h3>
 			  </div>
 			</section>
 
@@ -40,30 +40,8 @@
 
 						<%= link_to "Learn More", iv_therapy_path, class: 'faq-link' %>
 					</div>
-					<!-- <div class="faq-box four">
-						<h4>What Can it Do?</h4>
-			    	<p>
-			    		Hangover Relief <i class="fa fa-tint"></i>
-			    		Anti-Aging <i class="fa fa-tint"></i>
-			    		Weight Management <i class="fa fa-tint"></i>
-				    	Sports Performance <i class="fa fa-tint"></i>
-				    	Energy Levels <i class="fa fa-tint"></i>
-				    	Mental Health and Mood <i class="fa fa-tint"></i>
-				    	Libido <i class="fa fa-tint"></i>
-						</p>
-
-						<p>
-				    	Immune Support <i class="fa fa-tint"></i>
-				    	Recovery from Surgery/Injury <i class="fa fa-tint"></i>
-				    	Neurological Conditions <i class="fa fa-tint"></i>
-				    	Asthma <i class="fa fa-tint"></i>
-				    	Diabetes <i class="fa fa-tint"></i>
-				    	Fibromyalgia <i class="fa fa-tint"></i>
-
-				    	Detoxification (general detox, or detox from radiation/chemo treatments)<br>
-			    	</p>
-			    </div> -->
 			  </div>
+				<div class="col-md-8 col-md-offset-2"><h4 class="fancy">We have drips, shots, boosters, wellness packages, and more!</h4></div>
 			</div>
 
 			<div class="cta-banner">
@@ -79,32 +57,19 @@
 
 					<div class="content">
 						<h3>Walk-Ins Welcome!</h3>
+						<hr>
 						<h4>Hours of Operation:</h4>
 						<p>Monday - Friday: <span>10am-6pm</span></p>
 						<p>Saturday - Sunday: <span>10am - 3pm</span></p>
 						<p>Closed Tuesdays</p>
-
-						<p><span>After Hours Appointments Available</span></p>
+						<hr>
+						<p><b>After Hours Appointments Available</b></p>
 					</div>
 				</div>
 			</div>
 
-					<!--<li><span>Compromised</span> immune system</li>
-						<li><span>Auto</span> immune disorders</li>
-						<li><span>Athletic</span> performance</li>
-						<li><span>Cancer</span> / detox from radiation or chemotherapy treatments</li>
-						<li><span>General</span> detoxification</li>
-						<li><span>Neurological</span> conditions</li>
-						<li><span>Asthma</span></li>
-						<li><span>Diabetes</span></li>
-						<li><span>Fibromyalgia</span> symptoms</li>
-			    	<li><span>Hangover</span> Recovery</li>
-						<li><span>Increase</span> Energy Level</li>
-			    	<li><span>Weight</span> Management</li>
-			    	<li><span>Improve</span> Overall Well Being</li>
-			    	<li><span>Expedite</span> Recovery From Injury or Surgery</li> -->
 
-			<div class="banner3">
+				<div class="banner3">
 					<div class="top">
 						<div class="banner-mid">
 							<div class="box">
@@ -115,41 +80,43 @@
 						</div>
 					</div>
 
-				<div class="inner">
-					<div class="col-md-8 col-md-offset-2"><h4>We have drips, shots, boosters, wellness packages, and more!</h4></div>
-					<div class="banner-left">
-						<p>enrG-IV clients undergo brief medical screenings before settling in for their drips. Drip sessions typically last between 20 and 60 minutes.</p>
-						<p>Our intravenous vitamin and electrolyte cocktails contain only the purest nutrients, such as B-12, amino acids, and enzymes. You can enjoy them while relax or socialize in our lounge, in the comfort of a private room, or at the enrG IV Oxygen Bar.</p>
-					</div>
+					<div class="container">
+						<div class="banner-left">
+							<div class="iv-box">
+								<!-- <%= image_tag('drip1.png', alt: 'Enrg-IV logo text - name only', class: 'img-responsive ivcon') %>  -->
+								<p>enrG IV clients undergo brief medical screenings before settling in for drips. Drip sessions typically last 20 - 60 minutes.</p>
+							</div>
 
-					<div class="banner-right">
-						<div class="clearfix"></div>
-							<div class="drip age"><p>Beauty &amp; Anti-aging</p></div>
-							<div class="drip health"><p>Health &amp; Wellness</p></div>
-							<div class="drip lag"><p>Jet Lag &amp; Fatigue</p></div>
-							<div class="drip ath"><p>Athletic Performance</p></div>
-							<div class="drip immune"><p>Immune Support</p></div>
-							<div class="drip hangover"><p>Hangover Relief</p></div>
-							<div class="drip libido"><p>Libido Support</p></div>
-							<div class="drip detox"><p>General Detox</p></div>
-							<div class="drip full"><p>View Our Full IV Menu</p></div>
+							<div class="iv-box">
+								<p>Our intravenous vitamin and electrolyte cocktails contain only the purest nutrients, such as B-12, amino acids, and enzymes.</p>
+							</div>
+
+							<div class="iv-box">
+								<p> You can enjoy them while relax or socialize in our lounge, in the comfort of a private room, or at the enrG IV Oxygen Bar.</p>
+							</div>
+
+							<div class="iv-box link">
+								<%= link_to("More About Our Clinic", enrg_plus_path) %>
+							</div>
+						</div>
+
+						<div class="banner-right">
+							<h4>Why Do You Drip?</h4>
+							<div class="clearfix"></div>
+								<div class="drip age"><p>Beauty &amp; Anti-aging</p></div>
+								<div class="drip health"><p>Health &amp; Wellness</p></div>
+								<div class="drip lag"><p>Jet Lag &amp; Fatigue</p></div>
+								<div class="drip ath"><p>Athletic Performance</p></div>
+								<div class="drip immune"><p>Immune Support</p></div>
+								<div class="drip hangover"><p>Hangover Relief</p></div>
+								<div class="drip libido"><p>Libido Support</p></div>
+								<div class="drip detox"><p>General Detox</p></div>
+								<div class="drip full">
+									<%= link_to("/menu") do %>
+									<p>View Our Full IV Menu</p>
+									<% end %>
+								</div>
+						</div>
 					</div>
 				</div>
-			</div>
-
-
-
-
 </div>
-
-				<!-- 	<p>Our intravenous vitamin and electrolyte cocktails contain only the purest nutrients. They are designed to offer relief for a wide variety of ailments.</p>
-									Our staff includes medical expert​s​ who have been specially trained in IV Vitamin Therapies, making them fully equipped to provide you with the ultimate drip and drip experience.</p>-->
-
-								<!--
-									enrG-IV clients undergo brief medical screenings before settling in for their drips
-								enrG IV offers “classics” like the Myers’ cocktail (magnesium, calcium, B and C vitamins), developed by a Baltimore doctor in the 1970s to treat issues from sinusitis to fibromyalgia.
-
-
-								Amino acids can be added to stabilize moods and improve energy.
-								Vitamin C IV can be infused simultaneously to encourage collagen formation.
-								 -->
