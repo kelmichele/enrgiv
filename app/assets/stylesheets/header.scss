@@ -5,9 +5,15 @@
 
 header {@include sec-default(); height:120px; background-color: $white;}
 
-.book-bar {@include sec-default(); background-color: $blue; padding: 5px; @include ease();
-    .contact-info {width:45%; float: right;}
-    h4, a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
+.book-bar {@include sec-default(); background-color: $blue; padding:7px 5px 5px; @include ease();
+    // ul.social {display: inline-block;float: left; margin-bottom: 0; margin-left: 30px;
+    //     li {display: inline-block;font-size: 17px;}
+    // }
+    ul.social {margin-bottom: 0; display: inline-block;
+        li {display: inline-block;font-size: 17px; padding-left: 10px; i {color: $white;  @include tshadowl($gray);}}
+    }
+    .contact-info {width:50%; float: right; display: inline-block;}
+    h4, h4 a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
         &.wiw {color: $comp; @include tshadowl(rgba($gray, .1));}
     }
 }
