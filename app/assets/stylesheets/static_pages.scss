@@ -457,9 +457,18 @@ img.icon { width:10%; @include center-block();}
 		p span {text-align: center;}
 	}
 
-	.sidebar {width:17%; display: inline-block; float: right; background-color: $blue; padding: 20px 15px 0;
-		position: fixed; right:35px; vertical-align: middle; margin-top:200px; bottom: 200px;
-		.pricing, .add-ons {@include sec-default(); margin-bottom: 30px;}
+	.sidebar {width:19%; display: inline-block; float: right; background-color: $blue; padding: 20px ; margin: 40px 0 0;
+		// position: fixed; right:35px; vertical-align: middle; top: 40%; bottom: 200px;
+		.pricing, .add-ons {@include sec-default(); }
+		.pricing {text-align: center;}
+		.border {@include sec-default(); height: 1px; border-top: 1px dotted $offwhite; margin-top: 15px; }
+		h3{ color: $white; font-weight: bold; @include tshadowl($gray); font-size: 22px;
+			span {text-shadow:none; font-size: 17px; color: $gray;}
+		}
+		h4 {padding-left: 7px; font-size: 17px; margin-bottom: 20px; line-height: 1.2em; font-weight: bold;
+			span {font-weight: normal; font-size: 16px; color:$light; font-style: italic; }
+		}
+		.side-link { @include sec-default(); margin-top: 10px; p {margin-bottom: 0;color: $gray;} h3 {margin-top: 0;}}
 	}
 }
 
@@ -478,10 +487,10 @@ img.icon { width:10%; @include center-block();}
 	&::after { clear: both;}
 
 	li {
-		width: 340px;
-		height: 340px;
+		width: 330px;
+		height: 330px;
 		display: inline-block;
-		margin: 15px 5px;
+		margin: 15px 10px 15px 5px;
 	}
 
 	.ch-item {
@@ -497,8 +506,8 @@ img.icon { width:10%; @include center-block();}
 
 	.ch-info-wrap{
 		position: absolute;
-		width: 330px;
-		height: 330px;
+		width: 320px;
+		height: 320px;
 		border-radius: 50%;
 
 		-webkit-perspective: 800px;
@@ -519,8 +528,8 @@ img.icon { width:10%; @include center-block();}
 
 	.ch-info{
 		position: absolute;
-		width: 330px;
-		height: 330px;
+		width: 320px;
+		height: 320px;
 		border-radius: 50%;
 		-webkit-transition: all 0.4s ease-in-out;
 		-moz-transition: all 0.4s ease-in-out;
