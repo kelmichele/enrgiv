@@ -21,6 +21,8 @@
 	}
 }
 
+.uk-modal-close i {margin:10px 10px 0 0; font-size: 16px;}
+
 .pages-wrap{width: 95%; @include center-block();}
 .title-line {width: 50px; height: 1px; background-color: rgba($gray, .5); margin: 8px 0 15px;}
 .link-def {@include sec-default(); background-color: $blue; padding: 7px 10px; margin-top: 7px; color:$white; font-size: 16px; font-weight: bold; text-transform: uppercase;}
@@ -58,16 +60,16 @@ img.icon { width:10%; @include center-block();}
 }
 
 .drip {display: inline-block; float: none; margin:10px 0 10px 10px; width: 30%; height: 110px; text-align: center; @include sec-bgimage(); position: relative;z-index: 0;
-	&::before{@include before(); background-color: rgba($black, .55);}
+	&::before{@include before(); background-color: rgba($black, .45);}
 	p{font-size: 20px; font-weight: bold; color: $white; @include tshadow($gray); margin-top: 16%;}
 
 	&.age {background-image: url(image_path('drips/age.jpg'));}
-	&.health {background-image: url(image_path('drips/well.jpg'));}
+	&.health {background-image: url(image_path('drips/vitamin.jpg'));}
 	&.lag {background-image: url(image_path('drips/fatigue.jpg'));}
 	&.ath {background-image: url(image_path('drips/ath.jpg'));}
 	&.immune {background-image: url(image_path('drips/immune.jpg')); background-position: center center;}
-	&.hangover {background-image: url(image_path('drips/bar.jpg'));}
-	&.libido {background-image: url(image_path('drips/libido2.jpg'));}
+	&.hangover {background-image: url(image_path('drips/tired.jpg'));}
+	&.libido {background-image: url(image_path('drips/libido3.jpg'));}
 	&.detox {background-image: url(image_path('drips/detox.jpg'));}
 	&.full {background-color: $comp; &::before {display: none;}}
 }
@@ -77,14 +79,14 @@ img.icon { width:10%; @include center-block();}
 
 	.home-hero{@include sec-default(); padding: 100px;
 	 // position: relative; z-index: 0;
-		&.hero-img {@include sec-bgimage(); background-image: url(image_path('cover.jpg'));}
+		&.hero-img {@include sec-bgimage(); background-image: url(image_path('jump-pool.jpg'));}
 		// &::before {@include before(); background-color: rgba($black, .2);}
 
 		.bg-video {@include sec-default(); position: relative; z-index: 0;
 			&.gray{@include grayscale(); }
 		}
 
-		.title-block {width: 60%; float: left; margin-top: 20%; }
+		.title-block {width: 45%; float: right; margin-top: 15%; }
 		h1, h2, h3 {font-weight: bold;@include tshadowl(rgba($black, .3));}
 		h2 { margin-bottom: 0;}
 		h3 {font-size: 22px;}
@@ -162,7 +164,6 @@ img.icon { width:10%; @include center-block();}
 			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; letter-spacing: 5px;}
 		}
 
-
 		.banner-left, .banner-right {display: inline-block; float: left;}
 		.banner-left {width:35%; background-color: rgba($offwhite, .8); }
 
@@ -175,10 +176,9 @@ img.icon { width:10%; @include center-block();}
 			h4 {font-weight: 800; font-family: $open; text-align: center; font-size: 20px; background-color: $gray; padding: 8px 5px; color: $white;}
 		}
 
-
-		.drip {display: inline-block; float: none; margin:10px 0 10px 10px; width: 31%; height: 110px; text-align: center; @include sec-bgimage(); position: relative; z-index: 0;
-			&::before{@include before(); background-color: rgba($black, .55);}
-			p{font-size: 18px; font-weight: bold; color: $white; @include tshadow($gray); margin-top: 16%;}
+		.drip {margin:10px 0 10px 10px; width: 31%; height: 110px;
+			&::before{@include before(); background-color: rgba($black, .1);}
+			p{font-size: 18px; color: $white; @include tshadow($black); }
 		}
 	}
 
@@ -199,7 +199,8 @@ img.icon { width:10%; @include center-block();}
 }
 
 .menu {
-	.pages-header{background-image:url(image_path('placeholder.jpg'));background-position: top right; height:150px;&::before {background-color:rgba($black, .7);}}
+	.pages-header{background-image:url(image_path('jump.jpg'));background-position: bottom center; height:150px;&::before {background-color:rgba($black, .1);}}
+	h1 { @include tshadow($gray); }
 	.treatment-content{ @include sec-default(); padding: 40px 30px; background-color: $offwhite; }
 
 	#solo, #accordeon {display: inline-block; width:49%; float: left; }
@@ -243,8 +244,7 @@ img.icon { width:10%; @include center-block();}
 }
 
 .iv-therapy {
-	.pages-header {background-image: url(image_path('placeholder.jpg')); background-position: top right; height: 150px; }
-	.pages-header::before {background-color: rgba($black, .7);}
+	.pages-header {background-image:url(image_path('jump.jpg'));background-position: bottom center; height:150px;&::before {background-color:rgba($black, .1);}}
 	h1 { @include tshadow($gray); }
 
 	.layout-main {
@@ -300,7 +300,8 @@ img.icon { width:10%; @include center-block();}
 }
 
 .contact {
-	.pages-header{background-image:url(image_path('placeholder.jpg'));background-position: top right; height:250px;&::before {background-color:rgba($black, .7);}}
+	.pages-header{background-image:url(image_path('placeholder.jpg'));background-position: top right; height:200px;&::before {background-color:rgba($black, .2);}}
+	h1 { @include tshadow($black); }
 	.contact-sec {@include sec-default(); text-align: center; padding: $padd;background-color: $offwhite;
 		@include sec-bgimage();background-size: 50%;background-position: top right;
 			h4 {margin-left: 15px; margin-bottom:20px; line-height: 1.6em; font-family: $lora;
