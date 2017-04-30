@@ -3,46 +3,89 @@
 
 <div class="pages-wrap less">
 			<section class="home-hero hero-img">
-			  <!-- <div class="over-frame"> -->
 			  <div class="title-block">
-					<!-- <h3>Optimal Health through Natural Means</h3> -->
-					<h3>Optimal Health through Natural Means</h3>
-					<h1><%= image_tag('logo-text.png', alt: 'Enrg-IV logo text in white - name only', class: 'img-responsive') %></h1>
-			  	<!-- <h1>enrG<br><span>IV</span></h1> -->
-					<!-- <h3><span class="blue">IV Lounge.</span> Oxygen Bar. <span class="blue">Functional Medicine.</span></h3> -->
-					<h3>IV Lounge. Oxygen Bar. Functional Medicine.</h3>
+					<div class="tb1">
+						<h3>Hydration Spa and </h3>
+				  	<h1>enrG</h1>
+						<h3>Functional Medicine Clinic</h3>
+					</div>
+
+					<div class="tb2">
+						<h1><span>IV</span></h1>
+					</div>
 			  </div>
 			</section>
 
-			<div class="faqs-sec">
+			<div class="banner1">
 				<div class="inner">
-					<div class="top">
-						<hr>
-						<p class="sub"><b>enrG IV</b> is a Hydration Med-Spa located in Orange Beach, Alabama.<br> We specialize in <span>IV Vitamin Therapies</span> and other areas of <span>Functional Medicine</span>.</p>
-						<hr>
-					</div>
-					<div class="faq-box title">
-						<div class="overlay">
-							<h3>IV Vitamin Therapy</h3>
-						</div>
+					<!-- <div class="top2"> -->
+					<div class="left-block">
+						<p class="sub">Hydration Spa &amp;<br> Functional Medicine Clinic </p>
+						<!-- <p class="sub"><b>enrG IV</b> is a Hydration Spa<br> &amp; Functional Medicine Clinic </p> -->
+						<!-- <%= image_tag('menu-circlesblue.png', alt: '', class: 'img-responsive img-less') %>  -->
 					</div>
 
-					<div class="faq-box one">
-						<h3>What is it?</h3>
-						<p>The process of administering <b>vitamins, minerals, and other nutrients directly into the bloodstream</b>, through an IV drip. It delivers nutrients to cells that need them, and <b>restores balance</b> in the body.</p>
-						<p>It is a <b>safe, powerful</b> method that treats, and even resolves, numerous health problems. We provide <b>relief, healing, and recovery through hydration</b>.</p>
+					<!-- <div class="content"> -->
+					<div class="col-md-4">
+						<%= image_tag('bag-iconflow-bl.png', alt: '', class: 'img-responsive icon') %>
+						<!-- <%= image_tag('orange.jpg', alt: '', class: 'img-responsive img-round') %> -->
+						<h4>enrG IV is located in Orange Beach, Al.<br> We specialize in <span>IV Vitamin Therapies</span> and other areas of functional medicine.</h4>
 					</div>
 
-					<div class="faq-box two">
-						<h3>Who Can Use It?</h3>
-						<p>IV Therapy is used to <b>treat ailments ranging anywhere from sunburn to chronic illness</b>. However, it is not offered exclusively to those who suffer from a medical condition.</p>
-						<p> IV Therapy is a natural way to make you <b>feel better, look better, and recover faster</b>.</p>
-
-						<%= link_to "Learn More", iv_therapy_path, class: 'faq-link' %>
+					<div class="col-md-4">
+						<%= image_tag('bag-iconflow-comp.png', alt: '', class: 'img-responsive icon') %>
+					<!-- <%= image_tag('orange.jpg', alt: '', class: 'img-responsive img-round') %>  -->
+						<p>Clients pass the time in our luxurious recliners, kicked back in front of flatscreen TVs, in the comfort of a private room, socializing in our lounge, or at our oxygen bar.</p>
 					</div>
-			  </div>
+
+					<div class="col-md-4">
+						<%= image_tag('bag-iconflow-alt.png', alt: '', class: 'img-responsive icon') %>
+						<!-- <%= image_tag('orange.jpg', alt: '', class: 'img-responsive img-round') %>  -->
+						<p>Relax and rehydrate while you surf the internet and enjoy amenities like our signature enrG cocktails (made with B-12, amino acids, and enzymes). </p>
+					</div>
+				</div>
 				<div class="col-md-8 col-md-offset-2"><h4 class="fancy">We have drips, shots, boosters, wellness packages, and more!</h4></div>
 			</div>
+
+			<div class="faq-sec">
+				<div class="title-box">
+					<div class="inside-round">
+						<h3>IV Vitamin Therapy</h3>
+					</div>
+				</div>
+
+				<div class="col-md-7 col-md-offset-1">
+					<div class="faq-box">
+						<h3>What is it?</h3>
+						<p>The process of administering <b>vitamins, minerals, and other nutrients directly into the bloodstream</b>, through an IV drip.
+							<!-- It delivers nutrients to cells that need them, and <b>restores balance</b> in the body. -->
+						</p>
+					</div>
+
+					<div class="faq-box right">
+						<h3>Is it safe?</h3>
+						<p>It is a <b>safe, powerful, and natural</b> method that nurses, and even resolves, numerous health problems.
+							<!-- We provide <b>relief, healing, and recovery through hydration</b>. -->
+						</p>
+					</div>
+
+					<div class="faq-box">
+						<h3>Who Can Use It?</h3>
+						<p>IV Therapy is used to <b>fight ailments ranging anywhere from sunburn to chronic illness</b>. However, it is not offered exclusively to those who suffer from a medical condition.</p>
+						<!-- <p> IV Therapy is a natural way to make you <b>feel better, look better, and recover faster</b>.</p> -->
+						<!-- <%= link_to "Learn More", iv_therapy_path, class: 'faq-link' %> -->
+					</div>
+					<div class="faq-box right">
+						<h3>Why should I drip?</h3>
+						 <p> IV Therapy delivers nutrients to cells that need them, to improve, energize, and <b>restore balance</b> in the body. It provides <b>relief, healing, and recovery through hydration</b>. </p>
+						 <!-- is a natural way to make you <b>feel better, look better, and recover faster</b>.</p> -->
+					</div>
+
+			  </div>
+			</div>
+
+
+
 
 			<div class="cta-banner">
 				<div class="container">

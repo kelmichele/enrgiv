@@ -78,47 +78,77 @@ img.icon { width:10%; @include center-block();}
 	header {height: auto;}
 
 	.home-hero{@include sec-default(); padding: 100px;
-	 // position: relative; z-index: 0;
 		&.hero-img {@include sec-bgimage(); background-image: url(image_path('jump-pool.jpg'));}
-		// &::before {@include before(); background-color: rgba($black, .2);}
 
-		.bg-video {@include sec-default(); position: relative; z-index: 0;
-			&.gray{@include grayscale(); }
-		}
-
-		.title-block {width: 45%; float: right; margin-top: 15%; }
+		.title-block {width: 50%; float: right; margin-top: 15%; text-align: center; }
+		.tb1, .tb2 {display: inline-block; float: left;}
+		.tb2 {margin-top: 20px;}
 		h1, h2, h3 {font-weight: bold;@include tshadowl(rgba($black, .3));}
 		h2 { margin-bottom: 0;}
-		h3 {font-size: 22px;}
-		h1 {color: $white; @include tshadow($black); line-height: 1em; margin-top: 0; font-size: 80px;
-				span {font-size: 120px; letter-spacing: 10px; margin-left: 30px;}
+		h3 {font-size: 22px; line-height: .9em; margin:0;}
+		h1 {color: $gray; @include tshadow($black); line-height: 1em; margin: 0; font-size: 85px;
+				span {font-size: 120px; letter-spacing: 5px; }
 		}
 		.img-responsive {width: 340px; margin-left: 20px;}
 	}
 
-	.faqs-sec {@include sec-default();background-color: $offwhite; padding: 25px 0 40px;
-		.top {@include center-block(); width:80%; text-align: center;}
-		p.sub {font-size:20px; margin-top:25px; b{color: $blue; font-weight: bold;}
-			span{color: $black; font-weight: bold;}}
-		.inner { background-color: transparent;
-			@include center-block(); width:75%; }
+	.banner1 { @include sec-default();
+		background-color: $white; @include shadow();
+		padding:40px 0;
+		text-align: center;
+		// position: relative; z-index: 0;
+		// &::after {@include after(); background-color: $gray; width: 30%;}
+		.inner {width: 90%; @include center-block();}
+		.banner-mid {width:35%; @include center-block(); position: relative; z-index: 5;
+			.img-responsive {width:55%; @include center-block();}
+			.box{@include sec-default(); margin-bottom: 10px; background-color: $white; text-align: center;border-radius: 50%; padding-top: 35px;margin-top: -100px; height:170px;}
+			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; letter-spacing: 5px;}
+		}
 
-		.faq-box {display: inline-block;float: left; background-color: $white; padding: 10px 30px; margin-bottom: 15px;
-			width: 30%; height:430px;
+		.left-block { width: 50%; @include center-block();}
+		.icon {width:10%;display: inline-block;float: left;margin: 5px 10px 0;}
+		.img-less {width: 80px; @include center-block();}
+		.abs {height: 360px; position: absolute; right: 25%; top:10px;}
+		.img-round {width:100px; height: 100px; margin-bottom: 15px;
+			border-radius: 50%;
+			// display: inline-block;float: left;margin: 5px 10px 0;
+			@include center-block();
+		}
+
+		p.sub {font-size:30px;font-weight: 800; font-family: $open; margin-bottom: 30px;
+			b{color: $blue; }
+		}
+		h4 {font-weight: bold; margin-bottom: 10px;}
+		.content {width: 50%; @include center-block(); margin-top: 25px;
+			p {color: $font}
+			h4 {font-weight: bold;}
+		}
+		h3 {font-weight: 800; font-family: $open; color: $comp; font-size: 28px;}
+	}
+
+
+	.faq-sec {@include sec-default();background-color: $offwhite; padding: 10px 0 20px;
+		@include sec-bgimage(); background-image: url(image_path('feet.jpg')); background-size: 38%;
+		h3 {font-weight: bold; font-family: $lora; padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; margin-bottom: 10px;}
+
+		.title-box {display: inline-block; float: left; width: 30%; padding-top: 50px; padding-left: 100px;
+			.inside-round {width: 300px; height: 300px; background-color: $white; border-radius: 50%; text-align: center; padding: 100px 20px 0;}
+			h3 {@include tshadow(rgba($gray, .5));}
+		}
+
+		.faq-box {
+			// @include sec-default(); height: auto;
+			display: inline-block; width: 49%; float: left; padding:10px 15px;
+			h3 {font-size: 20px;}
 			p{padding-left:10px; color: $font;}
-			h3 {font-weight: bold; font-family: $lora; padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; margin-bottom: 20px;}
 			.faq-link {width: 80%; @include center-block(); background-color: $comp; color: $white; font-weight: bold; font-size: 16px; text-align: center; font-family: $karla; margin-top: 20px; padding: 10px;}
 			b{color: $blue}
-			&.title{@include sec-bgimage(); background-image: url(image_path('feet.jpg')); padding: 0;
-				.overlay{ @include sec-default(); height:100%; background-color: rgba($black, .3); padding: 15px 30px; color: $white;}
-				h3 {@include tshadow($black);}
-			}
-			&.one { float: none; margin-left: 5%; }
-			&.two {float: right;}
-
-			&.full {@include sec-default(); height: auto;}
+			&.right {float: right;}
 		}
 	}
+
+
+
 
 	.cta-banner {@include sec-default(); background-color: $blue; padding:45px 0 60px;
 		.intro {text-align: center; margin-bottom: 30px; display: inline-block; width:50%; float: left;}
@@ -203,7 +233,7 @@ img.icon { width:10%; @include center-block();}
 	h1 { @include tshadow($gray); }
 
 	.layout-main {
-		.inner {@include sec-default(); padding:20px 0; margin: 30px 0;
+		.inner {@include sec-default(); padding:20px 0;
 			@include sec-bgimage(); background-position: right center; background-size: 35%; background-image: url(image_path('patients-single.jpg'));}
 		p{color: $font;font-size: 16px; padding:0 5px;}
 		h3, h2 { color: $comp2; font-weight: bold}
@@ -211,14 +241,14 @@ img.icon { width:10%; @include center-block();}
 		hr {width: 90%; float: left; margin: 10px 0; }
 		.title-line {background-color: $blue;}
 
-		.left {width: 64%; padding: 0 20px 0 10px;}
-		.right {width:45%; float: right; padding: 0 15px;}
+		.left {padding: 0 20px 0 10px;}
+		.right {float: right; padding: 0 15px;}
 
 		.block1, .block2, .block3 {width: 50%; float: left; padding:0 10px;}
 		.block2 {float: right;}
 		.block3 {@include sec-default();padding-top: 10px; }
 
-		&.mid{background-color: $blue; padding: 30px 50px 40px;
+		&.mid{background-color: $blue; padding: 20px;
 			.inside {@include sec-default();}
 			h2 {color: $white; font-weight: bold; font-family: $lora; @include tshadowl(rgba($gray, .6)); margin-bottom: 20px;}
 			h4 {font-family: $karla; font-size: 20px; color: $offwhite; font-weight: bold;}
@@ -226,7 +256,7 @@ img.icon { width:10%; @include center-block();}
 			p { color:$black}
 
 			.left {width: 75%;}
-			.right {width: 22%; position: absolute;background-color: $white; padding: 10px 15px 15px;  text-align: center; border: 1px solid #dfdfdf;
+			.right {position: absolute;background-color: $white; padding: 10px 15px 15px;  text-align: center; border: 1px solid #dfdfdf;
 				h4 {text-transform: none; font-weight: normal; color: $blue; text-align: center; margin-bottom: 15px; font-size: 18px;}
 			}
 
@@ -246,11 +276,24 @@ img.icon { width:10%; @include center-block();}
 			&.second .cbp-caption-activeWrap {height:120px;}
 			.cbp-l-caption-body{padding-left: 10px;}
 	 	}
+	}
 
-	 		// h3{margin-top: 0; margin-bottom: 15px; color: $black; font-weight: bold;}
-	 		// h4 { text-transform: uppercase; color: $blue; font-size: 16px; font-weight: bold; margin-top: 0;position: relative; z-index: 0;
-	 		// 	&::after{content: ""; position: absolute; left:0px; bottom:-5px; width:35px; height: 2px; background-color: $blue;}
-	 		// }
+	@include bp(dt) {
+		.layout-main {
+			.inner {margin: 30px 0;}
+			.left {width: 64%; }
+			.right {width:45%; }
+
+			.block1, .block2, .block3 {width: 50%; float: left; padding:0 10px;}
+			.block2 {float: right;}
+			.block3 {@include sec-default();padding-top: 10px; }
+
+			&.mid{padding: 30px 50px 40px;
+				.inside {@include sec-default();}
+				.left {width: 75%;}
+				.right {width: 22%;}
+			}
+		}
 	}
 }
 
@@ -448,7 +491,7 @@ img.icon { width:10%; @include center-block();}
 }
 
 .menu {
-	.pages-header{background-image:url(image_path('jump.jpg'));background-position: bottom center; height:150px;&::before {background-color:rgba($black, .1);}}
+	.pages-header{background-image:url(image_path('vitamin.jpg'));background-position: center center; height:150px;&::before {background-color:rgba($black, .2);}}
 	h1 { @include tshadow($gray); }
 	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite; }
 
@@ -613,5 +656,17 @@ img.icon { width:10%; @include center-block();}
 		-o-transform: rotate3d(0,1,0,-180deg);
 		-ms-transform: rotate3d(0,1,0,-180deg);
 		transform: rotate3d(0,1,0,-180deg);
+	}
+}
+.h-menu{ @include sec-default();
+	// text-align: center;
+	.ch-grid {
+	 // @include sec-default();
+		li {
+			width: 280px;
+			height: 280px;
+		}
+
+		.ch-info-wrap, .ch-info {width: 270px; height: 270px;}
 	}
 }

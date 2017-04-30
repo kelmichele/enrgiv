@@ -1,0 +1,405 @@
+1-60 IS THE OG FAQS SEC
+<!-- 	<div class="faqs-sec">
+				<div class="inner">
+					<div class="faq-box title">
+						<div class="overlay">
+							<h3>IV Vitamin Therapy</h3>
+						</div>
+					</div>
+
+					<div class="faq-box one">
+						<h3>What is it?</h3>
+						<p>The process of administering <b>vitamins, minerals, and other nutrients directly into the bloodstream</b>, through an IV drip. It delivers nutrients to cells that need them, and <b>restores balance</b> in the body.</p>
+						<p>It is a <b>safe, powerful</b> method that treats, and even resolves, numerous health problems. We provide <b>relief, healing, and recovery through hydration</b>.</p>
+					</div>
+
+					<div class="faq-box two">
+						<h3>Who Can Use It?</h3>
+						<p>IV Therapy is used to <b>treat ailments ranging anywhere from sunburn to chronic illness</b>. However, it is not offered exclusively to those who suffer from a medical condition.</p>
+						<p> IV Therapy is a natural way to make you <b>feel better, look better, and recover faster</b>.</p>
+
+						<%= link_to "Learn More", iv_therapy_path, class: 'faq-link' %>
+					</div>
+			  </div>
+				<div class="col-md-8 col-md-offset-2"><h4 class="fancy">We have drips, shots, boosters, wellness packages, and more!</h4></div>
+			</div> -->
+
+
+
+<!---
+
+
+			.faqs-sec {@include sec-default();background-color: $offwhite; padding: 30px 0 40px;
+		.top {@include center-block(); width:80%; text-align: center;
+		}
+		p.sub {font-size:20px; margin-top:25px; b{color: $blue; font-weight: bold;}
+			span{color: $black; font-weight: bold;}
+		}
+
+		.mid-img{@include center-block();}
+		.inner { background-color: transparent; @include center-block(); width:75%; }
+
+		.faq-box {display: inline-block;float: left; background-color: $white; padding: 10px 30px; margin-bottom: 15px;
+			width: 31%; height:430px;
+			p{padding-left:10px; color: $font;}
+			h3 {font-weight: bold; font-family: $lora; padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; margin-bottom: 20px;}
+			.faq-link {width: 80%; @include center-block(); background-color: $comp; color: $white; font-weight: bold; font-size: 16px; text-align: center; font-family: $karla; margin-top: 20px; padding: 10px;}
+			b{color: $blue}
+			&.title{@include sec-bgimage();  padding: 0; background-color: transparent;
+				background-image: url(image_path('feet.jpg'));
+				.overlay{ @include sec-default(); height:100%; background-color: rgba($black, .3); padding: 15px 30px; color: $white;}
+				h3 {@include tshadow($black);}
+			}
+			&.one { float: none; margin-left: 4%; }
+			&.two {float: right;}
+
+			&.full {@include sec-default(); height: auto;}
+		}
+	}
+	-->
+
+
+
+
+
+
+<% @page_title = "ENRG IV Bar Orange Beach " %>
+<% @page_description = "New Subject" %>
+
+<div class="pages-wrap less">
+	<section class="home-hero hero-img">
+	  <div class="title-block">
+		  <div class="tb1">
+		  	<h1>enrG</h1>
+				<!-- <h3>IV Lounge. Oxygen Bar. Functional Medicine.</h3> -->
+			</div>
+
+			<div class="tb2">
+				<h1><span>IV</span></h1>
+			</div>
+	  </div>
+	</section>
+
+	<div class="banner1">
+		<div class="top">
+			<div class="banner-mid">
+				<div class="box">
+					<h3>Get The Full</h3>
+					<%= image_tag('logo-text.png', alt: 'Enrg-IV logo text - name only', class: 'img-responsive') %>
+					<h3>Experience</h3>
+				</div>
+			</div>
+		</div>
+
+		<div class="top2">
+			<p class="sub"><b>enrG IV</b> is a Hydration Spa and Functional Medicine Clinic. <br> We are located in Orange Beach, Alabama, and specialize in <span>IV Vitamin Therapies</span>.</p>
+			<hr>
+
+			<div class="col-md-3 col-md-offset-1">
+				<h3>Walk-Ins or<br> Appointments</h3>
+				<!-- <%= image_tag('water5.png', class: 'img-responsive mid-img') %>  -->
+			</div>
+
+			<div class="col-md-7 sec-info">
+				<p>Clients pass the time in our luxurious recliners, in front of flat-screen TVs, in the comfort of a private room, socializing in our lounge, or at our oxygen bar - all while enjoying amenities like signature enrG cocktails (made with B-12, as well as amino acids, and enzymes) and surfing the internet.</p>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+
+		<div class="faq-sidelay">
+			<div class="faq-box title">
+				<h3>IV Vitamin Therapy</h3>
+			</div>
+
+			<div class="faq-box one">
+				<!-- <h3>What is it?</h3> -->
+				<p>The process of administering <b>vitamins, minerals, and other nutrients directly into the bloodstream</b>, through an IV drip. It delivers nutrients to cells that need them, and <b>restores balance</b> in the body.</p>
+				<p>It is a <b>safe, powerful</b> method that treats, and even resolves, numerous health problems. We provide <b>relief, healing, and recovery through hydration</b>.</p>
+			</div>
+
+			<div class="faq-box two">
+				<h3>Who Can Use It?</h3>
+				<p>IV Therapy is used to <b>treat ailments ranging anywhere from sunburn to chronic illness</b>. However, it is not offered exclusively to those who suffer from a medical condition.</p>
+				<p> IV Therapy is a natural way to make you <b>feel better, look better, and recover faster</b>.</p>
+
+				<%= link_to "Learn More", iv_therapy_path, class: 'faq-link' %>
+			</div>
+	  </div>
+	</div>
+
+
+		<!-- 	<div class="faqs-sec">
+				<div class="inner">
+					<div class="faq-box title">
+						<div class="overlay">
+							<h3>IV Vitamin Therapy</h3>
+						</div>
+					</div>
+
+					<div class="faq-box one">
+						<h3>What is it?</h3>
+						<p>The process of administering <b>vitamins, minerals, and other nutrients directly into the bloodstream</b>, through an IV drip. It delivers nutrients to cells that need them, and <b>restores balance</b> in the body.</p>
+						<p>It is a <b>safe, powerful</b> method that treats, and even resolves, numerous health problems. We provide <b>relief, healing, and recovery through hydration</b>.</p>
+					</div>
+
+					<div class="faq-box two">
+						<h3>Who Can Use It?</h3>
+						<p>IV Therapy is used to <b>treat ailments ranging anywhere from sunburn to chronic illness</b>. However, it is not offered exclusively to those who suffer from a medical condition.</p>
+						<p> IV Therapy is a natural way to make you <b>feel better, look better, and recover faster</b>.</p>
+
+						<%= link_to "Learn More", iv_therapy_path, class: 'faq-link' %>
+					</div>
+			  </div>
+				<div class="col-md-8 col-md-offset-2"><h4 class="fancy">We have drips, shots, boosters, wellness packages, and more!</h4></div>
+			</div> -->
+			<div class="cta-banner">
+				<div class="container">
+					<div class="intro">
+						<h4>Don't hesitate to hydrate</h4>
+						<h3>Book Now!</h3>
+						<p>The enrG IV staff includes medical expert​s​ who have been specially trained in IV Vitamin Therapies. They are happy to answer any questions, or provide you with additional information you may need.
+						Let our doctors and nurses furnish your ultimate drip experience.</p>
+						<div class="cta one"> <span>Call Today:</span><br> <%= number_to_phone(2512400842, delimiter: '.') %></div>
+						<a data-uk-modal="{center:true}" class="modal3 cta" href="#appt"><span>Click Now</span> <br>to Book Online</a>
+					</div>
+
+					<!-- <div class="content">
+						<h3>Walk-Ins Welcome!</h3>
+						<hr>
+						<h4>Hours of Operation:</h4>
+						<p>Monday - Friday: <span>10am-6pm</span></p>
+						<p>Saturday - Sunday: <span>10am - 3pm</span></p>
+						<p>Closed Tuesdays</p>
+						<hr>
+						<p><b>After Hours Appointments Available</b></p>
+					</div> -->
+				</div>
+			</div>
+
+			<!-- <div class="banner3">
+				<div class="top">
+					<div class="banner-mid">
+						<div class="box">
+							<h3>Get The Full</h3>
+							<%= image_tag('logo-text.png', alt: 'Enrg-IV logo text - name only', class: 'img-responsive') %>
+							<h3>Experience</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="container">
+					<div class="banner-left">
+						<div class="iv-box">
+							<p>enrG IV clients undergo brief medical screenings before settling in for drips. Drip sessions typically last 20 - 60 minutes.</p>
+						</div>
+
+						<div class="iv-box">
+							<p>Our intravenous vitamin and electrolyte cocktails contain only the purest nutrients, such as B-12, amino acids, and enzymes.</p>
+						</div>
+
+						<div class="iv-box">
+							<p> You can enjoy them while relax or socialize in our lounge, in the comfort of a private room, or at the enrG IV Oxygen Bar.</p>
+						</div>
+
+						<div class="iv-box link">
+							<%= link_to("More About Our Clinic", enrg_plus_path) %>
+						</div>
+					</div>
+
+					<div class="banner-right">
+						<h4>Why Do You Drip?</h4>
+						<div class="clearfix"></div>
+							<div class="drip hangover"><p>Hangover Relief</p></div>
+							<div class="drip age"><p>Beauty &amp; Anti-aging</p></div>
+							<div class="drip health"><p>Health &amp; Wellness</p></div>
+							<div class="drip libido"><p>Libido Support</p></div>
+							<div class="drip lag"><p>Fatigue &amp; Jet Lag</p></div>
+							<div class="drip ath"><p>Athletic Performance</p></div>
+							<div class="drip immune"><p>Immune Support</p></div>
+							<div class="drip detox"><p>General Detox</p></div>
+							<div class="drip full">
+								<%= link_to("/menu") do %>
+								<p>View Our Full IV Menu</p>
+								<% end %>
+							</div>
+					</div>
+				</div>
+			</div> -->
+
+
+			<div class="h-menu">
+				<ul class="ch-grid">
+					<li>
+						<div class="ch-item hangover">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Over Indulgence</h4>
+										<h3>Never Again</h3>
+										<hr>
+										<p><span>	<i class="fa fa-tint"></i>1L normal saline, b-complex, Zofran</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>Don't let a night of fun keep you in bed for days after. Visit us for some IV hangover therapy. enrG IV can help you rehydrate, and eliminate the hangover symptoms that end your day before it starts.</p>
+									<!-- <p><%= truncate("Don't let a night of fun keep you in bed for days after. Visit us for some IV hangover therapy. enrG IV can help you rehydrate, and eliminate the hangover symptoms that end your day before it starts.", length: 100) { link_to "View Full Menu", "/menu" } %></p> -->
+									<!-- <a href="#">Continue</a> -->
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item beauty">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Beauty &amp; Anti-aging</h4>
+										<h3>Princess Again</h3>
+										<hr>
+										<p><span><i class="fa fa-tint"></i>1L normal saline, b-complex, magnesium, vitamin c</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>Hydration is the key to youthful skin. Our anti-aging drip can improve dry skin, blemishes, and signs of aging, and help restore that healthy glow you want. Maybe our laugh lines and frown lines help tell our story, but we'd rather remain mysterious!</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item wellness">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Health &amp; Wellness</h4>
+										<h3>I Feeeeeel Good</h3>
+										<hr>
+										<p><span>	<i class="fa fa-tint"></i>1L normal saline, vitamin c, b-complex, magnesium, amino acids</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>
+										<!-- It takes time and planning to maintain a healthy lifestyle. Since it isn't easy, -->
+										Because maintaining a healthy lifestyle isn't easy,
+										 we want all of our attempts to be effective. Even the best multi-vitamins and supplements only average about 20% absorption when taken orally. IV therapy is a great way to keep up your health and stay hydrated, with maximum vitamin absorption.</p>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item flu">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Cold &amp; Flu</h4>
+										<h3>Get Over It</h3>
+										<hr>
+										<p><span>	<i class="fa fa-tint"></i>1L normal saline, vitamin c, zinc, magnesium</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>No one wants to feel cold and stuffy at the beach! enrG IV has a drip that will help you drop that sickness. Come see us, and we'll get your toes back in the sand in no time! </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item fatigue">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Fatigue &amp; Jet Lag</h4>
+										<h3>Myers Cocktail</h3>
+										<hr>
+										<p><span>	<i class="fa fa-tint"></i>1L normal saline, b-complex, vitamin c, magnesium</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>Traveling adds stress to the body, often altering routines in an unhealthy way. You can't enjoy our beautiful beaches if your body feels dehydrated and fatigued. enrG IV has the drip that will refill your tank! </p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item sports">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Athletic Performance</h4>
+										<h3>Elephant Stomper/<br>Tiger Killer</h3>
+										<hr>
+										<p><span>	<i class="fa fa-tint"></i>1L normal saline, b-complex, magnesium, amino acids</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>enrG IV can help you enhance your performance, and speed up your recovery. Adequate hydration and nutrients make it possible to keep pushing yourself and improving.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item immune">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Immune Support</h4>
+										<h3>Vim &amp; Vigor</h3>
+										<hr>
+										<p><span><i class="fa fa-tint"></i>
+											Vitamin C, b-complex, and other powerful minerals and antioxidants
+											<!-- Vitamin C, b-complex, and other powerful antioxidants, and minerals crucial to hundreds of metabolic reations throughout the body (zinc, selenium, and magnesium) -->
+										</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>If you suffer from chronic illness, and need extra support, or if you just want a quick way to boost your energy and/or immune system, you found it!</p>
+										<p>We use minerals crucial to hundreds of metabolic reations throughout the body (zinc, selenium, and magnesium)</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item women">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Libido Support for Women</h4>
+										<h3>I’ll Have What She’s Having</h3>
+										<hr>
+										<p><span><i class="fa fa-tint"></i>B-complex, Amino Acids + ask about our secret ingredient</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>You get it.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="ch-item men">
+							<div class="ch-info-wrap">
+								<div class="ch-info">
+									<div class="ch-info-front ch-img">
+										<h4>Libido Support for Men</h4>
+										<h3>The All-Nighter</h3>
+										<hr>
+										<p><span><i class="fa fa-tint"></i>B-complex, Amino Acids + ask about our secret ingredient</span></p>
+									</div>
+									<div class="ch-info-back">
+										<p>You get it.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+</div>
