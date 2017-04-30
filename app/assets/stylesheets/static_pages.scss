@@ -59,6 +59,179 @@ img.icon { width:10%; @include center-block();}
 	h2, h3 {color: $white; }
 }
 
+.ch-grid {
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	font: left;
+	width: 80%;
+	&::before, &::after { content: ''; display: table; }
+	&::after { clear: both;}
+
+	li {
+		width: 330px;
+		height: 330px;
+		display: inline-block;
+		margin: 15px 10px 15px 5px;
+	}
+
+	.ch-item {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		position: relative;
+		box-shadow: 0 1px 2px rgba($black,0.1);
+		cursor: default;
+		background-color: $lt-blue;
+		text-align: center;
+	}
+
+	.ch-info-wrap{
+		position: absolute;
+		width: 320px;
+		height: 320px;
+		border-radius: 50%;
+
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
+		-ms-perspective: 800px;
+		perspective: 800px;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+		top: 5px;
+		left: 5px;
+		background-color: $gray;
+		box-shadow: 0 0 0 20px rgba($white,0.2), inset 0 0 3px rgba(115,114, 23, 0.8);
+	}
+
+	.ch-info{
+		position: absolute;
+		width: 320px;
+		height: 320px;
+		border-radius: 50%;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+
+
+		div {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-position: center center;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-o-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+
+		.ch-info-back {
+			-webkit-transform: rotate3d(0,1,0,180deg);
+			-moz-transform: rotate3d(0,1,0,180deg);
+			-o-transform: rotate3d(0,1,0,180deg);
+			-ms-transform: rotate3d(0,1,0,180deg);
+			transform: rotate3d(0,1,0,180deg);
+			background: $blue;
+			padding-top: 80px;
+			@include sec-bgimage(); background-image: url(image_path('menu-circles.png')); background-position: top center; background-size: 25%;
+		}
+
+		h3, h4 { color: $white; }
+		h3 {font-size: 20px;}
+
+		.ch-info-front {
+			color: $white;
+			padding-top:70px;
+
+			h4 {margin-bottom: 5px; font-size: 16px; color: $blue; font-weight: bold}
+			h3 {font-weight: bold; margin-top: 0; text-transform: uppercase; margin-bottom: 30px;}
+			hr{width:50%; @include center-block(); border-top: 1px solid rgba($offwhite, .6);}
+			i {font-size: 15px; margin-right: 5px;}
+		}
+
+		p {
+			color: $white;
+			padding: 5px 10px;
+			margin: 0 20px;
+			font-size: 16px;
+		}
+	}
+
+	.hangover .ch-info-front { background-color:$comp;}
+	.wellness {
+		.ch-info-front { background-color: #FFDB19;}
+		.ch-info-back {padding-top:60px;}
+	}
+	.flu .ch-info-front { background-color: #66ff33;}
+	.beauty .ch-info-front { background-color: #9900ff;}
+	.fatigue .ch-info-front { background-color: #ff6633;}
+	.sports .ch-info-front { background-color: #191970; }
+	.immune {
+		.ch-info-front { background-color: #008080;}
+		.ch-info-back { padding-top: 65px;}
+	}
+	.women .ch-info-front { background-color: #cc0066;}
+	.men .ch-info-front { background-color: #cc0000;}
+	.detox .ch-info-front{ background-color: $comp2;}
+
+	.ch-item:hover .ch-info-wrap { box-shadow:0 0 0 0 rgba($white,0.8), inset 0 0 3px rgba(115,114, 23, 0.8);}
+	.ch-item:hover .ch-info {
+		-webkit-transform: rotate3d(0,1,0,-180deg);
+		-moz-transform: rotate3d(0,1,0,-180deg);
+		-o-transform: rotate3d(0,1,0,-180deg);
+		-ms-transform: rotate3d(0,1,0,-180deg);
+		transform: rotate3d(0,1,0,-180deg);
+	}
+
+	&.h-menu{
+		// width:65%; float: left;
+		@include center-block(); width: 90%;
+		li {
+			width: 260px;
+			height: 260px;
+
+			&.link {
+				 width: 220px; height: 220px;
+				.ch-info-wrap { background-color: #191970; padding-top: 40px;
+					width: 210px; height: 210px;
+					&.alt{background-color: #44dba7; }
+					&.alt2{background-color: #9900cc; }
+
+				}
+				h4 { color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 22px; @include ease();
+					span {font-size: 18px;}
+				}
+				.icon {width: 20%;}
+				&:hover h4 {color: $comp;}
+			}
+		}
+
+		.ch-info-wrap, .ch-info {width: 250px; height: 250px;}
+		.ch-info {
+			.ch-info-back,.ch-info-front { padding-top: 40px;
+				h3 {margin-bottom: 15px;}
+				p{margin:0 15px;}
+				hr {margin: 10px auto;}
+			}
+			.ch-info-back {padding-top: 60px;}
+		}
+	}
+}
+
 .drip {display: inline-block; float: none; margin:10px 0 10px 10px; width: 30%; height: 110px; text-align: center; @include sec-bgimage(); position: relative;z-index: 0;
 	&::before{@include before(); background-color: rgba($black, .45);}
 	p{font-size: 20px; font-weight: bold; color: $white; @include tshadow($gray); margin-top: 16%;}
@@ -76,6 +249,11 @@ img.icon { width:10%; @include center-block();}
 
 .home { background-color: $white;
 	header {height: auto;}
+	h4.fancy {text-align: center; margin:40px 0 10px; position: relative; font-weight: bold; color: darken($blue, 5%); font-size: 20px;
+		&::before, &::after {content: ""; width: 10%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
+		&::before{left:0;}
+		&::after{right:0;}
+	}
 
 	.home-hero{@include sec-default(); padding: 100px;
 		&.hero-img {@include sec-bgimage(); background-image: url(image_path('jump-pool.jpg'));}
@@ -94,98 +272,101 @@ img.icon { width:10%; @include center-block();}
 
 	.banner1 { @include sec-default();
 		background-color: $white; @include shadow();
-		padding:40px 0;
+		padding:40px 0 60px;
 		text-align: center;
-		// position: relative; z-index: 0;
-		// &::after {@include after(); background-color: $gray; width: 30%;}
-		.inner {width: 90%; @include center-block();}
-		.banner-mid {width:35%; @include center-block(); position: relative; z-index: 5;
-			.img-responsive {width:55%; @include center-block();}
-			.box{@include sec-default(); margin-bottom: 10px; background-color: $white; text-align: center;border-radius: 50%; padding-top: 35px;margin-top: -100px; height:170px;}
-			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; letter-spacing: 5px;}
-		}
-
+		.inner {width: 92%; @include center-block();}
 		.left-block { width: 50%; @include center-block();}
-		.icon {width:10%;display: inline-block;float: left;margin: 5px 10px 0;}
+		.icon {width:10%;margin: 5px 5px 0;
+			display: inline-block;float: left;
+		}
 		.img-less {width: 80px; @include center-block();}
 		.abs {height: 360px; position: absolute; right: 25%; top:10px;}
 		.img-round {width:100px; height: 100px; margin-bottom: 15px;
 			border-radius: 50%;
-			// display: inline-block;float: left;margin: 5px 10px 0;
 			@include center-block();
 		}
 
-		p.sub {font-size:30px;font-weight: 800; font-family: $open; margin-bottom: 30px;
+		p.sub {font-size:30px;font-weight: 800; font-family: $open; margin-bottom: 40px;
 			b{color: $blue; }
 		}
-		h4 {font-weight: bold; margin-bottom: 10px;}
-		.content {width: 50%; @include center-block(); margin-top: 25px;
-			p {color: $font}
-			h4 {font-weight: bold;}
-		}
+		h4 {font-weight: bold; margin-bottom: 10px; line-height: 1.3em;}
 		h3 {font-weight: 800; font-family: $open; color: $comp; font-size: 28px;}
+
+		.b1-box {display: inline-block; width: 30%; float: left; text-align: center;
+			position: relative; padding-left: 45px; z-index: 0;
+			margin-left: 3%;
+			&::before {@include before(); width: 45px;
+				@include sec-bgimage(); background-image: url(image_path('bag-iconflow-bl.png')); }
+			p {font-size: 16px;}
+			&.two {
+				// float: none; margin: 0 3% 0 0;
+				&::before{background-image: url(image_path('bag-iconflow-comp.png')); }
+			}
+			&.three {
+				// float: right;
+				&::before{background-image: url(image_path('bag-iconflow-alt.png')); }
+			}
+		}
 	}
 
+	.faq-sec {@include sec-default();background-color: $offwhite; padding: 10px 0 60px;
+		@include sec-bgimage(); background-image: url(image_path('juice.jpg')); background-size: 38%;
+		&.white {background-color: $white; @include shadow();}
 
-	.faq-sec {@include sec-default();background-color: $offwhite; padding: 10px 0 20px;
-		@include sec-bgimage(); background-image: url(image_path('feet.jpg')); background-size: 38%;
 		h3 {font-weight: bold; font-family: $lora; padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; margin-bottom: 10px;}
 
 		.title-box {display: inline-block; float: left; width: 30%; padding-top: 50px; padding-left: 100px;
 			.inside-round {width: 300px; height: 300px; background-color: $white; border-radius: 50%; text-align: center; padding: 100px 20px 0;}
 			h3 {@include tshadow(rgba($gray, .5));}
+
+			.ch-grid {@include sec-default();
+				li, .ch-info-wrap, .ch-info {width: 300px; height: 300px; }
+				.ch-item, .ch-info-wrap {box-shadow: none;}
+				.ch-info-wrap{
+					background-color: $white;
+					top:0;
+					left:0;
+				}
+				.ch-info {
+					.ch-info-front{padding: 40% 20px 0;
+						h3 {color: #333; text-transform: none; font-size: 24px;@include tshadow(rgba($gray, .5));}
+					}
+					.ch-info-back{background-color: $comp; background-size: 25%; padding-top:45%;
+						.faq-link { background-color: $white; padding: 15px; font-weight: bold; font-size: 18px; text-transform: uppercase;}
+					}
+				}
+			}
 		}
 
 		.faq-box {
-			// @include sec-default(); height: auto;
 			display: inline-block; width: 49%; float: left; padding:10px 15px;
 			h3 {font-size: 20px;}
 			p{padding-left:10px; color: $font;}
 			.faq-link {width: 80%; @include center-block(); background-color: $comp; color: $white; font-weight: bold; font-size: 16px; text-align: center; font-family: $karla; margin-top: 20px; padding: 10px;}
-			b{color: $blue}
+			b{color: $comp}
 			&.right {float: right;}
+		}
+		.drip {margin:10px 0 10px 5px; width: 24%; height: 100px; float: left;
+			&::before{@include before(); background-color: rgba($black, .1);}
+			p{font-size: 18px; color: $white; @include tshadow($black); }
 		}
 	}
 
-
-
-
-	.cta-banner {@include sec-default(); background-color: $blue; padding:45px 0 60px;
-		.intro {text-align: center; margin-bottom: 30px; display: inline-block; width:50%; float: left;}
-			p {color: $white;}
-
-		h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); color: $white;}
+	.book-banner {@include sec-default();background-color: $blue; padding:45px 0 80px; text-align: center;
+		p {color: $white;}
+		h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); color: $white; font-family: $open;}
 		h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;}
 		h4 {font-size: 25px; margin-bottom: 0px;}
 
-		.cta {display: inline-block; width:40%; float: left; margin-left:5%; margin-top: 15px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
+		.cta {display: inline-block; width:20%; float: none; margin-left:5%; margin-top: 15px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
 			@include tshadowl(rgba($gray, .4));
 			span {color: $gray; font-size: 18px;}
 		}
-
-		.content {width: 40%; display: inline-block; float: right; text-align: center; padding:20px 30px; background-color: $white;
-			@include sec-bgimage(); background-image: url(image_path('bag-nobg.png')); background-size: 35%;  position: relative; z-index: 0;
-			&::before {@include before(); background-color: rgba($offwhite, .75);}
-
-			h3 {font-size: 30px; color: $comp; margin-bottom: 5px; text-shadow:none;}
-			h4{margin-bottom: 15px; color: $gray; text-shadow:none; font-size: 20px;}
-			p {line-height: 1.6em; font-size: 18px; color: $blue;
-				span {font-weight: bold; }
-				b{color: $comp;}
-			}
-		}
-		.boxes {@include sec-default(); margin-top:30px; padding:30px 30px 0}
-		.iv-box{ width:32%; display: inline-block; margin-bottom:10px;padding:15px 20px; text-align: center; p{font-size: 18px;}}
 	}
 
-	h4.fancy {text-align: center; margin:40px 0 10px; position: relative; font-weight: bold; color: darken($blue, 5%); font-size: 20px;
-			&::before, &::after {content: ""; width: 10%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
-			&::before{left:0;}
-			&::after{right:0;}
-		}
-
 	.banner3 {
-		@include sec-default(); background-color: $offwhite; padding: 60px 30px 30px;
+		@include sec-default(); background-color: $offwhite; padding: 60px 10px 30px;
+		text-align: center;
 		.inner {width:95%;@include center-block();}
 		.top {@include sec-default(); margin-bottom:20px; }
 		.banner-mid {width:35%; @include center-block(); position: relative; z-index: 5;
@@ -194,22 +375,19 @@ img.icon { width:10%; @include center-block();}
 			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; letter-spacing: 5px;}
 		}
 
-		.banner-left, .banner-right {display: inline-block; float: left;}
-		.banner-left {width:35%; background-color: rgba($offwhite, .8); }
-
-		.iv-box{ @include sec-default(); margin-bottom: 20px; background-color: $white; padding:15px 30px; text-align: center;
-			&.link {margin-bottom: 0; background-color: $gray; a{color: $white; font-weight: bold; font-size: 17px;}}
-		}
-		.ivcon {height: 80px; width:auto; @include center-block();}
-		span {font-weight: bold; color:$blue; font-size: 20px; text-transform: uppercase;line-height: 1.5em}
-		.banner-right {width:60%; float: right;
+		.banner-right { float: none; display: inline-block;
+			// width:65%;
+			width: 30%; padding-left: 45px;
 			h4 {font-weight: 800; font-family: $open; text-align: center; font-size: 20px; background-color: $gray; padding: 8px 5px; color: $white;}
 		}
-
-		.drip {margin:10px 0 10px 10px; width: 31%; height: 110px;
+		.drip {margin:10px 0 10px 5px;  height: 100px; float: left;
+			// width: 24%;
+			width:48%;
 			&::before{@include before(); background-color: rgba($black, .1);}
 			p{font-size: 18px; color: $white; @include tshadow($black); }
 		}
+
+		.sec1 {margin-bottom:20px; width: 60%; @include center-block(); text-align: center;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; }
 	}
 
 
@@ -515,158 +693,3 @@ img.icon { width:10%; @include center-block();}
 	}
 }
 
-
-.ch-grid {
-	// margin: 20px 0 0 0;
-	padding: 0;
-	list-style: none;
-	display: inline-block;
-	font: left;
-	width: 80%;
-	// display: block;
-	// text-align: center;
-	// width: 100%;
-	&::before, &::after { content: ''; display: table; }
-	&::after { clear: both;}
-
-	li {
-		width: 330px;
-		height: 330px;
-		display: inline-block;
-		margin: 15px 10px 15px 5px;
-	}
-
-	.ch-item {
-		width: 100%;
-		height: 100%;
-		border-radius: 50%;
-		position: relative;
-		box-shadow: 0 1px 2px rgba($black,0.1);
-		cursor: default;
-		background-color: $lt-blue;
-		text-align: center;
-	}
-
-	.ch-info-wrap{
-		position: absolute;
-		width: 320px;
-		height: 320px;
-		border-radius: 50%;
-
-		-webkit-perspective: 800px;
-		-moz-perspective: 800px;
-		-o-perspective: 800px;
-		-ms-perspective: 800px;
-		perspective: 800px;
-		-webkit-transition: all 0.4s ease-in-out;
-		-moz-transition: all 0.4s ease-in-out;
-		-o-transition: all 0.4s ease-in-out;
-		-ms-transition: all 0.4s ease-in-out;
-		transition: all 0.4s ease-in-out;
-		top: 5px;
-		left: 5px;
-		background-color: $gray;
-		box-shadow: 0 0 0 20px rgba($white,0.2), inset 0 0 3px rgba(115,114, 23, 0.8);
-	}
-
-	.ch-info{
-		position: absolute;
-		width: 320px;
-		height: 320px;
-		border-radius: 50%;
-		-webkit-transition: all 0.4s ease-in-out;
-		-moz-transition: all 0.4s ease-in-out;
-		-o-transition: all 0.4s ease-in-out;
-		-ms-transition: all 0.4s ease-in-out;
-		transition: all 0.4s ease-in-out;
-		-webkit-transform-style: preserve-3d;
-		-moz-transform-style: preserve-3d;
-		-o-transform-style: preserve-3d;
-		-ms-transform-style: preserve-3d;
-		transform-style: preserve-3d;
-
-
-		div {
-			display: block;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			border-radius: 50%;
-			background-position: center center;
-			-webkit-backface-visibility: hidden;
-			-moz-backface-visibility: hidden;
-			-o-backface-visibility: hidden;
-			-ms-backface-visibility: hidden;
-			backface-visibility: hidden;
-		}
-
-		.ch-info-back {
-			-webkit-transform: rotate3d(0,1,0,180deg);
-			-moz-transform: rotate3d(0,1,0,180deg);
-			-o-transform: rotate3d(0,1,0,180deg);
-			-ms-transform: rotate3d(0,1,0,180deg);
-			transform: rotate3d(0,1,0,180deg);
-			background: $blue;
-			padding-top: 80px;
-			@include sec-bgimage(); background-image: url(image_path('menu-circles.png')); background-position: top center; background-size: 25%;
-		}
-
-		h3, h4 { color: $white; }
-		h3 {font-size: 20px;}
-
-		.ch-info-front {
-			color: $white;
-			padding-top:70px;
-
-			h4 {margin-bottom: 5px; font-size: 16px; color: $blue; font-weight: bold}
-			h3 {font-weight: bold; margin-top: 0; text-transform: uppercase; margin-bottom: 30px;}
-			hr{width:50%; @include center-block(); border-top: 1px solid rgba($offwhite, .6);}
-			i {font-size: 15px; margin-right: 5px;}
-		}
-
-		p {
-			color: $white;
-			padding: 5px 10px;
-			margin: 0 30px;
-			font-size: 16px;
-		}
-	}
-
-	.hangover .ch-info-front { background-color:$comp;}
-	.wellness {
-		.ch-info-front { background-color: #FFDB19;}
-		.ch-info-back {padding-top:60px;}
-	}
-	.flu .ch-info-front { background-color: #66ff33;}
-	.beauty .ch-info-front { background-color: #9900ff;}
-	.fatigue .ch-info-front { background-color: #ff6633;}
-	.sports .ch-info-front { background-color: #191970; }
-	.immune {
-		.ch-info-front { background-color: #008080;}
-		.ch-info-back { padding-top: 65px;}
-	}
-	.women .ch-info-front { background-color: #cc0066;}
-	.men .ch-info-front { background-color: #cc0000;}
-	.detox .ch-info-front{ background-color: $comp2;}
-
-	.ch-item:hover .ch-info-wrap { box-shadow:0 0 0 0 rgba($white,0.8), inset 0 0 3px rgba(115,114, 23, 0.8);}
-	.ch-item:hover .ch-info {
-		-webkit-transform: rotate3d(0,1,0,-180deg);
-		-moz-transform: rotate3d(0,1,0,-180deg);
-		-o-transform: rotate3d(0,1,0,-180deg);
-		-ms-transform: rotate3d(0,1,0,-180deg);
-		transform: rotate3d(0,1,0,-180deg);
-	}
-}
-.h-menu{ @include sec-default();
-	// text-align: center;
-	.ch-grid {
-	 // @include sec-default();
-		li {
-			width: 280px;
-			height: 280px;
-		}
-
-		.ch-info-wrap, .ch-info {width: 270px; height: 270px;}
-	}
-}
