@@ -63,8 +63,8 @@ img.icon { width:10%; @include center-block();}
 	padding: 0;
 	list-style: none;
 	display: inline-block;
+	width: 75%;
 	font: left;
-	width: 80%;
 	&::before, &::after { content: ''; display: table; }
 	&::after { clear: both;}
 
@@ -199,39 +199,10 @@ img.icon { width:10%; @include center-block();}
 		transform: rotate3d(0,1,0,-180deg);
 	}
 
-	// &.h-menu{
-	// 	// width:65%; float: left;
-	// 	@include center-block(); width: 90%;
-	// 	li {
-	// 		width: 260px;
-	// 		height: 260px;
+	@include bp(dt) {
+		width: 80%;
 
-	// 		&.link {
-	// 			 width: 220px; height: 220px;
-	// 			.ch-info-wrap { background-color: #191970; padding-top: 40px;
-	// 				width: 210px; height: 210px;
-	// 				&.alt{background-color: #44dba7; }
-	// 				&.alt2{background-color: #9900cc; }
-
-	// 			}
-	// 			h4 { color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 22px; @include ease();
-	// 				span {font-size: 18px;}
-	// 			}
-	// 			.icon {width: 20%;}
-	// 			&:hover h4 {color: $comp;}
-	// 		}
-	// 	}
-
-	// 	.ch-info-wrap, .ch-info {width: 250px; height: 250px;}
-	// 	.ch-info {
-	// 		.ch-info-back,.ch-info-front { padding-top: 40px;
-	// 			h3 {margin-bottom: 15px;}
-	// 			p{margin:0 15px;}
-	// 			hr {margin: 10px auto;}
-	// 		}
-	// 		.ch-info-back {padding-top: 60px;}
-	// 	}
-	// }
+	}
 }
 
 .drip {display: inline-block; float: none; margin:10px 0 10px 10px; width: 30%; height: 110px; text-align: center; @include sec-bgimage(); position: relative;z-index: 0;
@@ -250,25 +221,34 @@ img.icon { width:10%; @include center-block();}
 }
 
 .home { background-color: $white;
-	header {height: auto;}
+	// header {height: auto;}
+	#nav .logo { width: 230px; padding: 10px 0;}
+
+
 	h4.fancy {text-align: center; margin:40px 0 10px; position: relative; font-weight: bold; color: darken($blue, 5%); font-size: 20px;
 		&::before, &::after {content: ""; width: 10%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
 		&::before{left:0;}
 		&::after{right:0;}
 	}
 
-	.home-hero{@include sec-default(); padding: 100px;
-		&.hero-img {@include sec-bgimage(); background-image: url(image_path('jump-pool.jpg'));}
+	.home-hero{@include sec-default(); padding: 100px; background-color: $black;
+		// margin-top:70px;
+		&.hero-img {@include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));}
 
-		.title-block {width: 50%; float: right; margin-top: 15%; text-align: center; }
-		.tb1, .tb2 {display: inline-block; float: left;}
-		.tb2 {margin-top: 20px;}
-		h1, h2, h3 {font-weight: bold;@include tshadowl(rgba($black, .3));}
-		h2 { margin-bottom: 0;}
-		h3 {font-size: 22px; line-height: .9em; margin:0;}
-		h1 {color: $gray; @include tshadow($black); line-height: 1em; margin: 0; font-size: 85px;
-				span {font-size: 120px; letter-spacing: 5px; }
+		.title-block {width: 40%; float: right; margin-top: 15%; text-align: center; padding-bottom: 50px;
+			border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid rgba($gray, .3);
 		}
+
+		h1, h2, h3 {font-weight: bold;@include tshadow(rgba($black, .8)); }
+		h2 { margin: 0; line-height: 1em; color:$white;
+			&.top {position: relative; margin-top: -20px;
+				&::before, &::after {content: ""; width: 15%; height: 1px; background-color: rgba($gray, .3); top:15px; position: absolute;}
+				&::before{left:30px;}
+				&::after{right:30px;}
+			}
+		}
+		h3 { line-height: .9em; margin:0;}
+		h1 {color: $black; @include tshadow($gray); line-height: 1em; margin: 0 0 10px; font-size: 85px;font-family: $open}
 		.img-responsive {width: 340px; margin-left: 20px;}
 	}
 
@@ -317,9 +297,9 @@ img.icon { width:10%; @include center-block();}
 
 			.ch-grid {@include sec-default(); display: none;
 				li, .ch-info-wrap, .ch-info {width: 300px; height: 300px; }
-				.ch-item, .ch-info-wrap {box-shadow: none;}
+				.ch-item, .ch-info-wrap {box-shadow: none; background-color: transparent;}
 				.ch-info-wrap{
-					background-color: $white;
+					background-color: rgba($white, .8);
 					top:0;
 					left:0;
 				}
@@ -327,7 +307,7 @@ img.icon { width:10%; @include center-block();}
 					.ch-info-front{padding: 40% 20px 0;
 						h3 {color: #333; text-transform: none; font-size: 24px;@include tshadow(rgba($gray, .5));}
 					}
-					.ch-info-back{background-color: $comp; background-size: 25%; padding-top:45%;
+					.ch-info-back{background-color: rgba($comp, .6); background-size: 25%; padding-top:45%;
 						.faq-link { background-color: $white; padding: 15px; font-weight: bold; font-size: 18px; text-transform: uppercase;}
 					}
 				}
@@ -463,15 +443,16 @@ img.icon { width:10%; @include center-block();}
 }
 
 .iv-therapy {
-	.pages-header {background-image:url(image_path('jump.jpg'));background-position: bottom center; height:150px;&::before {background-color:rgba($black, .1);}}
+	.pages-header {
+		background-image:url(image_path('jump.jpg'));background-position: bottom center; height:150px;&::before {background-color:rgba($comp, .65);}}
 	h1 { @include tshadow($gray); }
 
 	.layout-main {
 		.inner {@include sec-default(); padding:20px 0;
-			@include sec-bgimage(); background-position: right center; background-size: 35%; background-image: url(image_path('detox.png'));}
+			@include sec-bgimage(); background-position: right center; background-size: 33%; background-image: url(image_path('detox.png')); }
 		p{color: $font;font-size: 16px; padding:0 5px;}
 		h3, h2 { color: $comp2; font-weight: bold}
-		h4 {text-align: left; color: $blue; margin-bottom:5px; span {color: $gray;}}
+		h4 {text-align: left; color: $blue; margin-bottom:5px; font-family: $open; font-weight: bold; span {color: $gray;}}
 		hr {width: 90%; float: left; margin: 10px 0; }
 		.title-line {background-color: $blue;}
 
@@ -497,13 +478,18 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
+	.pre-final{@include sec-default(); background-color: $blue; padding:20px;}
 	.layout-final-sec {background-color: $offwhite; padding: 40px 0 50px;
+		h4.space{margin-bottom: 45px; font-weight: bold; font-family: $open; line-height: 1.3em; color: $blue}
 		h3 { color: $blue; font-weight: bold;}
 		p {font-size: 16px;}
 		.cbp-item {width:90%;}
 		.cbp-caption { margin-bottom: 20px;
 			padding-left: 10%; position: relative; z-index: 0;
-	 			&::before {@include before(); width:10%; @include sec-bgimage(); background-image: url(image_path('bag-iconflow-bl.png')); background-size: 95%;}
+	 			&::before {@include before(); width:10%; @include sec-bgimage(); background-image: url(image_path('bag-iconflow-comp.png')); background-size: 95%;}
+
+	 			// &:nth-child(2n+2)::before {background-image: url(image_path('bag-iconflow-alt.png')); }
+	 			// &:nth-child(3n+3)::before {background-image: url(image_path('bag-iconflow-comp.png')); }
 		 	.cbp-caption-defaultWrap {padding-left: 0; margin-bottom: 0px;
 		 	}
 			.cbp-caption-activeWrap {height:100px;}
@@ -700,51 +686,54 @@ img.icon { width:10%; @include center-block();}
 
 #package.uk-modal,
 #deal.uk-modal  {
-	.content{padding-bottom:50px;}
+	.content{padding-bottom:50px; text-align: center;}
 	h3 {color: $blue; font-weight: bold; }
 	h4 {font-weight: bold; margin-bottom: 0; font-style: italic;}
 	p {margin-left: 5px; color: $font;}
+
+	a.modal-link {font-weight: bold; font-family: $open; color: $comp; font-size: 20px; margin-top: 30px; padding: 10px; border: 1px solid $comp; @include ease();
+		&:hover{color: $blue}
+	}
 }
-.layout-member { @include sec-default(); background-color: $blue; padding: 30px 0;
-		@include sec-bgimage(); background-image: url(image_path('temp-cover2.png')); background-size: 40%; background-position: top right;
+.pre-member {@include sec-default(); @include shadow(); background-color: $white; padding: 25px 20px 50px; text-align: center;
+	@include sec-bgimage(); background-image: url(image_path('balloons.jpg')); background-size: 75%;
+	position: relative;z-index: 0;
+	&::before {@include before(); background-color: rgba($light, .9); width:75%;}
+	.sec1 {display: inline-block;float: left; width: 40%}
+	.icon {width: 80px;}
+	h2 {color: $comp; font-weight: bold; font-family: $open; @include tshadowl ($gray); text-transform: uppercase; margin-top: 0; margin-bottom: 25px;}
+	h4{color: $gray; line-height: 1.4em; font-weight: bold;}
+	h3 {line-height: 1em; font-weight: bold;color: $blue; margin-bottom: 0}
 
-		.membership {width: 60%; display: inline-block; float: left; }
-		p {color: $white; font-weight: bold;}
+	.monthly {display: inline-block; text-align: center;
+		width:140px; height:140px; border-radius: 50%; background-color:$comp; margin-left: 20px;
+		h4{font-weight: bold; color: $white; margin-top: 35%; line-height: 1.3em; span{font-weight: normal; color:$lt-blue}}
 
-		.intro  {text-align: center; margin-bottom: 30px;
-			@include sec-default();
-			h2 {color: $white; font-weight: bold; @include tshadowl ($gray); text-transform: uppercase; font-size: 35px; margin-top: 0; margin-bottom: 0;}
-			h4{color: $white; line-height: 1.4em; font-weight: bold;
-				&.lh0 {line-height: 1em;}}
-		}
+		// &.one {h4{color: $comp; span{color: $gray}}}
+		&.two {background-color: $gray;}
+		&.last {background-color: $blue; h4 span{color:$gray}}
+	}
 
-		.mem-box {width: 55%; display: inline-block; float: left; background-color: $white; padding:5px 15px 10px; text-align: center;
-			.title-line {@include center-block(); width: 45%;}
-			b {color:$blue}
-			p {color: $gray;
-				&.pleft {color: $blue;}
-				span {font-weight: bold; text-transform: uppercase; color: $comp; @include tshadowl($gray); font-size: 18px}
-			}
-			i {font-size: 14px;}
-			h3 {color: $gray; font-weight: bold; text-align: center;text-transform: uppercase;}
+	.mem-box { width: 25%; display: inline-block;float: left; border: 1px solid rgba($gray, .3); padding:20px 0px; margin-top: 50px; margin-left: 3%; background-color: $white;
+		.title-line {@include center-block(); width: 45%; background-color: rgba($gray, .1); margin-bottom: 20px;}
+		p {color: $gray;
+			&.pleft {color: $blue; margin-bottom: 25px;}
+			span {font-weight: bold; text-transform: uppercase; color: $comp; @include tshadowl($gray); font-size: 18px}
+			span.print {color: $font; font-style: italic; font-size: 15px; font-weight: normal; text-shadow: none; }
 		}
-
-		.right{width:40%; display: inline-block; float: none; padding: 20px 0 15px; background-color: $offwhite;
-			p{text-align: center; color: $gray; margin-bottom: 0;
-				span {color: $font; font-style: italic; font-size: 15px; font-weight: normal; }
-			}
-		}
-		.monthly {display: inline-block; width: 100%; padding: 5px 5px 0; text-align: center;
-			&.last {margin-bottom: 10px;}
-			h4{font-weight: bold; color: $blue; margin-bottom: 5px; span{font-weight: normal; color:$gray}}
-		}
+		i {font-size: 14px;}
+		h3 {color: $gray; font-weight: bold; text-align: center; font-size: 19px; padding: 0 10px;}
+	}
 }
+// .layout-member { @include sec-default(); background-color: $blue; padding: 20px ;
+// }
 
-.specials-row{@include sec-default();padding: 20px 0; text-align: center;
-	.link-specials {display: inline-block; width: 43%; font-size: 18px; font-weight: bold;
+.specials-row{text-align: center; display: inline-block; float: right; width: 21%; margin-top: 55px;
+	.link-specials {
+		// width:50%; display: inline-block;float: left;
+		 @include sec-default(); margin: 20px 0;
+		font-size: 17px; font-weight: bold;
 		background-color: $comp; padding: 5px; @include tshadowl($gray);
-		&.one {float: left;}
-		&.two {float: none; margin-left: 20px;}
 		.in {border: 1px solid $white; @include sec-default(); padding: 10px;}
 		.spec{color: $white;}
 		span {font-size: 15px; color: $white;}
@@ -757,11 +746,8 @@ img.icon { width:10%; @include center-block();}
 	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite; }
 
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
-	// .cbp-caption-activeWrap {padding: 20px; background-color: $white; border-top: 1px solid #dfdfdf;
-	// 	p span {text-align: center;}
-	// }
 
-	.sidebar {width:20%; display: inline-block; float: right; margin: 40px 0 0;
+	.sidebar {width:25%; display: inline-block; float: right; margin: 80px 0 0;
 		background-color: $white; border: 1px solid rgba($blue, .4);
 		.pricing, .add-ons {@include sec-default(); }
 		.pricing {text-align: center; background-color: $blue; padding: 15px 0; }
@@ -794,6 +780,10 @@ img.icon { width:10%; @include center-block();}
 			p {font-size: 15px; color: $gray;}
 
 		}
+	}
+
+	@include bp(dt) {
+		.sidebar {width:20%; margin: 40px 0 0;}
 	}
 }
 

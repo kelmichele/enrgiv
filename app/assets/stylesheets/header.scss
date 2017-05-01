@@ -3,23 +3,19 @@
 
 
 
-header {@include sec-default(); height:120px; background-color: $white;}
+header {@include sec-default(); height:100px; background-color: $white;}
 
 .book-bar {@include sec-default(); background-color: $blue; padding:7px 5px 5px; @include ease();
-    // ul.social {display: inline-block;float: left; margin-bottom: 0; margin-left: 30px;
-    //     li {display: inline-block;font-size: 17px;}
-    // }
     ul.social {margin-bottom: 0; display: inline-block;
         li {display: inline-block;font-size: 17px; padding-left: 10px; i {color: $white;  @include tshadowl($gray);}}
     }
-    .contact-info {width:50%; float: right; display: inline-block;}
+    .contact-info {width:65%; float: right; }
     h4, h4 a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
         &.wiw {color: $comp; @include tshadowl(rgba($gray, .1));}
     }
 }
 #nav {
     background-color: $white;
-    // position: absolute;
     position: relative;
     top: 0px;
     right: 0;
@@ -28,7 +24,7 @@ header {@include sec-default(); height:120px; background-color: $white;}
     padding-bottom: 10px;
 
     .logo-block {display: inline-block;float: left; width: 35%;}
-    .logo {@include ease2(); width: 230px;padding: 10px 0;}
+    .logo {@include ease2(); width: 250px;padding: 10px 0;}
 
     nav { display: inline-block; float: right;
         ul.megamenu-parent {margin-top:55px}
@@ -70,12 +66,11 @@ header {@include sec-default(); height:120px; background-color: $white;}
     }
 }
 
-
-
 #offcanvas-toggler {
     width: 40px;
     float:right;
-    background-color:$blue;
+    margin-top: 25px;
+    background-color:$white;
     padding: 10px 0 5px;
     text-align: center;
     border-radius: 4px;
@@ -93,16 +88,15 @@ header {@include sec-default(); height:120px; background-color: $white;}
         width: 25px;
         height: 3px;
         border-radius: 4px;
-        background-color: $black;
+        background-color: $blue;
+        border: 1px solid rgba($black, .4);
     }
-
 }
-.offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white; background:$black}
+.offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white;}
 .offcanvas-menu .offcanvas-inner .module .menu .nav-child a{padding:4px 25px}
 .offcanvas-menu .menu ul li{position:relative}
 
 .close-offcanvas{position:absolute; top:15px; right:15px; z-index:1; color:$white; border:2px solid #eee; border-radius:100%; width:22px; height:22px; line-height:18px; text-align:center; font-size:12px}
-// .close-offcanvas:hover{background:$black; color:$white}
 
 .offcanvas-menu{width:240px; height:100%; background:darken($blue, 10%); color:$white; position:fixed; top:0; opacity:0; z-index:9999; overflow-y:scroll;
     .offcanvas-inner{padding:20px;}
@@ -110,7 +104,7 @@ header {@include sec-default(); height:120px; background-color: $white;}
         ul{margin:0 0 0 -20px;
             li { margin-bottom:15px; padding-bottom:5px; padding-left: 15px; border-bottom:1px solid rgba($white, .4);
                 a { -webkit-transition:300ms; -o-transition:300ms; transition:300ms; padding:7px 0; padding-left:0px; color: $white; font-size: 16px; line-height: 1.5em;}
-                a:hover{background:transparent;}
+                // a:hover{background:transparent;}
                 &:first-child{margin-top:0}
                 &.has-child{ font-size: 14px; color: #333; margin-left: 15px;}
                 .dropdown li:last-child{border-bottom:none;}
@@ -132,7 +126,17 @@ h3.module-title{color: $white;}
 .menu .nav-child.small{font-size:inherit}
 
 
-@include bp(md) {
+
+@include bp(dt) {
+    header {height:120px; }
+    .book-bar {
+        .contact-info {width:50%; }
+    }
+
+}
+
+
+@include bp(tb) {
     #offcanvas-toggler { display:inline-block; }
-    nav {display: none;}
+    #nav nav {display: none;}
 }

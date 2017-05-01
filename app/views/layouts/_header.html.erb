@@ -1,11 +1,7 @@
 <header>
 	<div id="nav" class="stick">
-		<div class="book-bar">
-			<!-- <ul class="social">
-				<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
-				<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
-			</ul> -->
 
+		<div class="book-bar">
 			<div class="contact-info">
 				<h4><%= number_to_phone(2512400842, delimiter: '.') %></h4>
 				<h4><a data-uk-modal="{center:true}" class="modal3" href="#appt">Book Online Now</a></h4>
@@ -16,6 +12,7 @@
 				</ul>
 			</div>
 		</div>
+
 		<div class="container">
 			<% unless current_page?(enrg_plus_path) %>
 		    <div class="logo-block"><%= link_to(image_tag( 'enrg-logo.png', alt: 'enrG IV Logo', class: 'img-responsive logo'), root_path ) %></div>

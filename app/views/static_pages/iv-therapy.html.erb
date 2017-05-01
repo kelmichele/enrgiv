@@ -34,45 +34,43 @@
 			</div>
 		</div>
 
-		<div class="layout-member">
-			<div class="container">
-				<div id="members" class="membership">
-					<div class="intro">
-						<h4 class="lh0">enrG IV Members save big!</h4>
-						<h2>Join the Club</h2>
-						<%= image_tag('menu-circles.png', class: 'img-responsive icon', alt: 'enrG Plus Logo') %>
-						<h4> Choose one of our Membership Plans today,<br> and boost your savings as you boost your health! </h4>
-					</div>
-					<div class="clearfix"></div>
-						<div class="mem-box">
-							<h3>We'll Drip to That</h3>
-							<div class="title-line"></div>
-							<p>Join our other members, and get: </p>
-							<p class="pleft"><i class="fa fa-tint"></i> Your first treatment of every month,<br><span> completely free</span></p>
-							<p class="pleft"><i class="fa fa-tint"></i> 15% off all supplements</p>
-						</div>
+		<div class="pre-member">
+			<div id="#members" class="container-fluid">
+				<div class="sec1">
+					<%= image_tag('menu-circlesblue.png', class: 'img-responsive icon', alt: 'enrG Plus Logo') %>
+					<h2>Join the Club</h2>
+					<h3>enrG IV Members save big!</h3>
+					<h4>We offer 3 Month, 6 Month, and 9 Month Membership Packages. Choose a plan today, and boost your savings as you boost your health! </h4>
 
-						<div class="right">
-							<p>Choose a Plan:</p>
-							<div class="monthly"><h4>3 Month Plan... <span>$109/mo.</span></h4></div>
-							<div class="monthly"><h4>6 Month Plan... <span>$99/mo.</span></h4></div>
-							<div class="monthly last"><h4>9 Month Plan... <span>$70/mo.</span></h4></div>
-							<p><span>*IV Drips regularly cost $149 </span></p>
-						</div>
-						<div class="clearfix"></div>
-
-						<div class="specials-row">
-								<div class="link-specials one"><div class="in"><a data-uk-modal="{center:true}" class="modal3 spec" href="#package"><span>View Our </span><br>Weight Loss Package</a></div></div>
-								<div class="link-specials two"><div class="in"><a data-uk-modal="{center:true}" class="modal3 spec" href="#deal"><span>View Our </span><br>Non-Member Special</a></div></div>
-						</div>
+					<div class="monthly one"><h4>3 Month Plan:<br> <span>$109/mo.</span></h4></div>
+					<div class="monthly two"><h4>6 Month Plan:<br> <span>$99/mo.</span></h4></div>
+					<div class="monthly last"><h4>9 Month Plan:<br> <span>$70/mo.</span></h4></div>
 				</div>
+
+
+					<div class="mem-box">
+						<h3>What do members get? </h3>
+						<div class="title-line"></div>
+						<p class="pleft"><i class="fa fa-tint"></i> The first treatment each month,<br><span> free of charge</span></p>
+						<div class="title-line"></div>
+						<p class="pleft"><i class="fa fa-tint"></i> 15% off all supplements</p>
+						<div class="title-line"></div>
+						<p><span class="print">*IV Drips regularly cost $149 </span></p>
+					</div>
+
+					<div class="specials-row">
+						<div class="link-specials one"><div class="in"><a data-uk-modal="{center:true}" class="modal3 spec" href="#package"><span>View Our </span><br>Weight Loss Package</a></div></div>
+						<div class="link-specials two"><div class="in"><a data-uk-modal="{center:true}" class="modal3 spec" href="#deal"><span>View Our </span><br>Non-Member Special</a></div></div>
+					</div>
 			</div>
 		</div>
 
 		<div class="layout-final-sec">
 			<div class="container">
 				<div class="content">
-					<h4>The list below contains some of the most common reasons our clients give for their visit, and how IV therapy can help. </h4>
+					<h4 class="space">The following list contains some of the most common reasons we see for client visits.<br>
+						Choose any item for more information on how IV therapy can help. </h4>
+
 					<div id="accordeon" class="col-md-6">
 				  	<div class="cbp-item">
 					    <div class="cbp-caption first">
@@ -163,8 +161,6 @@
   <div class="uk-modal-dialog">
     <a class="uk-modal-close uk-close"><i class="fa fa-close"></i></a>
     <div class="content specials">
-    	<div class="container">
-    		<!-- <div class="col-md-8 col-md-offset-2"> -->
     			<h3 class="blue">Weight Loss Package</h3>
 					<h4>$350 Nutritional Program</h4>
     			<div class="col-md-6"><hr></div>
@@ -172,8 +168,6 @@
 					<p>Fitness plan, detoxification plan with supplements</p>
 					<p>4 weekly evaluations, with body composition analysis. </p>
 					<p>Lipotropic enrgy boosting injections at each visit.</p>
-    		<!-- </div> -->
-			</div>
 		</div>
 	</div>
 </div>
@@ -182,13 +176,11 @@
   <div class="uk-modal-dialog">
     <a class="uk-modal-close uk-close"><i class="fa fa-close"></i></a>
     <div class="content specials">
-    	<div class="container">
-    		<!-- <div class="col-md-6 col-md-offset-3"> -->
-				<h3 class="blue">Get 4 IV’s for $429 </h3>
-				<h4> No Membership Required!</h4>
-				<p><span>*IV Drips regularly cost $149 each. </span></p>
-    		<!-- </div> -->
-			</div>
+			<h3 class="blue">Get 4 IV’s for $429 </h3>
+			<h4> No Membership Required!</h4>
+			<p><span>*IV Drips regularly cost $149 each. </span></p>
+			<hr><div class="clearfix"></div>
+			<%= link_to "View Our IV Menu", menu_path, class: 'modal-link' %>
 		</div>
 	</div>
 </div>
