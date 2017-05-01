@@ -235,20 +235,27 @@ img.icon { width:10%; @include center-block();}
 		// margin-top:70px;
 		&.hero-img {@include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));}
 
-		.title-block {width: 40%; float: right; margin-top: 15%; text-align: center; padding-bottom: 50px;
-			border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid rgba($gray, .3);
+		.title-block {width: 40%; float: right; margin-top: 15%; text-align: center;
+			.content{@include sec-default();padding-bottom: 50px;
+			border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid rgba($gray, .3);}
+
+			// .span{content:""; position: absolute; width:150px; height:150px; top:0; left: 35%; z-index: 10; @include sec-bgimage();  background-position: top center; background-image: url(image_path('menu-circles.png'));}
 		}
 
 		h1, h2, h3 {font-weight: bold;@include tshadow(rgba($black, .8)); }
 		h2 { margin: 0; line-height: 1em; color:$white;
-			&.top {position: relative; margin-top: -20px;
+			&.top {position: relative;
 				&::before, &::after {content: ""; width: 15%; height: 1px; background-color: rgba($gray, .3); top:15px; position: absolute;}
 				&::before{left:30px;}
 				&::after{right:30px;}
 			}
 		}
 		h3 { line-height: .9em; margin:0;}
-		h1 {color: $black; @include tshadow($gray); line-height: 1em; margin: 0 0 10px; font-size: 85px;font-family: $open}
+		h1 {color: $black; @include tshadow($gray); line-height: 1.1em;  font-size: 85px;font-family: $open; margin-top: 0;
+			// background-color: rgba($lt-blue,.5);
+			// width:90%; @include center-block();
+			// border: 2px solid $white;
+		}
 		.img-responsive {width: 340px; margin-left: 20px;}
 	}
 
@@ -263,14 +270,17 @@ img.icon { width:10%; @include center-block();}
 		p.sub {font-size:25px;font-weight: 800; font-family: $open;
 			b{color: $blue; }
 		}
-		h4 {font-weight: bold; margin-bottom: 10px; line-height: 1.3em;}
+		h4 {font-weight: bold; margin-bottom: 10px; line-height: 1.3em;
+			b {color: $blue;}
+			// span {color: $comp}
+		}
 
-		.b1-box {display: inline-block; width: 48%; float: left; text-align: center;
+		.b1-box {display: inline-block; width: 48%; float: left; text-align: left;
 			position: relative; padding-left: 40px; z-index: 0;
-			&::before {@include before(); width: 50px; left: -10px; top:-20px;
+			&::before {@include before(); width: 50px; left: -14px; top:-15px;
 				@include sec-bgimage(); background-image: url(image_path('bag-iconflow-bl.png')); }
 			p {font-size: 16px;}
-			&.one {@include sec-default(); margin-bottom: 20px; padding:0;
+			&.one {@include sec-default(); margin-bottom: 20px; padding:0; text-align: center;
 				&::before {display: none;}
 			}
 			&.two {
@@ -416,7 +426,9 @@ img.icon { width:10%; @include center-block();}
 		}
 
 		.banner3 {
-			.hd-block {width: 55%; @include center-block();}
+			.hd-block {width: 55%; @include center-block();
+				p{display: none;}
+			}
 
 			.ch-grid.h-menu{
 				@include center-block(); width: 90%;
@@ -448,38 +460,63 @@ img.icon { width:10%; @include center-block();}
 	h1 { @include tshadow($gray); }
 
 	.layout-main {
-		.inner {@include sec-default(); padding:20px 0;
-			@include sec-bgimage(); background-position: right center; background-size: 33%; background-image: url(image_path('detox.png')); }
+		.inner {@include sec-default(); padding:20px 0; @include sec-bgimage(); background-position: right bottom; background-size: 28%; background-image: url(image_path('detox.png')); }
 		p{color: $font;font-size: 16px; padding:0 5px;}
 		h3, h2 { color: $comp2; font-weight: bold}
 		h4 {text-align: left; color: $blue; margin-bottom:5px; font-family: $open; font-weight: bold; span {color: $gray;}}
 		hr {width: 90%; float: left; margin: 10px 0; }
 		.title-line {background-color: $blue;}
 
-		.left {padding: 0 20px 0 10px;}
+		.left {@include sec-default();padding: 0 20px 0 10px;}
 		.right {float: right; padding: 0 15px;}
 
-		.block1, .block2, .block3 {width: 50%; float: left; padding:0 10px;}
+		.block1, .block2, .block3 {width: 49%; float: left; padding:0 10px;}
 		.block2 {float: right;}
-		.block3 {@include sec-default();padding-top: 10px; }
+		.block3 {width: 75%;  }
+	}
 
-		&.mid{background-color: $blue; padding: 20px;
-			.inside {@include sec-default();}
-			h2 {color: $white; font-weight: bold; font-family: $lora; @include tshadowl(rgba($gray, .6)); margin-bottom: 20px;}
-			h4 {font-family: $karla; font-size: 20px; color: $offwhite; font-weight: bold;}
-			.title-line {background-color: rgba($gray, .2);}
-			p { color:$black}
+	.pre-member {@include sec-default(); @include shadow(); background-color: $white; text-align: center;
+		@include sec-bgimage(); background-image: url(image_path('balloons.jpg')); position: relative;z-index: 0;
+		padding: 25px 0px 0;
+		&::before {@include before(); background-color: rgba($light, .9); }
 
-			.left {width: 75%;}
-			.right {position: absolute;background-color: $white; padding: 10px 15px 15px;  text-align: center; border: 1px solid #dfdfdf;
-				h4 {text-transform: none; font-weight: normal; color: $blue; text-align: center; margin-bottom: 15px; font-size: 18px;}
+		.sec1 {display: inline-block;float: left; width: 60%; padding-left: 30px;}
+		.icon {width: 80px;}
+		h2 {color: $comp; font-weight: bold; font-family: $open; @include tshadowl ($gray); text-transform: uppercase; margin-top: 0; margin-bottom: 25px;}
+		h4{color: $gray; line-height: 1.4em; font-weight: bold;}
+		h3 {line-height: 1em; font-weight: bold;color: $blue; margin-bottom: 0}
+
+		.monthly {display: inline-block; text-align: center;
+			width:140px; height:140px; border-radius: 50%; background-color:$comp; margin-left: 20px;
+			h4{font-weight: bold; color: $white; margin-top: 35%; line-height: 1.3em; span{font-weight: normal; color:$lt-blue}}
+
+			&.two {background-color: $gray;}
+			&.last {background-color: $blue; h4 span{color:$gray}}
+		}
+
+		.mem-box { width: 35%; display: inline-block;float: right; border: 1px solid rgba($gray, .3); padding:10px 0px; margin-top: 50px; margin-right: 1%; background-color: $white;
+			.title-line {@include center-block(); width: 45%; background-color: rgba($gray, .1); margin-bottom: 20px;}
+			p {color: $gray;
+				&.pleft {color: $blue; font-weight: bold; margin-bottom: 25px;}
+				span {font-weight: bold; text-transform: uppercase; color: $comp; @include tshadowl($gray); font-size: 18px}
+				span.print {color: $font; font-style: italic; font-size: 15px; font-weight: normal; text-shadow: none; }
 			}
-
+			i {font-size: 14px;}
+			h3 {color: $gray; font-weight: bold; text-align: center; font-size: 19px; padding: 0 10px;}
 		}
 	}
 
-	.pre-final{@include sec-default(); background-color: $blue; padding:20px;}
-	.layout-final-sec {background-color: $offwhite; padding: 40px 0 50px;
+	.specials-row{text-align: center; margin-top: 50px; @include sec-default();
+		background-color: $white; padding: 20px 10px;
+		.link-specials { display: inline-block; width: 40%; font-size: 17px; font-weight: bold; background-color: $comp; padding: 5px; @include tshadowl($gray);
+			margin: 0 15px;
+			.in {border: 1px solid $white; @include sec-default(); padding: 10px;}
+			.spec{color: $white;}
+			span {font-size: 15px; color: $white;}
+		}
+	}
+
+	.layout-final-sec {background-color: $offwhite; padding: 40px 20px 20px;
 		h4.space{margin-bottom: 45px; font-weight: bold; font-family: $open; line-height: 1.3em; color: $blue}
 		h3 { color: $blue; font-weight: bold;}
 		p {font-size: 16px;}
@@ -487,31 +524,42 @@ img.icon { width:10%; @include center-block();}
 		.cbp-caption { margin-bottom: 20px;
 			padding-left: 10%; position: relative; z-index: 0;
 	 			&::before {@include before(); width:10%; @include sec-bgimage(); background-image: url(image_path('bag-iconflow-comp.png')); background-size: 95%;}
-
-	 			// &:nth-child(2n+2)::before {background-image: url(image_path('bag-iconflow-alt.png')); }
-	 			// &:nth-child(3n+3)::before {background-image: url(image_path('bag-iconflow-comp.png')); }
-		 	.cbp-caption-defaultWrap {padding-left: 0; margin-bottom: 0px;
-		 	}
-			.cbp-caption-activeWrap {height:100px;}
-			&.second .cbp-caption-activeWrap {height:120px;}
+		 	.cbp-caption-defaultWrap {padding-left: 0; margin-bottom: 0px;}
+			.cbp-caption-activeWrap {height:120px;}
+			&.second .cbp-caption-activeWrap {height:140px;}
 			.cbp-l-caption-body{padding-left: 10px;}
 	 	}
 	}
 
 	@include bp(dt) {
 		.layout-main {
-			.inner {margin: 30px 0;}
+			.inner {margin: 30px 0;background-size: 33%;background-position: right center;}
 			.left {width: 64%; }
 			.right {width:45%; }
 
 			.block1, .block2, .block3 {width: 50%; float: left; padding:0 10px;}
 			.block2 {float: right;}
 			.block3 {@include sec-default();padding-top: 10px; }
+		}
 
-			&.mid{padding: 30px 50px 40px;
-				.inside {@include sec-default();}
-				.left {width: 75%;}
-				.right {width: 22%;}
+		.pre-member {
+			background-size: 75%;padding: 25px 20px 50px;
+			&::before {@include before(); background-color: rgba($light, .9); width:75%;}
+
+			.sec1 { width: 40%; padding-left: 0px;}
+			.mem-box { width: 25%; float: left; padding:20px 0px; margin-top: 50px; margin-left: 3%; margin-right: 0; }
+		}
+
+		.specials-row{display: inline-block; float: right; width: 21%; margin-top: 55px; padding: 0;
+			.link-specials {
+			 	@include sec-default(); margin: 20px 0;
+			}
+		}
+
+		.layout-final-sec { padding: 40px 0 50px;
+			.cbp-caption {
+				.cbp-caption-activeWrap {height:100px;}
+				&.second .cbp-caption-activeWrap {height:120px;}
 			}
 		}
 	}
@@ -695,50 +743,7 @@ img.icon { width:10%; @include center-block();}
 		&:hover{color: $blue}
 	}
 }
-.pre-member {@include sec-default(); @include shadow(); background-color: $white; padding: 25px 20px 50px; text-align: center;
-	@include sec-bgimage(); background-image: url(image_path('balloons.jpg')); background-size: 75%;
-	position: relative;z-index: 0;
-	&::before {@include before(); background-color: rgba($light, .9); width:75%;}
-	.sec1 {display: inline-block;float: left; width: 40%}
-	.icon {width: 80px;}
-	h2 {color: $comp; font-weight: bold; font-family: $open; @include tshadowl ($gray); text-transform: uppercase; margin-top: 0; margin-bottom: 25px;}
-	h4{color: $gray; line-height: 1.4em; font-weight: bold;}
-	h3 {line-height: 1em; font-weight: bold;color: $blue; margin-bottom: 0}
 
-	.monthly {display: inline-block; text-align: center;
-		width:140px; height:140px; border-radius: 50%; background-color:$comp; margin-left: 20px;
-		h4{font-weight: bold; color: $white; margin-top: 35%; line-height: 1.3em; span{font-weight: normal; color:$lt-blue}}
-
-		// &.one {h4{color: $comp; span{color: $gray}}}
-		&.two {background-color: $gray;}
-		&.last {background-color: $blue; h4 span{color:$gray}}
-	}
-
-	.mem-box { width: 25%; display: inline-block;float: left; border: 1px solid rgba($gray, .3); padding:20px 0px; margin-top: 50px; margin-left: 3%; background-color: $white;
-		.title-line {@include center-block(); width: 45%; background-color: rgba($gray, .1); margin-bottom: 20px;}
-		p {color: $gray;
-			&.pleft {color: $blue; margin-bottom: 25px;}
-			span {font-weight: bold; text-transform: uppercase; color: $comp; @include tshadowl($gray); font-size: 18px}
-			span.print {color: $font; font-style: italic; font-size: 15px; font-weight: normal; text-shadow: none; }
-		}
-		i {font-size: 14px;}
-		h3 {color: $gray; font-weight: bold; text-align: center; font-size: 19px; padding: 0 10px;}
-	}
-}
-// .layout-member { @include sec-default(); background-color: $blue; padding: 20px ;
-// }
-
-.specials-row{text-align: center; display: inline-block; float: right; width: 21%; margin-top: 55px;
-	.link-specials {
-		// width:50%; display: inline-block;float: left;
-		 @include sec-default(); margin: 20px 0;
-		font-size: 17px; font-weight: bold;
-		background-color: $comp; padding: 5px; @include tshadowl($gray);
-		.in {border: 1px solid $white; @include sec-default(); padding: 10px;}
-		.spec{color: $white;}
-		span {font-size: 15px; color: $white;}
-	}
-}
 
 .menu {
 	.pages-header{background-image:url(image_path('vitamin.jpg'));background-position: center center; height:150px;&::before {background-color:rgba($black, .2);}}
