@@ -500,6 +500,7 @@ img.icon { width:10%; @include center-block();}
 
 .plus {
 	.layout-main {
+		@include shadow(); background-color: $white;
 		.icon {width:24%; margin-bottom: 0px;}
 		.content-box {width: 80%; @include center-block();
 			h4 span {font-size: 24px}
@@ -509,11 +510,11 @@ img.icon { width:10%; @include center-block();}
 			.block3 {width: 63%; float: left; margin-top: 25px;}
 			.block4{width: 30%; float: none; padding:15px; margin-left:20px; border: 1px solid #dfdfdf;}
 
-			.link-btn { @include sec-default(); padding:20px 10px ; background-color: $gray;@include sec-bgimage(); background-image: url(image_path('bag-iconflow-bl.png')); background-size: 19%; border: 1px solid #dfdfdf;
+			.link-btn { @include sec-default(); padding:20px 10px ; background-color: $light;@include sec-bgimage(); background-image: url(image_path('bag-iconflow-comp.png')); background-size: 19%; border: 1px solid #dfdfdf;
 				.inner{width:80%; float: right; text-align: center;}
 
-				h5{color: $white; @include tshadowl(rgba($gray, .4)); font-size: 19px; font-weight: bold; line-height: 1.2em; @include ease();
-					&:hover{color: $comp;}
+				h5{color: $comp; @include tshadowl(rgba($gray, .4)); font-size: 19px; font-weight: bold; line-height: 1.2em; @include ease();
+					&:hover{color: $gray;}
 				}
 			}
 		}
@@ -522,6 +523,7 @@ img.icon { width:10%; @include center-block();}
 
 	#clinic.uk-modal {
 		text-align: center;
+		.uk-modal-close {float: right;}
 		h2 {font-weight: bold; color: $blue;}
 		.left{width: 50%; float: left;}
 		h4{text-transform: none; font-weight: bold; color: $comp;}
@@ -530,15 +532,40 @@ img.icon { width:10%; @include center-block();}
 	.layout-main.mid{background-color: $blue; padding: 30px 50px 40px; margin-bottom:60px;
 		.inside {@include sec-default();}
 		h2 {color: $white; font-weight: bold; font-family: $lora; @include tshadowl(rgba($gray, .6)); margin-bottom: 20px;}
-		h4 {font-family: $karla; font-size: 20px; color: $offwhite; font-weight: bold;}
+		h4 {font-family: $karla; font-size: 20px; color: $offwhite; font-weight: bold; text-align: left;}
 		.title-line {background-color: rgba($gray, .2);}
 		p { color:$black}
 
 		.left {width: 75%;}
-		.right {width: 22%; position: absolute;background-color: $white; padding: 10px 15px 15px;  text-align: center; border: 1px solid #dfdfdf;
+		.right {width: 22%;
+		 	// position: absolute;
+		 	background-color: $white; padding: 10px 15px 15px;  text-align: center; border: 1px solid #dfdfdf;
 			h4 {text-transform: none; font-weight: normal; color: $blue; text-align: center; margin-bottom: 15px; font-size: 18px;}
 		}
+	}
 
+	.layout-mid{@include sec-default(); background-color: $comp2;
+		@include sec-bgimage(); background-image: url(image_path('rolling.jpg'));
+		.title-line {background-color: rgba($gray, .2);}
+		p { color:$black}
+
+		.block1, .block2 {@include sec-default(); width: 35%;display: inline-block; float: left;background-color: $offwhite; padding:10px 20px;
+			height:217px;
+		  p {font-size: 16px;}
+			h4 {color: $comp; font-weight: bold;}
+		}
+
+		// .links-mid { width: 15%; display: inline-block; float: left; text-align: center; padding-top:20px;
+			.inner-link {
+				// margin: 30px 0;@include sec-default();
+				background-color: rgba($comp, .8);
+				display: inline-block;float: left;width:15%;
+				padding:20px 10px;height:217px;
+			}
+			.link-box { border:1px solid $white; padding: 50px 15px;
+				h4{color: $white; font-weight: bold;}
+			}
+		// }
 	}
 }
 

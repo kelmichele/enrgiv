@@ -42,44 +42,43 @@ $399.00 an month for up to 8 IVs a month + 20% off Supplements -->
 					</div>
 
 					<div class="block4">
-							<a data-uk-modal="{center:true}" class="modal3 link-btn" href="#clinic">
-							<div class="inner">
-									<!-- <%= image_tag('menu-circles.png', class: 'icon', alt: 'enrG Plus Logo') %>  -->
-									<h5>View Clinic Information &amp; Costs</h5>
-									</div>
-								</a>
-							</div>
-
-
-						<div class="uk-modal" id="clinic">
-						  <div class="uk-modal-dialog uk-modal-dialog-large">
-						    <a class="uk-modal-close uk-close"></a>
-						    <div class="content">
-						    	<div class="container">
-						    		<div class="left">
-											<h2>Clinic Visits</h2>
-											<p>All visits include extensive history and physical assessment, initial dietary and supplement recommendations, and laboratory recommendations.</p>
-
-											<hr>
-											<h4>Initial Visit Cost:</h4>
-											<p><b>Doctor's Office</b>... $299</p>
-											<p><b>Nurse Practioner</b>... $245</p>
-											<p><b>RN</b>... $199</p>
-											<hr>
-										<p class="fine">*Some laboratory expenses may be covered by insurance.<br> Others may be out of pocket expenses.</p>
-										</div>
-									</div>
-						    </div>
-						  </div>
+						<a data-uk-modal="{center:true}" class="modal3 link-btn" href="#clinic">
+						<div class="inner">
+								<!-- <%= image_tag('menu-circles.png', class: 'icon', alt: 'enrG Plus Logo') %>  -->
+								<h5>View Clinic Information &amp; Costs</h5>
+								</div>
+							</a>
 						</div>
+
+
+					<div class="uk-modal" id="clinic">
+					  <div class="uk-modal-dialog">
+					    <a class="uk-modal-close fa fa-close"></a>
+					    <div class="content">
+					    	<!-- <div class="container"> -->
+					    		<!-- <div class="left"> -->
+										<h2>Clinic Visits</h2>
+										<p>All visits include extensive history and physical assessment, initial dietary and supplement recommendations, and laboratory recommendations.</p>
+
+										<hr>
+										<h4>Initial Visit Cost:</h4>
+										<p><b>Doctor's Office</b>... $299</p>
+										<p><b>Nurse Practioner</b>... $245</p>
+										<p><b>RN</b>... $199</p>
+										<hr>
+									<p class="fine">*Some laboratory expenses may be covered by insurance.<br> Others may be out of pocket expenses.</p>
+									<!-- </div> -->
+								<!-- </div> -->
+					    </div>
+					  </div>
 					</div>
 				</div>
 			</div>
+		</div>
 
-			<div class="layout-main mid">
+			<!-- <div class="layout-main mid">
 				<div class="inside">
 					<div class="left">
-						<h2>Why Drip With Us?</h2>
 						<div class="block1">
 							<h4>The enrG IV Medical Staff</h4>
 							<div class="title-line"></div><div class="clearfix"></div>
@@ -108,6 +107,44 @@ $399.00 an month for up to 8 IVs a month + 20% off Supplements -->
 							<%= link_to "View Our Menu", menu_path, class: 'link-def' %>
 						</div>
 					</div>
+			</div> -->
+
+			<div class="layout-mid">
+				<div class="inside">
+					<!-- <div class="right"> -->
+						<!-- <div class="bottom"> -->
+							<div class="block1">
+								<h4>The enrG IV Medical Staff</h4>
+								<div class="title-line"></div><div class="clearfix"></div>
+								<p>Our team includes medical expert​s​ who have been specially trained in IV Vitamin Therapies. Their unique understanding and advanced knowledge helps our clients find the perfect therapy to fit their needs. enrG IV doctors and nurses are well-equipped to supply you with the ultimate drip experience.</p>
+							</div>
+
+							<%= link_to "/menu", class: 'inner-link' do %>
+								<div class="link-box one">
+									<h4>View Our <br>IV Therapy Menu</h4>
+								</div>
+							<% end %>
+
+							<div class="block2">
+								<h4>The enrG IV Experience</h4>
+								<div class="title-line"></div><div class="clearfix"></div>
+								<p>enrG IV drips generally last between 20 and 60 minutes. Clients undergo a brief medical screening, then settle in for the mixture of their choice. Our signature vitamin and electrolyte cocktails contain only the purest nutrients, and you can enjoy them as you relax in our lounge, in the comfort of a private room, or at our oxygen bar!</p>
+							</div>
+						<!-- </div> -->
+					<!-- </div> -->
+
+					<!-- <div class="links-mid"> -->
+
+
+						<!-- <div class="col-md-12"><hr></div> -->
+
+						<%= link_to "/iv-therapy", class: 'inner-link two' do %>
+							<div class="link-box">
+								<h4>Learn More About<br> IV Therapy</h4>
+							</div>
+						<% end %>
+					<!-- </div> -->
+
 			</div>
 		</div>
 	</div>
