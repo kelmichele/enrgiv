@@ -566,6 +566,7 @@ img.icon { width:10%; @include center-block();}
 }
 
 .plus {
+	.pages-header{}
 	.layout-main {
 		@include shadow(); background-color: $white;
 		.icon {width:24%; margin-bottom: 0px;}
@@ -577,11 +578,11 @@ img.icon { width:10%; @include center-block();}
 			.block3 {width: 63%; float: left; margin-top: 20px;}
 			.block4{width: 36%; float: right; padding:10px; margin-top:15px; border: 1px solid #dfdfdf;}
 
-			.link-btn { @include sec-default(); padding:20px 10px ; background-color: $light;@include sec-bgimage(); background-image: url(image_path('bag-iconflow-comp.png')); background-size: 19%; border: 1px solid #dfdfdf;
+			.link-btn { @include sec-default(); padding:20px 10px ; background-color: $light;@include sec-bgimage(); background-image: url(image_path('bag-iconflow-bl.png')); background-size: 19%; border: 1px solid #dfdfdf;
 				.inner{width:80%; float: right; text-align: center;}
 
-				h5{color: $comp; @include tshadowl(rgba($gray, .4)); font-size: 19px; font-weight: bold; line-height: 1.2em; @include ease();
-					&:hover{color: $gray;}
+				h5{color: $gray; @include tshadowl(rgba($gray, .4)); font-size: 19px; font-weight: bold; line-height: 1.2em; @include ease();
+					&:hover{color: $comp;}
 				}
 			}
 		}
@@ -596,22 +597,30 @@ img.icon { width:10%; @include center-block();}
 		h4{text-transform: none; font-weight: bold; color: $comp;}
 	}
 
-	.layout-mid{@include sec-default(); background-color: $comp2;
-		@include sec-bgimage(); background-image: url(image_path('rolling.jpg'));
+	.layout-mid{@include sec-default(); background-color: $offwhite;
+		.inside{width:85%; @include center-block();}
 		.title-line {background-color: rgba($gray, .2);}
 		p { color:$black}
 
-		.block1, .block2 {width: 42.5%;display: inline-block; float: left;background-color: $offwhite; padding:10px 20px;
-			height:250px;
+		.block1, .block2 {display: inline-block; float: left;background-color: $offwhite; padding:20px;
+			// width: 42.5%;
+			width: 70%;
+			// height:220px;
 		  p {font-size: 16px;}
-			h4 {color: $comp; font-weight: bold;}
+			h4 {color: $blue; font-weight: bold;}
 		}
+		// .block1{margin-right: 15px;}
+		.block2 {float: right;}
 
 		.inner-link {
-			background-color: rgba($comp, .8);
-			display: inline-block;float: left;width:15%;
-			padding:20px 10px;height:250px;
-			&.two {display: none;}
+			display: inline-block;float: left;
+			// width:15%;
+			width:28%;
+			@include sec-bgimage(); background-image: url(image_path('roll-sm.jpg')); position: relative; z-index: 0;
+			&::before{@include before();background-color: rgba($comp, .8);}
+			padding:20px 10px;
+			height:210px;
+			&.two {float: left;}
 		}
 		.link-box { border:1px solid $white; padding: 50px 15px;
 			h4{color: $white; font-weight: bold;}
@@ -626,10 +635,11 @@ img.icon { width:10%; @include center-block();}
 			}
 		}
 		.layout-mid {
-			.block1, .block2 {width: 35%; padding:10px 20px; height:217px;}
+			.inside {@include sec-default();}
+			.block1, .block2 {width: 35%; padding:10px 20px; height:217px; margin:0; float: left;}
 			.inner-link {
 				width:15%;padding:20px 10px;height:217px;
-				&.two {display: inline-block;}
+				&.two {float: right;}
 			}
 			.link-box {padding: 50px 15px; }
 		}
@@ -649,8 +659,11 @@ img.icon { width:10%; @include center-block();}
 }
 
 .menu {
-	.pages-header{background-image:url(image_path('vitamin.jpg'));background-position: center center; height:150px;&::before {background-color:rgba($black, .2);}}
-	h1 { @include tshadow($gray); }
+	.pages-header{
+		// background-image:url(image_path('vitamin.jpg'));background-position: center center; height:150px;&::before {background-color:rgba($black, .2);}}
+		background-color: $comp; height:150px}
+		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
+	h1 { @include tshadow($gray); display: inline-block;float: left;}
 	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite; }
 
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
