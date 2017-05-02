@@ -8,22 +8,29 @@
 
 	<div class="contact-sec">
 		<div class="container">
-			<div class="col-md-6">
-				<h4><%= number_to_phone(2512400842, delimiter: '.') %></h4>
+				<div class="col-md-3">
+				<!-- <div class="col-md-6"> -->
+					<h4><%= number_to_phone(2512400842, delimiter: '.') %></h4>
 
-				<h4>info@enrgiv.com</h4>
+					<h4>info@enrgiv.com</h4>
 
-				<h4>3099 Loop Rd<br> Orange Beach, Al 36561</h4>
+					<h4>3099 Loop Rd<br> Orange Beach, Al 36561</h4>
 
-				<ul class="social">
-					<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
-					<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
-				</ul>
+					<ul class="social">
+						<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
+						<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
+					</ul>
+				</div>
 
-				<h4>Hours of Operation:<br> Monday - Friday: 10am-6pm<br> Saturday - Sunday: 10am - 3pm<br> Closed Tuesdays<br> <span>After Hours Appointments Available</span></h4>
-			</div>
+				<div class="col-md-4">
+					<h4><span>Hours of Operation:</span><div class="title-line"></div></h4>
+
+					<h4> Monday - Friday: 10am-6pm<br> Saturday - Sunday: 10am - 3pm</h4>
+					<p> <b>Closed Tuesdays<br>After Hours Appointments Available</b></p>
+				</div>
 
 			<div class="col-md-4 col-md-offset-1">
+			<!-- <div class="col-md-4"> -->
 				<a data-uk-modal="{center:true}" class="modal3 link-box" href="#appt">
 					<div class="inside">
 						<h4>Book Your enrG <span>IV Appointment</span></h4>
@@ -41,12 +48,8 @@
 						<h4>Learn More About <span>IV Therapy</span></h4>
 					</div>
 				<% end %>
-
 			</div>
+
 		</div>
 	</div>
 </div>
-
-
-<!-- At enrG IV we provide Vitamin IV Therapy for health and wellness.  -->
-<!-- We’ve taken a traditional medical treatment and given it a modern twist. We provide only the purest nutrients compounded by pharmacies with a commitment to quality control. -->
