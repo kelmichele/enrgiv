@@ -566,7 +566,9 @@ img.icon { width:10%; @include center-block();}
 }
 
 .contact {
-	.pages-header{background-image:url(image_path('placeholder.jpg'));background-position: top right; height:200px;&::before {background-color:rgba($black, .2);}}
+	.pages-header{
+		background-image:url(image_path('jump.jpg'));background-position: bottom center; height:150px;&::before {background-color:rgba($comp, .65);}}
+		// background-image:url(image_path('placeholder.jpg'));background-position: top right; height:200px;&::before {background-color:rgba($black, .2);}}
 	h1 { @include tshadow($black); }
 	.contact-sec {@include sec-default(); text-align: center; padding: $padd;background-color: $offwhite;
 		@include sec-bgimage();background-size: 50%;background-position: top right;
@@ -575,9 +577,9 @@ img.icon { width:10%; @include center-block();}
 
 
 		.link-box {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('placeholder.jpg')); position: relative; z-index: 0; margin: 15px 0 20px; padding: 20px;
-			&::before {@include before(); background-color: rgba($black, .7);}
-			.inside {@include sec-default(); text-align: center; padding: 15px 0 0; border: 1px dotted $white;}
-			h4 {color: $white; margin-top:0; span{font-weight: bold; color: $blue; font-family: inherit;}}
+			&::before {@include before(); background-color: rgba($light, .85);}
+			.inside {@include sec-default(); text-align: center; padding: 15px 0 0; border: 1px dotted $gray;}
+			h4 {color: $gray; margin-top:0; font-weight: bold; @include tshadowl(rgba($gray,.6)); span{font-weight: bold; color: $comp; font-family: inherit;}}
 		}
 
 		ul.social {padding: 10px 40px; position: relative;
