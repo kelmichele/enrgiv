@@ -1,134 +1,21 @@
-<div class="layout-main mid">
-	<div class="inside">
-			<div class="left">
-				<h2>Why Drip With Us?</h2>
-				<div class="block1">
-					<h4>The enrG IV Medical Staff</h4>
-					<div class="title-line"></div><div class="clearfix"></div>
-					<p>Our team includes medical expert​s​ who have been specially trained in IV Vitamin Therapies. Their unique understanding and advanced knowledge helps our clients find the perfect therapy to fit their needs. enrG IV doctors and nurses are well-equipped to supply you with the ultimate drip experience.</p>
-				</div>
-
-				<div class="block2">
-					<h4>The enrG IV Experience</h4>
-					<div class="title-line"></div><div class="clearfix"></div>
-					<p>enrG IV drips generally last between 20 and 60 minutes. Clients undergo a brief medical screening, then settle in for the mixture of their choice. Our signature vitamin and electrolyte cocktails contain only the purest nutrients, and you can enjoy them as you relax in our lounge, in the comfort of a private room, or at our oxygen bar!</p>
-				</div>
-			</div>
-
-			<div class="right">
-				<!-- <%= image_tag('nacl.png', class: 'img-responsive') %>  -->
-				<div class="box">
-					<h4>Our Signature IV Therapies include: </h4>
-					<p>Beauty &amp; Anti-aging</p>
-					<p>Health &amp; Wellness</p>
-					<p>Fatigue &amp; Jet Lag</p>
-					<p>Athletic Performance</p>
-					<p>Hangover Relief</p>
-					<p>Immune Support</p>
-					<p>Libido Support</p>
-					<p>Detox</p>
-					<div class="clearfix"></div>
-					<%= link_to "View Our Menu", menu_path, class: 'link-def' %>
-				</div>
-			</div>
-	</div>
-</div>
-
-
-
-<div class="layout-final-sec">
-	<div class="container">
-		<div id="members" class="membership">
-			<div class="intro">
-				<h4 class="lh0">enrG IV Members save big!</h4>
-				<h2>Join the Club</h2>
-				<%= image_tag('menu-circles.png', class: 'img-responsive icon', alt: 'enrG Plus Logo') %>
-				<h4> Choose one of our Membership Plans today,<br> and boost your savings as you boost your health! </h4>
-			</div>
-			<div class="clearfix"></div>
-				<div class="mem-box">
-					<h3>We'll Drip to That</h3>
-					<div class="title-line"></div>
-					<p>Join our other members, and get: </p>
-					<p class="pleft"><i class="fa fa-tint"></i> Your first treatment of every month,<br><span> completely free</span></p>
-					<p class="pleft"><i class="fa fa-tint"></i> 15% off all supplements</p>
-				</div>
-
-				<div class="right">
-					<p>Choose a Plan:</p>
-					<div class="monthly"><h4>3 Month Plan... <span>$109</span></h4></div>
-					<div class="monthly"><h4>6 Month Plan... <span>$99</span></h4></div>
-					<div class="monthly"><h4>9 Month Plan... <span>$70</span></h4></div>
-				</div>
-				<div class="clearfix"></div>
-
-				<div class="specials-row">
-						<div class="link-specials one"><div class="in"><a data-uk-modal="{center:true}" class="modal3 spec" href="#package"><span>View Our </span><br>Weight Loss Package</a></div></div>
-						<div class="link-specials two"><div class="in"><a data-uk-modal="{center:true}" class="modal3 spec" href="#deal"><span>View Our </span><br>Non-Member Special</a></div></div>
-				</div>
-		</div>
-	</div>
-</div>
-
-
-<div class="uk-modal" id="package">
-  <div class="uk-modal-dialog uk-modal-dialog-large">
-    <a class="uk-modal-close uk-close"></a>
-    <div class="content specials">
-    	<div class="container">
-    		<div class="col-md-8 col-md-offset-2">
-    			<h3 class="blue">Weight Loss Package</h3>
-					<h4>$350 Nutritional Program</h4>
-    			<div class="col-md-6"><hr></div>
-    			<div class="clearfix"></div>
-					<p>Fitness plan, detoxification plan with supplements</p>
-					<p>4 weekly evaluations, with body composition analysis. </p>
-					<p>Lipotropic enrgy boosting injections at each visit.</p>
-    		</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<div class="uk-modal" id="deal">
-  <div class="uk-modal-dialog uk-modal-dialog-large">
-    <a class="uk-modal-close uk-close"></a>
-    <div class="content specials">
-    	<div class="container">
-    		<div class="col-md-6 col-md-offset-3">
-						<h3 class="blue">Get 4 IV’s for $429 </h3>
-						<h4> No Membership Required!</h4>
-    		</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-
-
-
 <% @page_title = "IV Menu" %>
 <% @page_description = "New Subject" %>
 
 <div class="pages-wrap">
-	<div class="pages-header img">
+	<div class="pages-header ">
 		<div class="container">
 			<h1>enrG Signature IV Cocktails</h1>
+			<!-- <%= image_tag('green.png', class: 'img-responsive header-icon', alt: '') %>  -->
+
 		</div>
 	</div>
 		<!--
-		IV pricing 149.00
-		boost shots $25.00 -->
-
-		<!-- Amino acids can be added to stabilize moods and improve energy.
-		Vitamin C IV can be infused simultaneously to encourage collagen formation as well. -->
+		boost shots $25.00
+			SIZE?
+			AMOUNT?
+		 -->
 
 		<!-- ADD ON IV:
-		Glutathione
-		enrG B12 Boost
-		Mega Weight Loss Boost
-		Mini Weight Loss Boost
 		Oxygen Bar
 		Vibration Machine -->
 
@@ -140,7 +27,7 @@
 
 	<div class="treatment-content">
 		<div class="container-fluid">
-			<section class="main">
+		<!-- <div class="container-fluid pright-0"> -->
 				<ul class="ch-grid">
 					<li>
 						<div class="ch-item hangover">
@@ -150,7 +37,7 @@
 										<h4>Over Indulgence</h4>
 										<h3>Never Again</h3>
 										<hr>
-										<p><span>	<i class="fa fa-tint"></i>1L normal saline, b-complex, Zofran</span></p>
+										<p><span>	<i class="fa fa-tint"></i> b-complex, Zofran</span></p>
 									</div>
 									<div class="ch-info-back">
 										<p>Don't let a night of fun keep you in bed for days after. Visit us for some IV hangover therapy. enrG IV can help you rehydrate, and eliminate the hangover symptoms that end your day before it starts.</p>
@@ -168,7 +55,7 @@
 										<h4>Beauty &amp; Anti-aging</h4>
 										<h3>Princess Again</h3>
 										<hr>
-										<p><span><i class="fa fa-tint"></i>1L normal saline, b-complex, magnesium, vitamin c</span></p>
+										<p><span><i class="fa fa-tint"></i> b-complex, magnesium, vitamin c</span></p>
 									</div>
 									<div class="ch-info-back">
 										<p>Hydration is the key to youthful skin. Our anti-aging drip can improve dry skin, blemishes, and signs of aging, and help restore that healthy glow you want. Maybe our laugh lines and frown lines help tell our story, but we'd rather remain mysterious!</p>
@@ -186,13 +73,12 @@
 										<h4>Health &amp; Wellness</h4>
 										<h3>I Feeeeeel Good</h3>
 										<hr>
-										<p><span>	<i class="fa fa-tint"></i>1L normal saline, vitamin c, b-complex, magnesium, amino acids</span></p>
+										<p><span>	<i class="fa fa-tint"></i> vitamin c, b-complex, magnesium, amino acids</span></p>
 									</div>
 									<div class="ch-info-back">
 										<p>
 										<!-- It takes time and planning to maintain a healthy lifestyle. Since it isn't easy, -->
-										Because maintaining a healthy lifestyle isn't easy,
-										 we want all of our attempts to be effective. Even the best multi-vitamins and supplements only average about 20% absorption when taken orally. IV therapy is a great way to keep up your health and stay hydrated, with maximum vitamin absorption.</p>
+										Maintaining a healthy lifestyle isn't easy, so we want all of our attempts to work. Even the best multi-vitamins and supplements only average about 20% absorption when taken orally. IV therapy is a great way to keep up your health, stay hydrated, and get maximum vitamin absorption.</p>
 
 									</div>
 								</div>
@@ -208,7 +94,7 @@
 										<h4>Cold &amp; Flu</h4>
 										<h3>Get Over It</h3>
 										<hr>
-										<p><span>	<i class="fa fa-tint"></i>1L normal saline, vitamin c, zinc, magnesium</span></p>
+										<p><span>	<i class="fa fa-tint"></i> vitamin c, zinc, magnesium</span></p>
 									</div>
 									<div class="ch-info-back">
 										<p>No one wants to feel cold and stuffy at the beach! enrG IV has a drip that will help you drop that sickness. Come see us, and we'll get your toes back in the sand in no time! </p>
@@ -226,7 +112,7 @@
 										<h4>Fatigue &amp; Jet Lag</h4>
 										<h3>Myers Cocktail</h3>
 										<hr>
-										<p><span>	<i class="fa fa-tint"></i>1L normal saline, b-complex, vitamin c, magnesium</span></p>
+										<p><span>	<i class="fa fa-tint"></i> b-complex, vitamin c, magnesium</span></p>
 									</div>
 									<div class="ch-info-back">
 										<p>Traveling adds stress to the body, often altering routines in an unhealthy way. You can't enjoy our beautiful beaches if your body feels dehydrated and fatigued. enrG IV has the drip that will refill your tank! </p>
@@ -242,9 +128,9 @@
 								<div class="ch-info">
 									<div class="ch-info-front ch-img">
 										<h4>Athletic Performance</h4>
-										<h3>Elephant Stomper/Tiger Killer</h3>
+										<h3>Elephant Stomper/<br>Tiger Killer</h3>
 										<hr>
-										<p><span>	<i class="fa fa-tint"></i>1L normal saline, b-complex, magnesium, amino acids</span></p>
+										<p><span>	<i class="fa fa-tint"></i> b-complex, magnesium, amino acids</span></p>
 									</div>
 									<div class="ch-info-back">
 										<p>enrG IV can help you enhance your performance, and speed up your recovery. Adequate hydration and nutrients make it possible to keep pushing yourself and improving.</p>
@@ -263,11 +149,13 @@
 										<h3>Vim &amp; Vigor</h3>
 										<hr>
 										<p><span><i class="fa fa-tint"></i>
-											Vitamin C, and other powerful antioxidants, b-complex, and minerals crucial to hundreds of metabolic reations throughout the body (zinc, selenium, and magnesium)
+											Vitamin C, b-complex, and other powerful minerals and antioxidants
+											<!-- Vitamin C, b-complex, and other powerful antioxidants, and minerals crucial to hundreds of metabolic reations throughout the body (zinc, selenium, and magnesium) -->
 										</span></p>
 									</div>
 									<div class="ch-info-back">
-										<p>If you suffer from chronic illness, and need some extra support, or if you just want a quick way to boost your energy and/or immune system, this IV is the answer!</p>
+										<p>If you suffer from chronic illness, and need extra support, or if you just want a quick way to boost your energy and/or immune system, you found it!</p>
+										<p>We use minerals crucial to hundreds of metabolic reations throughout the body (zinc, selenium, and magnesium)</p>
 									</div>
 								</div>
 							</div>
@@ -310,7 +198,7 @@
 						</div>
 					</li>
 
-					<li>
+					<!-- <li>
 						<div class="ch-item detox">
 							<div class="ch-info-wrap">
 								<div class="ch-info">
@@ -335,71 +223,274 @@
 								</div>
 							</div>
 						</div>
-					</li>
+					</li> -->
 				</ul>
-			</section>
+
+
+	      <div class="sidebar">
+	      	<div class="pricing">
+						<!-- <h3>Pricing:</h3> -->
+						<h3>IV Drips... <span>$149</span></h3>
+						<h3>B12 Boost Shot... <span>$25</span></h3>
+						<h3>Mega Weight Loss... <span>$35</span></h3>
+						<h3>Mini Weight Loss... <span>$25</span></h3>
+						<h3>Oxygen... <span>$20/ 20 min.<br>Additional $1/min.</span></h3>
+
+						<%= link_to "/iv-therapy#members", class: 'side-link' do %>
+							<p>Check Out Our</p> <h3>Membership Plans</h3>
+						<% end %>
+					</div>
+
+					<div class="add-ons">
+						<h3>Add to any IV:</h3>
+						<div id="accordeon" class="col-md-12">
+					  	<div class="cbp-item">
+						    <div class="cbp-caption first">
+									<div class="cbp-caption-defaultWrap">
+										<h4>Glutathione<br>
+											<span>Major functions include neutralizing free radicals, detoxification, and anti-aging.</span>
+										</h4>
+										<p>Click to See More</p>
+									</div>
+									<div class="cbp-caption-activeWrap">
+										<div class="cbp-l-caption-body">
+
+											<p><b>Neutralizing free radicals:</b><br> (such as superoxide and reactive oxygen species (ROS), like hydroxy radicals, peroxynitrites, and hydroperoxides), all of which are byproducts of oxygen metabolism in the mitochondria.
+											</p>
+
+											<p><b>Detoxification:</b><br> GSH attaches to substances like heavy metals and xenobiotics—molecules that need to be excreted. It forms “conjugates” for easier elimination -- by the liver via bile, and the kidneys via urine.
+											</p>
+
+											<p><b>Skin:</b><br> The anti-aging effects of Glutathione are remarkable, from complexion, age spots and wrinkles, there is very little that won’t benefit from this master antioxidant.
+											</p>
+
+											<p>*Free radicals and ROS can cause damage to DNA, proteins and cell membranes altering their function, causing mutations and may be implicated in chronic illnesses like cancer or heart disease. Glutathione renders these molecules inert, protecting you from their destructive effects.</p>
+										</div>
+									</div>
+								</div>
+
+								<!-- <h4>enrG B12</h4> -->
+								<!-- <h4>Amino acids<br><span> can be added to stabilize moods and improve energy.</span></h4> -->
+								<h4 class="noborder">Vitamin C IV<br><span> can be simultaneously infused to encourage collagen formation.</span></h4>
+
+							</div>
+						</div>
+					</div>
+
+					<div class="pricing">
+						<h3><span>Come in &amp; try our</span><br> Vibration Platform<br> <span>$10/mo. - Unlimited use.</span></h3>
+						<hr>
+						<p> Ask about pricing for your own Vibration Platform!</p>
+					</div>
+	      </div>
+
+
 		</div>
 	</div>
 </div>
 
-      <div class="sidebar">
-      	<div class="pricing">
-					<h3>Pricing:</h3>
-					<h4>IV Treatment $149.00</h4>
-					<h4>Boost Shots $25.00</h4>
-				</div>
 
-				<div class="add-ons">
-					<h3>Add to any IV:</h3>
-					<h4>Glutathione</h4>
-					<h4>enrG B12 Boost</h4>
-					<h4>Mega Weight Loss Boost</h4>
-					<h4>Mini Weight Loss Boost</h4>
-					<h4>Oxygen Bar</h4>
-				</div>
-      </div>
+
 
 .menu {
-	.pages-header{background-image:url(image_path('jump.jpg'));background-position: bottom center; height:150px;&::before {background-color:rgba($black, .1);}}
-	h1 { @include tshadow($gray); }
-	.treatment-content{ @include sec-default(); padding: 40px 30px; background-color: $offwhite; }
-
-	#solo, #accordeon {display: inline-block; width:49%; float: left; }
-	#solo {float: right;}
-
-	.cbp-item {@include sec-default();
-		p span {color: $blue; font-weight: bold; @include sec-default();}
-		.cbp-caption {  margin-bottom:20px;}
-
-		.cbp-caption-defaultWrap { padding: 30px 0 15px 30px;background-color: $white; padding-left: 14%; position: relative; z-index: 0;
-			&::before {@include before(); width:10%; background-color: $blue; @include sec-bgimage(); background-image: url(image_path('bag-iconflow.png')); background-size: 90%;}
-		}
-
-		h3{margin-top: 0; margin-bottom: 15px; color: $black; font-weight: bold;}
-		h4 { text-transform: uppercase; color: $blue; font-size: 16px; font-weight: bold; margin-top: 0;position: relative; z-index: 0;
-			&::after{content: ""; position: absolute; left:0px; bottom:-5px; width:35px; height: 2px; background-color: $blue;}
-		}
-	}
+	.pages-header{
+		// background-image:url(image_path('berry2.png'));background-position: right center; background-size: 20%;
+		// &::before {background-color:rgba($black, .2);}
+		background-color: $comp; height:150px}
+		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
+	h1 { @include tshadow($gray); display: inline-block;float: left;}
+	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite; }
 
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
-	.cbp-caption-activeWrap {padding: 20px; background-color: $white; border-top: 1px solid #dfdfdf;
-		p span {text-align: center;}
-	}
 
-
-	#solo {
-		.cbp-caption-defaultWrap {  padding:15px 0 0px; background-color: transparent;text-align: center;
-			h4::after{display: none;}
-			h3{margin-bottom: 5px;}
-			&::before {display: none;}
+	.sidebar {width:25%; display: inline-block; float: right; margin: 80px 0 0;
+		background-color: $white; border: 1px solid rgba($blue, .4);
+		hr{width:85%; @include center-block();}
+		.pricing, .add-ons {@include sec-default(); }
+		.pricing {text-align: center; background-color: $blue; padding: 15px 0; }
+		.border {@include sec-default(); height: 1px; border-top: 1px dotted $offwhite; margin-top: 15px; }
+		h3{ color: $white; font-weight: bold; @include tshadowl($gray); font-size: 22px;
+			span {text-shadow:none; font-size: 17px; color: $gray;}
 		}
-		.cbp-caption {background-color: $white; padding: 10px 30px;}
+		h4 {font-size: 17px; margin-bottom: 20px; line-height: 1.2em; font-weight: bold; padding-left: 20px;
+		  padding-bottom:15px;border-bottom: 1px dotted #eaeaea;
+		  &.noborder{border-bottom: none;}
+			span {font-weight: normal; font-size: 15px; color:$font; font-style: italic; }
+		}
+		p span { font-style: italic; }
+		.side-link { @include sec-default(); margin-top: 10px; p {margin-bottom: 0;color: $gray;} h3 {margin-top: 0;}}
 
-		.cbp-caption-activeWrap {position: relative; padding: 0 25px 10px 0; border-top: 0; width:90%; text-align: center; @include center-block(); background-color: transparent;}
-		.cbp-l-caption-body {padding-left: 0;}
+		.add-ons {
+			// padding:0px 10px;
+			padding-top: 20px;
+			h3 {color: $blue; padding-left: 20px; margin-bottom: 0; @include tshadowl(rgba($gray, .5)); line-height: 1em}
+		}
+		#accordeon{ padding: 0;
+			.cbp-item{@include sec-default(); padding:0;}
+			.cbp-caption{padding-left: 0;}
+			.cbp-caption-defaultWrap {padding-left: 0;
+				h4 {margin-bottom: 5px; color: #333; border-bottom: none;}
+				p{color: $blue; font-weight: bold; margin-left: 20px;}
+			}
+			.cbp-caption-activeWrap { background-color: $light;}
+			.cbp-l-caption-body {padding: 10px 5px 10px 10px;}
+			p {font-size: 15px; color: $gray;}
+
+		}
 	}
 
-	.sidebar {width:30%; display: inline-block; float: right; background-color: $blue; padding: 40px 15px 0;
-		.pricing, .add-ons {@include sec-default(); margin-bottom: 30px;}
+	@include bp(dt) {
+		.sidebar {width:20%; margin: 40px 0 0;}
+	}
+}
+
+
+
+
+
+.ch-grid {
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	width: 75%;
+	font: left;
+	&::before, &::after { content: ''; display: table; }
+	&::after { clear: both;}
+
+	li {
+		width: 315px;
+		height: 315px;
+		display: inline-block;
+		margin: 15px 10px 15px 5px;
+	}
+
+	.ch-item {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		position: relative;
+		box-shadow: 0 1px 2px rgba($black,0.1);
+		cursor: default;
+		background-color: $lt-blue;
+		text-align: center;
+	}
+
+	.ch-info-wrap{
+		position: absolute;
+		width: 305px;
+		height: 305px;
+		border-radius: 50%;
+
+		-webkit-perspective: 800px;
+		-moz-perspective: 800px;
+		-o-perspective: 800px;
+		-ms-perspective: 800px;
+		perspective: 800px;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+		top: 5px;
+		left: 5px;
+		background-color: $gray;
+		box-shadow: 0 0 0 20px rgba($white,0.2), inset 0 0 3px rgba(115,114, 23, 0.8);
+	}
+
+	.ch-info{
+		position: absolute;
+		// width: 320px;
+		// height: 320px;
+		width: 100%;
+		height:100%;
+		border-radius: 50%;
+		-webkit-transition: all 0.4s ease-in-out;
+		-moz-transition: all 0.4s ease-in-out;
+		-o-transition: all 0.4s ease-in-out;
+		-ms-transition: all 0.4s ease-in-out;
+		transition: all 0.4s ease-in-out;
+		-webkit-transform-style: preserve-3d;
+		-moz-transform-style: preserve-3d;
+		-o-transform-style: preserve-3d;
+		-ms-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+
+
+		div {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-position: center center;
+			-webkit-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-o-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+
+		.ch-info-back {
+			-webkit-transform: rotate3d(0,1,0,180deg);
+			-moz-transform: rotate3d(0,1,0,180deg);
+			-o-transform: rotate3d(0,1,0,180deg);
+			-ms-transform: rotate3d(0,1,0,180deg);
+			transform: rotate3d(0,1,0,180deg);
+			background: $blue;
+			padding-top: 80px;
+			@include sec-bgimage(); background-image: url(image_path('menu-circles.png')); background-position: top center; background-size: 25%;
+		}
+
+		h3, h4 { color: $white; }
+		h3 {font-size: 20px;}
+
+		.ch-info-front {
+			color: $white;
+			padding-top:70px;
+
+			h4 {margin-bottom: 5px; font-size: 16px; color: $blue; font-weight: bold}
+			h3 {font-weight: bold; margin-top: 0; text-transform: uppercase; margin-bottom: 30px;}
+			hr{width:50%; @include center-block(); border-top: 1px solid rgba($offwhite, .6);}
+			i {font-size: 15px; margin-right: 5px;}
+			p {text-transform: capitalize;}
+		}
+
+		p {
+			color: $white;
+			padding: 5px 10px;
+			margin: 0 20px;
+			font-size: 16px;
+		}
+	}
+
+	.hangover .ch-info-front { background-color:$comp;}
+	.wellness {
+		.ch-info-front { background-color: #FFDB19;}
+		.ch-info-back {padding-top:60px;}
+	}
+	.flu .ch-info-front { background-color: #66ff33;}
+	.beauty .ch-info-front { background-color: #9900ff;}
+	.fatigue .ch-info-front { background-color: #ff6633;}
+	.sports .ch-info-front { background-color: #191970; }
+	.immune {
+		.ch-info-front { background-color: #008080;}
+		.ch-info-back { padding-top: 65px;}
+	}
+	.women .ch-info-front { background-color: #cc0066;}
+	.men .ch-info-front { background-color: #cc0000;}
+	.detox .ch-info-front{ background-color: $comp2;}
+
+	.ch-item:hover .ch-info-wrap { box-shadow:0 0 0 0 rgba($white,0.8), inset 0 0 3px rgba(115,114, 23, 0.8);}
+	.ch-item:hover .ch-info {
+		-webkit-transform: rotate3d(0,1,0,-180deg);
+		-moz-transform: rotate3d(0,1,0,-180deg);
+		-o-transform: rotate3d(0,1,0,-180deg);
+		-ms-transform: rotate3d(0,1,0,-180deg);
+		transform: rotate3d(0,1,0,-180deg);
+	}
+
+	@include bp(dt) {
+		width: 80%;
+
 	}
 }

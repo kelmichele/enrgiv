@@ -12,6 +12,7 @@ header {@include sec-default(); height:100px; background-color: $white;}
     .contact-info {width:65%; float: right; }
     h4, h4 a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
         &.wiw {color: $comp; @include tshadowl(rgba($gray, .1));}
+        &.phone span {color: $offwhite; text-shadow:none; }
     }
 }
 #nav {

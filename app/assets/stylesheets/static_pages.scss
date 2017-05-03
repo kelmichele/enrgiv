@@ -163,6 +163,7 @@ img.icon { width:10%; @include center-block();}
 			h3 {font-weight: bold; margin-top: 0; text-transform: uppercase; margin-bottom: 30px;}
 			hr{width:50%; @include center-block(); border-top: 1px solid rgba($offwhite, .6);}
 			i {font-size: 15px; margin-right: 5px;}
+			p {text-transform: capitalize;}
 		}
 
 		p {
@@ -176,7 +177,6 @@ img.icon { width:10%; @include center-block();}
 	.hangover .ch-info-front { background-color:$comp;}
 	.wellness {
 		.ch-info-front { background-color: #FFDB19;}
-		.ch-info-back {padding-top:60px;}
 	}
 	.flu .ch-info-front { background-color: #66ff33;}
 	.beauty .ch-info-front { background-color: #9900ff;}
@@ -184,7 +184,6 @@ img.icon { width:10%; @include center-block();}
 	.sports .ch-info-front { background-color: #191970; }
 	.immune {
 		.ch-info-front { background-color: #008080;}
-		.ch-info-back { padding-top: 65px;}
 	}
 	.women .ch-info-front { background-color: #cc0066;}
 	.men .ch-info-front { background-color: #cc0000;}
@@ -201,7 +200,6 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(dt) {
 		width: 80%;
-
 	}
 }
 
@@ -678,7 +676,7 @@ img.icon { width:10%; @include center-block();}
 
 .plus {
 	.pages-header.img{background-color: #1341be; background-image: url(image_path('ekg.png')), url(image_path('ekg.png')); background-position:left bottom, right bottom; background-size: 20%; height:150px;
-			&::before{display: none;}
+		&::before{display: none;}
 	}
 
 	h1 {color: $white; font-family: $open; text-align: center; text-transform: none; }
@@ -696,8 +694,7 @@ img.icon { width:10%; @include center-block();}
 				h4 {text-align: left;}
 			}
 			.plus-round{ display: inline-block; float: none; margin:0 10px; text-align: center; width: 190px; height:190px; border-radius: 50%; padding: auto 15px; @include ease();
-		// @include sec-bgimage(); background-image: url(image_path('scope.png')); background-size: 20%; background-position: bottom center;
-				h4{margin-top: 35%; text-transform: none; font-weight: bold; line-height: 1.2em; font-family: $open;@include ease(); font-size: 19px;
+				h4{ margin-top: 35%; text-transform: none; font-weight: bold; line-height: 1.2em; font-family: $open;@include ease(); font-size: 19px;
 					span {font-size: 16px; color: $white;}
 			 	}
 			 	&.one{background-color:#44dba7;}
@@ -713,24 +710,16 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	.final {@include sec-default(); background-color: $offwhite; padding: $padd;
-		.drip-box{@include center-block(); width:85%;}
-		.left, .right{display: inline-block; float: left;}
-		.left {width: 15%; background-color: $blue; height:320px; text-align: center; padding-top:25px;
-			// @include sec-bgimage(); background-image: url(image_path('orange.jpg'));
-		}
-		.right{ width: 70%;}
-		.link {width: 15%; float: right; padding: 50px 15px 0; height:320px; text-align: center; background-color: $blue;
-		 // @include sec-bgimage(); background-image: url(image_path('orange.jpg')); position: relative;z-index: 0;
-			// &::before {@include before(); background-color: rgba($comp, .75);}
-		}
+		.left, .right, .link{display: inline-block; float: left;}
+		.left,.link {background-color: $blue; text-align: center; padding-top:25px;}
 
 		h3,h4 {font-family: $open; font-weight: bold; color: $white; margin-bottom: 0; }
 		h4{font-size: 25px;
 			&.link4 {line-height: 1.5em; color: $white;}
 		}
-		h3, h3 span {font-family: $open; font-weight: bold; color: $white; @include tshadow($black); font-size: 30px; }
+		h3, h3 span {@include tshadow($black); font-size: 30px; }
 
-		.drip {display: inline-block; float: left; margin:0px 5px 10px 10px; width: 23%; height: 100px; text-align: center; @include sec-bgimage(); position: relative;z-index: 0;
+		.drip {display: inline-block; float: left; margin:0px 5px 10px 10px; text-align: center; @include sec-bgimage(); position: relative;z-index: 0;
 			&::before{@include before(); background-color: rgba($black, .25);}
 			p{font-size: 20px; line-height: 1.2em; font-weight: bold; color: $white; margin-top:25px; @include tshadow($gray); }
 		}
@@ -774,36 +763,118 @@ img.icon { width:10%; @include center-block();}
 		.layout-main {
 			.content-box {width: 80%;}
 		}
-		.layout-mid {
-			.inside {@include sec-default();}
-			.block1, .block2 {width: 35%; padding:10px 20px; height:217px; margin:0; float: left;}
-			.inner-link {
-				width:15%;padding:20px 10px;height:217px;
-				&.two {float: right;}
+
+		.final {
+			.drip-box{@include center-block(); width:85%;}
+			.left {width: 15%; height:320px; }
+			.right{ width: 70%;}
+			.link {width: 15%; float: right; padding: 50px 15px 0; height:320px;}
+
+			.drip { width: 23%; height: 100px;
+				p{font-size: 20px; }
 			}
-			.link-box {padding: 50px 15px; }
+		}
+	}
+
+	@include bp(tb) {
+		.layout-main { padding: 20px 5px;
+			.content-box {
+				.top {width: 85%; @include center-block();}
+				.plus-round {width: 175px; height: 175px;}
+			}
+		}
+		.final {
+			.drip-box{width:95%;@include center-block();}
+			.left, .link {width: 18%; float: left; height:195px; padding: 10px;}
+			.right{ width: 82%; float: right;}
+			.drip { height: 90px;}
+			h3, h3 span {font-size: 25px;}
+			h4 {font-size: 20px;}
+
 		}
 	}
 
 	@include bp(md) {
-		.pages-header{ padding:60px 0 0;}
+		.pages-header.img{ padding:45px 0 0; height:130px;}
 
-		.layout-main { padding:0px 10px 20px;
+		.layout-main { padding-top:0;
 			.content-box {@include sec-default();
+				.block1{width:40%;}
+				.block2 {width:59%;}
+				.block3 {width:90%; @include center-block();}
+				.round-block{@include sec-default(); text-align: center; padding-top:15px;}
+				.plus-round {width: 160px; height: 155px; margin: 0 15px;}
+			}
+		}
+		.final { padding: 20px 10px;
+			.drip-box{width: 100%;}
+			.left {width:98%; height: auto; padding: 5px 0 15px; margin-bottom: 10px;
+				.md-hide {display: none;}
+			}
+			.link { background-color: transparent;
+				position: relative; z-index: 0;
+				&::before {@include before(); background-color: $blue; height:330px;}
+			}
+			.drip { height: 75px;
+				p {margin-top: 20px; font-size: 18px;}
+			}
+		}
+	}
 
-				.block3{ width:70%}
-				.block4 {width: 30%}
-				.link-btn { padding: 10px;
-					.inner{width:95%;}
-					h5{ font-size: 16px;}
-				}
+	@include bp(ph) {
+
+		.layout-main {
+			.content-box {
+				.top{@include sec-default();}
+				.block1{@include sec-default();}
+				.block2 {@include sec-default();}
+				.block3 {@include sec-default(); margin-top: 0;}
+			}
+		}
+		.final {
+			h3{font-size: 20px;}
+			h4 {font-size: 18px;}
+			.link { background-color: transparent;
+				position: relative; z-index: 0;
+				&::before {@include before(); background-color: $blue; height:215px;}
+			}
+			.drip { height: 75px;
+				width: 30%; height:50px; margin:0 3px 5px;
+				p {margin-top: 10px; font-size: 15px;}
+			}
+		}
+	}
+
+	@include bp(sm) {
+		.layout-main {padding:0;
+			.content-box {
+				hr{margin:10px 0;}
+				.round-block{padding: 5px 0 10px;}
+				.plus-round { width:145px; height: 145px;}
 			}
 		}
 
-		.layout-mid {
-			.inside {width: 95%;}
-		}
+		.final {
+			.drip-box {@include sec-default();}
+			.right, .left, .link {@include sec-default();}
+			.link{height: auto; background-color: $blue; &::before {display: none;}}
 
+			.drip {width:48%; height:50px;}
+		}
+	}
+
+	@include bp(xs) {
+		.layout-main .content-box {
+			.plus-round {@include sec-default(); border-radius: 0; margin:10px 0; height:auto; padding:10px 0 8px;
+				h4 {margin-top: 0px;}
+			}
+		}
+	}
+
+	@include bp(xx) {
+		.final {
+			.drip {width:100%; height:30px; br{display: none;}}
+		}
 	}
 }
 
@@ -820,18 +891,23 @@ img.icon { width:10%; @include center-block();}
 }
 
 .menu {
-	.pages-header{
-		background-image:url(image_path('berry2.png'));background-position: right center; background-size: 20%;  height:150px;
-		// &::before {background-color:rgba($black, .2);}
-		background-color: $comp; height:150px}
+	.pages-header{background-color: $comp; height:150px}
 		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
-	h1 { @include tshadow($gray); display: inline-block;float: left;}
-	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite; }
+		h1 { @include tshadow($gray); display: inline-block;float: left;}
 
+	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite; }
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
 
-	.sidebar {width:25%; display: inline-block; float: right; margin: 80px 0 0;
-		background-color: $white; border: 1px solid rgba($blue, .4);
+	.direct { @include center-block(); border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; text-align: center; padding: 12px 10px 5px; margin-bottom: 20px;
+		p{ font-size: 20px; font-family: $open;font-weight: bold;
+			span {color: $comp;font-family: $open;font-weight: bold;}
+		}
+		display: none;
+	}
+
+	.sidebar { display: inline-block; float: right;	background-color: $white; border: 1px solid rgba($blue, .4); margin: 40px 0 0;
+		br.md-br {display: none;}
+		hr{width:85%; @include center-block();}
 		.pricing, .add-ons {@include sec-default(); }
 		.pricing {text-align: center; background-color: $blue; padding: 15px 0; }
 		.border {@include sec-default(); height: 1px; border-top: 1px dotted $offwhite; margin-top: 15px; }
@@ -847,7 +923,6 @@ img.icon { width:10%; @include center-block();}
 		.side-link { @include sec-default(); margin-top: 10px; p {margin-bottom: 0;color: $gray;} h3 {margin-top: 0;}}
 
 		.add-ons {
-			// padding:0px 10px;
 			padding-top: 20px;
 			h3 {color: $blue; padding-left: 20px; margin-bottom: 0; @include tshadowl(rgba($gray, .5)); line-height: 1em}
 		}
@@ -865,8 +940,95 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
+	.ch-grid {width: 70%;
+		li {
+			width: 290px;
+			height: 290px;
+		}
+
+		.ch-info-wrap{
+			width: 280px;
+			height: 280px;
+		}
+
+		.ch-info {
+			.ch-info-front {padding-top:55px;}
+			.ch-info-back.less {padding-top:60px;}
+
+			h3 {font-size: 19px; margin: 0 10px 30px;}
+		}
+	}
+
 	@include bp(dt) {
-		.sidebar {width:20%; margin: 40px 0 0;}
+		.direct {display: none;}
+		br.md-br {display: none;}
+		.sidebar {width:25%;}
+	}
+
+	@include bp(tb) {
+		.direct {display: block; width:75%;}
+		.sidebar {width: 28%;}
+
+		.ch-grid {
+			li {
+				width: 270px;
+				height: 270px;
+			}
+
+			.ch-info-wrap{
+				width: 260px;
+				height: 260px;
+			}
+
+			.ch-info {
+				.ch-info-front {padding-top:40px;
+					hr{margin:5px auto 10px;}
+				}
+			}
+		}
+	}
+
+	@include bp(md) {
+		.direct{width: 95%;}
+
+		.sidebar { @include sec-default();
+			.pricing {
+				h3 {font-size: 18px;line-height: 1.3em; display: inline-block; width: 45%; text-align: center;}
+			}
+			.add-ons {padding-top:10px;
+				h3 {margin-bottom: 5px;}
+			}
+
+		}
+
+		.ch-grid { @include sec-default(); text-align: center;
+			li {
+				// width: 255px;
+				// height: 255px;
+				margin: 10px 5px;
+			}
+
+			// .ch-info-wrap{
+			// 	width: 250px;
+			// 	height: 250px;
+			// 	top:2.5px;
+			// 	left: 2.5px;
+			// }
+
+			.ch-info {
+				.ch-info-front {
+					h3 {font-size: 18px; margin: 0 10px 15px;}
+					// h4, p {font-size: 15px;}
+				}
+				.ch-info-back {padding-top: 65px;
+					p { padding: 0 5px;}
+					&.less {padding-top: 50px;}
+				}
+			}
+		}
+
+
+
 	}
 }
 
