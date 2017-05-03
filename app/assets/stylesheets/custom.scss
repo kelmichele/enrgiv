@@ -91,6 +91,12 @@ p{font-size: 17px; line-height: 1.4em;}
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
+
+    @include bp(mb) {
+        width: 20px;height:20px;
+        // background-size: 70%;
+        right:5px;
+    }
 }
 
 footer {
@@ -100,7 +106,6 @@ footer {
 
     ul {
         li {display: inline-block; }
-
         &.social { text-align: center; li { font-size: 18px; font-weight: bold; margin-right: 20px;}}
 
         &.ft-menu, &.contact { display: inline-block; float: left;
@@ -121,7 +126,7 @@ footer {
     }
 
 
-    .cta {display: inline-block; float: right; position: relative; z-index: 0;
+    .cta-sec {display: inline-block; float: right; position: relative; z-index: 0;
         &::before{@include before(); @include ease2(); width:55px; height:80px; left:-25px; top: -16px; @include sec-bgimage(); background-image: url(image_path('circles-white.png')); background-size: 85%;}
         h4 {margin-top: 0; @include ease2(); color: $white; font-weight: bold; padding-top: 4px; @include tshadowl($gray);}
         &:hover {
@@ -143,6 +148,62 @@ footer {
 
     @include bp(tb) {
         padding: 40px 20px 20px;
+    }
+
+    @include bp(md) {
+        .soc, .con {display: inline-block; float: left; width:50%;}
+
+        .cta-sec { float: none; margin-left: 35px;
+            &::before{width:35px; height:50px; left:-18px; top: -10px;}
+            h4 {font-size: 16px; @include tshadowl(rgba($gray, .4));}
+        }
+
+        .bottom {
+            p {@include sec-default(); text-align: center;
+                &.loc {display: none;}
+            }
+        }
+    }
+    @include bp(mb) {
+        padding:25px 10px 0px;
+        .blue-block{padding-bottom: 0;}
+
+        ul.social li {font-size: 15px; margin-right: 10px;}
+        ul.ft-menu{ @include sec-default(); text-align: center; margin-bottom: 15px;
+            // li { margin-right: 12px;
+            // &::after{height: 20px; margin-left: 6px;}}
+        }
+
+        .cta-sec{
+            margin-left: 0;
+            @include sec-default(); text-align: center; border-top: 1px solid rgba($white, .6);
+
+            &::before {display: none;}
+        }
+    }
+
+    @include bp(ph) {
+        .soc { width:40%;}
+        .con { width:60%; float: right;}
+
+        ul.ft-menu{
+            li { margin-right: 10px;
+            &::after{margin-left: 6px; background-color: rgba($white,.6);}}
+        }
+    }
+
+    @include bp(sm) {
+        .soc, .con {width: 50%;}
+        ul.social li.title{width:100%;}
+        ul.contact li{ width: 100%;
+            &::after {display: none;}
+        }
+
+        ul.ft-menu{
+            li { margin:0 10px 10px 0;}
+        }
+
+        .bottom p.copy span {@include sec-default();}
     }
 }
 

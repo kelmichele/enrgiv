@@ -1,108 +1,140 @@
 <% @page_title = "enrG+" %>
 <% @page_description = "New Subject" %>
-<!-- Memberships-
-12 months $70.00/month for first IV + discounts off Supplements and additional IVs for the month.
-6 months  $99.00/month for first IV + discounts off Supplements and additional IVs for the month.
-3 months  $109.00/month for first IV + discounts off Supplements and additional IVs for the month.
 
-Memberships- Platnum
-$399.00 an month for up to 8 IVs a month + 20% off Supplements -->
 
 <div class="plus">
 	<div class="pages-wrap">
 		<div class="pages-header img">
 			<div class="container">
-				<h1><%= image_tag('nrg-plus.png', class: 'img-responsive logo-plus', alt: 'enrG Plus, Functional Medicine Clinic, Logo') %></h1>
+				<!-- <h1><%= image_tag('nrg-plus.png', class: 'img-responsive logo-plus', alt: 'enrG Plus, Functional Medicine Clinic, Logo') %></h1> -->
+				<h1>enrG+ </h1>
 			</div>
 		</div>
 
-		<div class="layout-main">
-			<div class="container-fluid">
-				<div class="content-box">
+		<!-- <div class="plus-body"> -->
+			<div class="layout-main">
+				<div class="container-fluid">
+					<div class="content-box">
 
-					<div class="top">
-						<hr>
-						<h4><span>enrG+</span> is the functional medicine side of our clinic.</h4>
-						<hr>
-					</div>
-
-					<div class="block1">
-						<p>Traditional medicine works as a symptom treatment model, providing relief for what is currently bothering us. This approach works very well as a band aid, but it doesn't supply real results for patients with long term ailments, or chronic conditions. enrG IV takes a more functional approach.</p>
-					</div>
-
-					<div class="block2">
-						<p>
-						Functional medicine seeks to discover the root cause of symptoms, and treat it through natural means. It views the body as one integrated system, not a collection of independent organs divided up by medical specialties. This technique results in finding connections and relationships that lead to the core problem. Functional medicine does not replace traditional medicine. It enhances it by eliminating the root cause, stopping the symptoms altogether.</p>
-					</div>
-
-					<div class="clearfix"></div>
-
-					<div class="block3">
-						<p>enrG+ offers real solutions to your health problems and, in most cases, can also provide the instant feeling of relief that you get from traditional medicine. One of the most valuable of our comprehensive functional therapies is the intravenous delivery of life enhancing nutrients and natural medicines. Intravenous (IV) therapies provide relief and healing for people with health concerns of all kinds.</p>
-					</div>
-
-					<div class="block4">
-						<a data-uk-modal="{center:true}" class="modal3 link-btn" href="#clinic">
-						<div class="inner">
-								<!-- <%= image_tag('menu-circles.png', class: 'icon', alt: 'enrG Plus Logo') %>  -->
-								<h5>View Clinic Information &amp; Costs</h5>
-								</div>
-							</a>
+						<div class="top">
+							<hr>
+							<h4><span>enrG+</span> is the functional medicine side of our clinic.</h4>
+							<hr>
 						</div>
 
-
-					<div class="uk-modal" id="clinic">
-					  <div class="uk-modal-dialog">
-					    <a class="uk-modal-close fa fa-close"></a>
-					    <div class="content">
-					    	<!-- <div class="container"> -->
-					    		<!-- <div class="left"> -->
-										<h2>Clinic Visits</h2>
-										<p>All visits include extensive history and physical assessment, initial dietary and supplement recommendations, and laboratory recommendations.</p>
-
-										<hr>
-										<h4>Initial Visit Cost:</h4>
-										<p><b>Doctor's Office</b>... $299</p>
-										<p><b>Nurse Practioner</b>... $245</p>
-										<p><b>RN</b>... $199</p>
-										<hr>
-									<p class="fine">*Some laboratory expenses may be covered by insurance.<br> Others may be out of pocket expenses.</p>
-									<!-- </div> -->
-								<!-- </div> -->
-					    </div>
-					  </div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-			<div class="layout-mid">
-				<div class="inside">
 						<div class="block1">
-							<h4>The enrG IV Medical Staff</h4>
-							<div class="title-line"></div><div class="clearfix"></div>
+							<p>Traditional medicine works as a symptom treatment model, providing relief for what is currently bothering us. This approach works very well for short term treatment, but it doesn't supply real results for patients with long term ailments, or chronic conditions. <b>enrG+ takes a more functional approach.</b></p>
+						</div>
+
+						<div class="block2">
+							<p>
+							Functional medicine seeks to discover the root cause of symptoms, and treat it through natural means. It views the body as one integrated system, not a collection of independent organs divided up by medical specialties. This technique results in finding connections and relationships that lead to the core problem. Functional medicine does not replace traditional medicine. It enhances it by eliminating the root cause, stopping the symptoms altogether.</p>
+						</div>
+
+						<div class="clearfix"></div>
+
+						<div class="block3">
+							<h4><span>Professional Medical Staff</span></h4>
 							<p>Our team includes medical expert​s​ who have been specially trained in IV Vitamin Therapies. Their unique understanding and advanced knowledge helps our clients find the perfect therapy to fit their needs. enrG IV doctors and nurses are well-equipped to supply you with the ultimate drip experience.</p>
 						</div>
 
-						<%= link_to "/menu", class: 'inner-link' do %>
-							<div class="link-box one">
-								<h4>View Our <br>IV Therapy Menu</h4>
-							</div>
-						<% end %>
+						<div class="round-block">
+								<div class="plus-round one">
+									<a data-uk-modal="{center:true}" class="modal3 round-link" href="#clinic">
+										<!-- <%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>  -->
+										<h4><span>More About Our</span><br> Clinic &amp; Costs</h4>
+									</a>
+								</div>
 
-						<div class="block2">
-							<h4>The enrG IV Experience</h4>
-							<div class="title-line"></div><div class="clearfix"></div>
-							<p>enrG IV drips generally last between 20 and 60 minutes. Clients undergo a brief medical screening, then settle in for the mixture of their choice. Our signature vitamin and electrolyte cocktails contain only the purest nutrients, and you can enjoy them as you relax in our lounge, in the comfort of a private room, or at our oxygen bar!</p>
+								<div class="plus-round two">
+									<%= link_to "/iv-therapy", class: 'round-link' do %>
+										<!-- <%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>  -->
+										<h4><span>Learn More About</span> <br>IV Therapy</h4>
+									<% end %>
+								</div>
 						</div>
 
-						<%= link_to "/iv-therapy", class: 'inner-link two' do %>
-							<div class="link-box">
-								<h4>Learn More About<br> IV Therapy</h4>
-							</div>
-						<% end %>
+						<div class="uk-modal" id="clinic">
+						  <div class="uk-modal-dialog">
+						    <a class="uk-modal-close fa fa-close"></a>
+						    <div class="content">
+						    	<!-- <div class="container"> -->
+						    		<!-- <div class="left"> -->
+											<h2>Clinic Visits</h2>
+											<p>All visits include extensive history and physical assessment, initial dietary and supplement recommendations, and laboratory recommendations.</p>
 
+											<hr>
+											<h4>Initial Visit Cost:</h4>
+											<p><b>Doctor's Office</b>... $299</p>
+											<p><b>Nurse Practioner</b>... $245</p>
+											<p><b>RN</b>... $199</p>
+											<hr>
+										<p class="fine">*Some laboratory expenses may be covered by insurance.<br> Others may be out of pocket expenses.</p>
+										<!-- </div> -->
+									<!-- </div> -->
+						    </div>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- <div class="layout-mid">
+				<div class="inside">
+					<div class="block1">
+						<h4>The enrG IV Medical Staff</h4>
+						<div class="title-line"></div><div class="clearfix"></div>
+						<p>Our team includes medical expert​s​ who have been specially trained in IV Vitamin Therapies. Their unique understanding and advanced knowledge helps our clients find the perfect therapy to fit their needs. enrG IV doctors and nurses are well-equipped to supply you with the ultimate drip experience.</p>
+					</div>
+
+					<%= link_to "/menu", class: 'inner-link' do %>
+						<div class="link-box one">
+							<h4>View Our <br>IV Therapy Menu</h4>
+						</div>
+					<% end %>
+
+					<div class="block2">
+						<h4>The enrG IV Experience</h4>
+						<div class="title-line"></div><div class="clearfix"></div>
+						<p>enrG IV drips generally last between 20 and 60 minutes. Clients undergo a brief medical screening, then settle in for the mixture of their choice. Our signature vitamin and electrolyte cocktails contain only the purest nutrients, and you can enjoy them as you relax in our lounge, in the comfort of a private room, or at our oxygen bar!</p>
+					</div>
+
+					<%= link_to "/iv-therapy", class: 'inner-link two' do %>
+						<div class="link-box">
+							<h4>Learn More About<br> IV Therapy</h4>
+						</div>
+					<% end %>
+				</div>
+			</div> -->
+
+		<div class="final">
+			<div class="drip-box">
+					<div class="left">
+						<h3><i class="fa fa-plus"></i><br> We'll Drip<br> to That</h3>
+					</div>
+
+					<div class="right">
+						<div class="drip hangover"><p>Hangover Relief</p></div>
+						<div class="drip lag"><p>Energy Boost</p></div>
+						<div class="drip illness"><p>Inflammation</p></div>
+						<div class="drip detox"><p>Detoxification</p></div>
+						<div class="drip neuro"><p>Fibromyalgia</p></div>
+						<div class="drip immune"><p>Auto Immune<br> Disorders</p></div>
+						<div class="drip age"><p>Diabetes</p></div>
+						<div class="drip ath"><p>Athletic<br> Performance</p></div>
+						<div class="drip health"><p>Asthma</p></div>
+						<div class="drip health"><p>Weight Loss</p></div>
+						<div class="drip neuro"><p>Neurological<br> Conditions</p></div>
+						<div class="drip health"><p>Chronic Illness</p></div>
+					</div>
+
+					<div class="link">
+						<%= link_to "/menu", class: 'round-link' do %>
+							<h4 class="link4">View Our Full IV Menu</h4>
+						<% end %>
+					</div>
 			</div>
 		</div>
+
 	</div>
 </div>

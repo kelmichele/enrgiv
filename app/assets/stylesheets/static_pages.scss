@@ -205,9 +205,9 @@ img.icon { width:10%; @include center-block();}
 	}
 }
 
-.drip {display: inline-block; float: none; margin:10px 0 10px 10px; width: 30%; height: 110px; text-align: center; @include sec-bgimage(); position: relative;z-index: 0;
+.drip {display: inline-block; float: none; margin:10px 0 10px 10px; width: 30%; height: 110px; text-align: center; @include sec-bgimage(); background-image: url(image_path('slices-bg.jpg')); position: relative;z-index: 0;
 	&::before{@include before(); background-color: rgba($black, .45);}
-	p{font-size: 20px; font-weight: bold; color: $white; @include tshadow($gray); margin-top: 16%;}
+	p{font-size: 20px; font-weight: bold; color: $white; @include tshadow($gray); }
 
 	&.age {background-image: url(image_path('drips/age.jpg'));}
 	&.health {background-image: url(image_path('drips/vitamin.jpg'));}
@@ -293,7 +293,9 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	.faq-sec {@include sec-default();background-color: $offwhite; padding: 0px 0 60px;
-		@include sec-bgimage(); background-image: url(image_path('juice.jpg')); background-size: 35%;
+		@include sec-bgimage(); background-size: 35%;
+		 background-image: url(image_path('juice.jpg'));
+		 // background-image: url(image_path('slices-bg.jpg'));
 		&.white {background-color: $white; @include shadow();}
 
 		h3 {font-weight: bold; font-family: $lora; padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; margin-bottom: 10px;}
@@ -339,7 +341,9 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
-	.book-banner {@include sec-default();background-color: $blue; padding:45px 0 80px; text-align: center;
+	.book-banner {@include sec-default(); padding:45px 0 80px; text-align: center;background-color: $blue;
+		// position: relative;z-index: 0;
+		// &::before{@include before(); height: 150px; @include sec-bgimage(); background-image: url(image_path('wave-curve.png')); top: -30px;}
 		p {color: $white;}
 		h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); color: $white; font-family: $open;}
 		h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;}
@@ -517,7 +521,7 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	.layout-final-sec {background-color: $offwhite; padding: 40px 20px 20px;
-		h4.space{margin-bottom: 45px; font-weight: bold; font-family: $open; line-height: 1.3em; color: $blue}
+		h4.space{margin-bottom: 45px; font-weight: bold; font-family: $open; line-height: 1.3em; color: $gray; width:75%;}
 		h3 { color: $blue; font-weight: bold;}
 		p {font-size: 16px;}
 		.cbp-item {width:90%;}
@@ -544,7 +548,7 @@ img.icon { width:10%; @include center-block();}
 
 		.pre-member {
 			background-size: 75%;padding: 25px 20px 50px;
-			&::before {@include before(); background-color: rgba($light, .9); width:75%;}
+			&::before {@include before(); background-color: rgba($white, .93); width:75%;}
 
 			.sec1 { width: 40%; padding-left: 0px;}
 			.mem-box { width: 25%; float: left; padding:20px 0px; margin-top: 50px; margin-left: 3%; margin-right: 0; }
@@ -558,6 +562,8 @@ img.icon { width:10%; @include center-block();}
 
 		.layout-final-sec { padding: 40px 0 50px;
 			.cbp-caption {
+				// &::before {background-color: $white;}
+				// .cbp-caption-defaultWrap {background-color: $white;}
 				.cbp-caption-activeWrap {height:100px;}
 				&.second .cbp-caption-activeWrap {height:120px;}
 			}
@@ -566,27 +572,63 @@ img.icon { width:10%; @include center-block();}
 }
 
 .plus {
-	.pages-header{}
+	.pages-header.img{background-color: #1341be; background-image: url(image_path('ekg.png')), url(image_path('ekg.png')); background-position:left bottom, right bottom; background-size: 20%; height:150px;
+			&::before{display: none;}
+	}
+
+	h1 {color: $white; font-family: $open; text-align: center; text-transform: none; }
+
 	.layout-main {
-		@include shadow(); background-color: $white;
+		background-color: $white; @include shadow();
 		.icon {width:24%; margin-bottom: 0px;}
-		.content-box {width: 95%; @include center-block();
+		.content-box {
+			width: 95%; @include center-block();
 			h4 span {font-size: 24px}
 			.block1, .block2, .block3, .block4 {padding: 0 5px; display: inline-block;}
-			.block1{width: 35%; }
+			.block1{width: 36%; }
 			.block2 {width: 64%; float: right;}
-			.block3 {width: 63%; float: left; margin-top: 20px;}
-			.block4{width: 36%; float: right; padding:10px; margin-top:15px; border: 1px solid #dfdfdf;}
-
-			.link-btn { @include sec-default(); padding:20px 10px ; background-color: $light;@include sec-bgimage(); background-image: url(image_path('bag-iconflow-bl.png')); background-size: 19%; border: 1px solid #dfdfdf;
-				.inner{width:80%; float: right; text-align: center;}
-
-				h5{color: $gray; @include tshadowl(rgba($gray, .4)); font-size: 19px; font-weight: bold; line-height: 1.2em; @include ease();
-					&:hover{color: $comp;}
+			.block3 {width: 54%; float: left; margin-top: 20px;
+				h4 {text-align: left;}
+			}
+			.plus-round{ display: inline-block; float: none; margin:0 10px; text-align: center; width: 190px; height:190px; border-radius: 50%; padding: auto 15px; @include ease();
+		// @include sec-bgimage(); background-image: url(image_path('scope.png')); background-size: 20%; background-position: bottom center;
+				h4{margin-top: 35%; text-transform: none; font-weight: bold; line-height: 1.2em; font-family: $open;@include ease(); font-size: 19px;
+					span {font-size: 16px; color: $white;}
+			 	}
+			 	&.one{background-color:#44dba7;}
+				&.two{background-color:$comp;
+					h4 {color: #44dba7;}
+				}
+				&:hover {background-color: $blue;
+					h4 {color: $lt-blue;}
 				}
 			}
 		}
 		p {font-size: 16px;}
+	}
+
+	.final {@include sec-default(); background-color: $offwhite; padding: $padd;
+		.drip-box{@include center-block(); width:85%;}
+		.left, .right{display: inline-block; float: left;}
+		.left {width: 15%; background-color: $blue; height:320px; text-align: center; padding-top:25px;
+			// @include sec-bgimage(); background-image: url(image_path('orange.jpg'));
+		}
+		.right{ width: 70%;}
+		.link {width: 15%; float: right; padding: 50px 15px 0; height:320px; text-align: center; background-color: $blue;
+		 // @include sec-bgimage(); background-image: url(image_path('orange.jpg')); position: relative;z-index: 0;
+			// &::before {@include before(); background-color: rgba($comp, .75);}
+		}
+
+		h3,h4 {font-family: $open; font-weight: bold; color: $white; margin-bottom: 0; }
+		h4{font-size: 25px;
+			&.link4 {line-height: 1.5em; color: $white;}
+		}
+		h3, h3 span {font-family: $open; font-weight: bold; color: $white; @include tshadow($black); font-size: 30px; }
+
+		.drip {display: inline-block; float: left; margin:0px 5px 10px 10px; width: 23%; height: 100px; text-align: center; @include sec-bgimage(); position: relative;z-index: 0;
+			&::before{@include before(); background-color: rgba($black, .25);}
+			p{font-size: 20px; line-height: 1.2em; font-weight: bold; color: $white; margin-top:25px; @include tshadow($gray); }
+		}
 	}
 
 	#clinic.uk-modal {
@@ -597,24 +639,20 @@ img.icon { width:10%; @include center-block();}
 		h4{text-transform: none; font-weight: bold; color: $comp;}
 	}
 
-	.layout-mid{@include sec-default(); background-color: $offwhite;
+	.layout-mid{@include sec-default(); width:85%; background-color: $offwhite;
 		.inside{width:85%; @include center-block();}
 		.title-line {background-color: rgba($gray, .2);}
 		p { color:$black}
 
 		.block1, .block2 {display: inline-block; float: left;background-color: $offwhite; padding:20px;
-			// width: 42.5%;
 			width: 70%;
-			// height:220px;
 		  p {font-size: 16px;}
 			h4 {color: $blue; font-weight: bold;}
 		}
-		// .block1{margin-right: 15px;}
 		.block2 {float: right;}
 
 		.inner-link {
 			display: inline-block;float: left;
-			// width:15%;
 			width:28%;
 			@include sec-bgimage(); background-image: url(image_path('roll-sm.jpg')); position: relative; z-index: 0;
 			&::before{@include before();background-color: rgba($comp, .8);}
@@ -629,10 +667,7 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(dt) {
 		.layout-main {
-			.content-box {width: 80%;
-				.block3 {margin-top: 25px;}
-				.block4{width: 30%; float: none; margin-top: 0; padding:15px; margin-left:20px;}
-			}
+			.content-box {width: 80%;}
 		}
 		.layout-mid {
 			.inside {@include sec-default();}
@@ -643,6 +678,27 @@ img.icon { width:10%; @include center-block();}
 			}
 			.link-box {padding: 50px 15px; }
 		}
+	}
+
+	@include bp(md) {
+		.pages-header{ padding:60px 0 0;}
+
+		.layout-main { padding:0px 10px 20px;
+			.content-box {@include sec-default();
+
+				.block3{ width:70%}
+				.block4 {width: 30%}
+				.link-btn { padding: 10px;
+					.inner{width:95%;}
+					h5{ font-size: 16px;}
+				}
+			}
+		}
+
+		.layout-mid {
+			.inside {width: 95%;}
+		}
+
 	}
 }
 
@@ -660,7 +716,8 @@ img.icon { width:10%; @include center-block();}
 
 .menu {
 	.pages-header{
-		// background-image:url(image_path('vitamin.jpg'));background-position: center center; height:150px;&::before {background-color:rgba($black, .2);}}
+		background-image:url(image_path('berry2.png'));background-position: right center; background-size: 20%;  height:150px;
+		// &::before {background-color:rgba($black, .2);}
 		background-color: $comp; height:150px}
 		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
 	h1 { @include tshadow($gray); display: inline-block;float: left;}

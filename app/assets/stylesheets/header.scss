@@ -23,8 +23,9 @@ header {@include sec-default(); height:100px; background-color: $white;}
     z-index: 555;
     padding-bottom: 10px;
 
-    .logo-block {display: inline-block;float: left; width: 35%;}
-    .logo {@include ease2(); width: 250px;padding: 10px 0;}
+    // .logo-block {display: inline-block;float: left; width: 35%;}
+    .logo-block {display: inline-block;float: left; }
+    .logo {@include ease2(); width: 250px; padding:5px 0;}
 
     nav { display: inline-block; float: right;
         ul.megamenu-parent {margin-top:55px}
@@ -34,6 +35,7 @@ header {@include sec-default(); height:100px; background-color: $white;}
             margin-right: 30px;
             font-size: 17px;
             text-transform: uppercase;
+            &:last-child{margin-right: 0;}
 
             a {color: $black; text-transform: uppercase;}
             &:hover a{color: $blue}
@@ -70,11 +72,13 @@ header {@include sec-default(); height:100px; background-color: $white;}
     width: 40px;
     float:right;
     margin-top: 25px;
-    background-color:$white;
+    background-color:$blue;
     padding: 10px 0 5px;
     text-align: center;
     border-radius: 4px;
-    border: 1px solid $black;
+    border: 1px solid $white;
+    margin-right:20px;
+    // border: 1px solid rgba($gray, .5);
     display:none;
 
     h4 {color:$white; line-height:2em; padding-top:10px; }
@@ -88,8 +92,8 @@ header {@include sec-default(); height:100px; background-color: $white;}
         width: 25px;
         height: 3px;
         border-radius: 4px;
-        background-color: $blue;
-        border: 1px solid rgba($black, .4);
+        background-color: $white;
+        border: 1px solid rgba($black, .1);
     }
 }
 .offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white;}
@@ -132,11 +136,27 @@ h3.module-title{color: $white;}
     .book-bar {
         .contact-info {width:50%; }
     }
-
 }
 
 
 @include bp(tb) {
+    #nav {
+        nav{
+            li a {font-size: 16px;}
+        }
+    }
+}
+
+@include bp(md) {
+    .book-bar {padding: 6px 25px 5px;
+        .contact-info {@include sec-default();text-align: center;
+            h4, ul.social { float: none; margin: 0 10px;
+                // &.phone{float: left;}
+                // &.book {float: none;}
+                // &.wiw {float: none;}
+            }
+        }
+    }
     #offcanvas-toggler { display:inline-block; }
     #nav nav {display: none;}
 }
