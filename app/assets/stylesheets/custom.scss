@@ -92,11 +92,8 @@ p{font-size: 17px; line-height: 1.4em;}
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
 
-    @include bp(mb) {
-        width: 20px;height:20px;
-        // background-size: 70%;
-        right:5px;
-    }
+    @include bp(md) {right:5px;}
+    @include bp(mb) {width: 20px;height:20px;}
 }
 
 footer {

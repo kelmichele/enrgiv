@@ -183,7 +183,7 @@
     }
 
     @else if $point == xx {
-        @media (min-width: 320px)  { @content ; }
+        @media (max-width: 320px)  { @content ; }
     }
 
 }
