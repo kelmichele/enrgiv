@@ -4,10 +4,11 @@
 <div class="pages-wrap less">
 		<section class="home-hero hero-img">
 		  <div class="title-block">
-		  	<span></span>
-				<h2 class="top"> Optimal Health</h2>
+		  	<div class="top">
+					<%= image_tag('menu-circles.png', alt: 'Enrg-IV logo symbol', class: 'img-responsive circles') %>
+					<h2> Optimal Health</h2>
+				</div>
 		  	<div class="content">
-		  	<!-- Add circles img -->
 			  	<h1>enrG IV</h1>
 			  	<h2> Through Natural Means</h2>
 			  </div>
@@ -93,15 +94,15 @@
 		<div class="book-banner">
 			<div class="intro">
 				<h4>Don't hesitate to hydrate</h4>
-				<h3>Book Now!</h3>
+				<h3>Call Now!<br>
+				<span><%= number_to_phone(2512400842, delimiter: '.', class: 'phone-cta') %></span></h3>
 
-				<div class="col-md-10 col-md-offset-1">
-					<p>enrG IV clients undergo brief medical screenings from our team, before settling in for their drips.
-						Our staff includes medical expert​s​ who have been specially trained in IV Vitamin Therapies. They are leaders in the industry,  and are happy to answer any questions, or address any concerns you may have. <b>The enrG IV doctors and nurses will give you the ultimate drip experience!</b></p>
+				<!-- <div class="cta one"> <span>Call Today:</span><br> <%= number_to_phone(2512400842, delimiter: '.') %></div> -->
+				<div class="col-md-8 col-md-offset-2">
+					<p>enrG IV clients undergo brief medical screenings from our team, before settling in for their drips.<br>
+						<b>Our staff includes medical expert​s​ who have been specially trained in IV Vitamin Therapies.</b> They are leaders in the industry, and are happy to answer any questions, or address any concerns you may have. <b>The enrG IV doctors and nurses will give you the ultimate drip experience!</b></p>
 				</div>
-
-				<div class="cta one"> <span>Call Today:</span><br> <%= number_to_phone(2512400842, delimiter: '.') %></div>
-				<a data-uk-modal="{center:true}" class="modal3 cta" href="#appt"><span>Click Here</span> <br>to Book Online</a>
+				<!-- <a data-uk-modal="{center:true}" class="modal3 cta" href="#appt"><span>Click Here</span> <br>to Book Online</a> -->
 			</div>
 		</div>
 
@@ -221,7 +222,7 @@
 							<div class="ch-info-wrap alt2">
 								<%= link_to "/enrg-plus", class: 'round-link' do %>
 									<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
-									<h4><span>enrG IV</span><br> Clinic</h4>
+									<h4><span>enrG+</span><br> Clinic</h4>
 								<% end %>
 							</div>
 						</div>
@@ -245,15 +246,3 @@
 			</div>
 		</div>
 </div>
-
-
-<!-- 	<div class="content">
-							<h3>Walk-Ins Welcome!</h3>
-							<hr>
-							<h4>Hours of Operation:</h4>
-							<p>Monday - Friday: <span>10am-6pm</span></p>
-							<p>Saturday - Sunday: <span>10am - 3pm</span></p>
-							<p>Closed Tuesdays</p>
-							<hr>
-							<p><b>After Hours Appointments Available</b></p>
-						</div> -->
