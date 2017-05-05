@@ -747,16 +747,37 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(dt) {
 		.layout-main {
-			.content-box {width: 80%;}
+			.content-box {width: 80%;
+
+				.block3 {width: 60%}
+				.weight-loss{width: 100%; @include center-block(); margin-top: 25px;
+					h4 span {font-size: 18px;}
+					h3 {line-height: 1.5em; font-size: 24px}
+					.inner { background-position: center center;
+						.top{width: 40%; display: inline-block; float: left; background-color: transparent; margin-top: 50px}
+						.incs-blk{width: 55%; display: inline-block; float: right;}
+						.inc {background-color: rgba($white, .55);}
+					}
+				}
+			}
 		}
 		.final {
-			.drip-box{width:62%; float: left;}
-			.right{ @include sec-default(); }
-
-			.drip { width: 23%; height: 90px;
+			.drip-box{width:70%; float: left;}
+			.left {width: 14%; float: left; display: inline-block; height:280px; margin-right: 5px}
+			.right {width: 85%; float: none; display: inline-block;}
+			.last {@include sec-default(); background-color: $blue; margin-right: 0; width: 99%;
+					h3 {margin: 5px;text-align: center;}
 			}
+			// .drip-box{width:62%; float: left;}
+			// .right{ @include sec-default(); }
 
-			.weight-loss {width: 37%;}
+			// .drip { width: 23%; height: 90px;}
+			.drip { width: 32.5%; height: 90px;}
+			// .weight-loss {width: 37%;}
+
+			.text {width: 22%; float: none; display: inline-block; margin-left: 3%; text-align: center; margin-top: 30px;
+				h4 {line-height: 1.4em}
+			}
 		}
 	}
 
