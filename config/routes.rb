@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'menu' => 'static_pages#menu'
   get 'iv-therapy' => 'static_pages#iv-therapy'
   get 'page' => 'static_pages#page'
+  get 'home-ff' => 'static_pages#home-ff'
 
 
   get '/fb', to: 'links#fb'

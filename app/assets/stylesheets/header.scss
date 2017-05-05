@@ -9,12 +9,13 @@ header {@include sec-default(); height:100px; background-color: $white;}
     ul.social {margin-bottom: 0; display: inline-block;
         li {display: inline-block;font-size: 17px; padding-left: 10px; i {color: $white;  @include tshadowl($gray);}}
     }
-    .contact-info {width:65%; float: right; }
+    .contact-info {width:80%; float: right; }
     h4, h4 a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
-        &.wiw {color: $comp; @include tshadowl(rgba($gray, .1));}
-        &.phone span {color: $offwhite; text-shadow:none; }
+        &.wiw {color: $comp; @include tshadowl(rgba($gray, .3));}
+        // &.phone span {color: $offwhite; text-shadow:none; }
     }
 }
+
 #nav {
     background-color: $white;
     position: relative;
