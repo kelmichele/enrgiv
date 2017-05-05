@@ -4,22 +4,19 @@
 <div class="pages-wrap">
 	<div class="pages-header ">
 		<div class="container">
-			<!-- <h1>enrG Signature IV Cocktails</h1> -->
-			<h1>enrG IV Menu</h1>
+			<h1>Signature Cocktails</h1>
+			<!-- <h1>enrG IV Menu</h1> -->
 		</div>
 	</div>
 
 	<div class="treatment-content">
 		<div class="container-fluid no-padding-xs">
-
 			<div class="direct"><p><span>Select</span> any option from the menu below for more information.</p></div>
+			<%= render 'static_pages/cocktails'%>
 
-				<%= render 'static_pages/cocktails'%>
-
-	      <div class="sidebar">
+      <div class="sidebar">
 	      	<div class="pricing">
 						<%= image_tag('menu-circlesblue.png', class: 'img-responsive icon', alt: 'enrG Plus Logo') %>
-	      		<!-- <div class="title">Pricing</div> -->
 						<h4>IV Drips...<br class="md-br"> <span>$149</span></h4>
 						<h4>B12 Boost Shot...<br class="md-br"> <span>$25</span></h4>
 						<h4>Mega Weight Loss...<br class="md-br"> <span>$35</span></h4>
@@ -33,11 +30,13 @@
 					</div>
 
 					<div class="plan">
-						<a data-uk-modal="{center:true}" class="modal3 side-link" href="#members">
+						<div class="side-link">
+						<!-- <a data-uk-modal="{center:true}" class="modal3 side-link" href="#members"> -->
 							<div class="inner">
-								<p>Check Out Our</p> <h3>Membership Plans</h3>
+								<p>Look Below For Our</p> <h3>Membership Plans</h3>
 							</div>
-						</a>
+						</div>
+						<!-- </a> -->
 					</div>
 
 				 	<div class="nonmember">
@@ -45,7 +44,6 @@
 					 	<div class="title-line"></div>
 				 		<h3>Get 4 IV’s for $429 </h3>
 				 		<p><b>No Membership Required!</b></p>
-				 		<!-- <p><span>*IV Drips regularly cost $149 each. </span></p> -->
 				 	</div>
 
 					<div class="add-ons">
@@ -76,18 +74,45 @@
 										</div>
 									</div>
 								</div>
-
-								<!-- <h4>enrG B12</h4> -->
-								<!-- <h4>Amino acids<br><span> can be added to stabilize moods and improve energy.</span></h4> -->
 								<h4 class="noborder">Vitamin C IV<br><span> can be simultaneously infused to encourage collagen formation.</span></h4>
-
 							</div>
 						</div>
 					</div>
-
-	      </div>
+      </div>
 		</div>
 	</div>
-</div>
 
+    <div id="members">
+      <div class="content">
+      	<div class="container">
+	      	<div class="col-md-7">
+		      	<div class="sec1">
+		      		<%= image_tag('menu-circlesblue.png', class: 'img-responsive icon', alt: 'enrG Plus Logo') %>
+		      		<h2>Join the Club</h2>
+		      		<h3>enrG IV Members save big!</h3>
+		      		<h4>We offer <b>3 Month</b>, <b>6 Month</b>, and <b>12 Month</b> Membership Packages.<br> Choose a plan today, and boost your savings as you boost your health! </h4>
+		      		<div class="title-line"></div>
+		      	<!-- </div> -->
+
+		      	<div class="monthly one"><h4>3 Month:<br> <span>$109/mo.</span></h4></div>
+		      	<div class="monthly two"><h4>6 Month:<br> <span>$99/mo.</span></h4></div>
+		      	<div class="monthly last"><h4>12 Month:<br> <span>$69/mo.</span></h4></div>
+		     	</div></div>
+
+	      	<div class="col-md-4">
+		      	<div class="mem-box">
+		      		<h3>What do members get? </h3>
+		      		<div class="title-line"></div>
+		      		<p class="pleft"><i class="fa fa-tint"></i> The first treatment each month,<br><span> free of charge</span></p>
+		      		<div class="title-line"></div>
+		      		<p class="pleft"><i class="fa fa-tint"></i> 15% off all supplements</p>
+		      		<div class="title-line"></div>
+		      		<p><span class="print">*IV Drips regularly cost $149 </span></p>
+		      	</div>
+		      </div>
+		    </div>
+	    </div>
+		</div>
+
+</div>
 
