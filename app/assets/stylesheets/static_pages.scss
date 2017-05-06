@@ -314,7 +314,8 @@ img.icon { width:10%; @include center-block();}
 
 	.banner-top { @include sec-default();
 		background-color: $white;
-		@include sec-bgimage(); background-image: url(image_path('water-temp.png')); background-position: bottom center;
+		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
+		// background-position: bottom right;
 		.inner {width: 92%; @include center-block();}
 		.left-block {@include sec-default(); margin-bottom: 15px; text-align: center;}
 
@@ -343,11 +344,12 @@ img.icon { width:10%; @include center-block();}
 			}
 		}
 	}
-	.layout-mainb{@include sec-default(); padding:20px 0 75px; background-color: #d7ecfa;
+	.layout-mainb{@include sec-default(); padding:50px 0 0;
+		// background-color: #d7ecfa;
 
-		@include sec-bgimage(); background-image: url(image_path('water-temp.png')); background-position: center center;
+		// @include sec-bgimage(); background-image: url(image_path('water-temp.png')); background-position: center center;
 	}
-	.inner-sub {@include center-block(); width: 90%; text-align: center; margin-top: -50px;
+	.inner-sub {@include center-block(); width: 90%; text-align: center;
 		background-color: $white;
 		.qcon {width: 12%; @include center-block();}
 		.top-bar {@include sec-default(); text-align: center; margin-bottom: 25px;}
