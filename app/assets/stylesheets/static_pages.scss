@@ -239,7 +239,7 @@ img.icon { width:10%; @include center-block();}
 		&::after{right:0;}
 	}
 
-	.home-hero{@include sec-default(); padding: 60px; background-color: $black;
+	.home-hero{@include sec-default(); padding: 60px;
 		&.hero-img {@include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));}
 
 		.title-block {float: right; margin-top: 6%; text-align: center;
@@ -259,8 +259,9 @@ img.icon { width:10%; @include center-block();}
 
 		h1, h2, h3 {font-weight: bold;@include tshadow(rgba($black, .8)); color:$white; }
 		h3 { line-height: .9em; margin:0;}
-		h1 {color: $black; @include tshadow($gray); line-height: 1em; font-family: $open; position: relative; z-index: 0;
-			&::before {@include before(); width:150px; height:200px;top:-20px; @include sec-bgimage(); background-image: url(image_path('circles-header.png'));}
+		h1 {color: $black; @include tshadow($gray); line-height: 1em; font-family: $open;
+			// position: relative; z-index: 0;
+			// &::before {@include before(); width:150px; height:200px;top:-20px; @include sec-bgimage(); background-image: url(image_path('circles-header.png'));}
 		}
 	}
 
@@ -1016,7 +1017,9 @@ img.icon { width:10%; @include center-block();}
 	@include bp(dt) {
 		.direct {display: none;}
 		br.md-br {display: none;}
-		.sidebar {width:22%;}
+
+		.ch-grid{margin-left: 2%;}
+		.sidebar {width:22%; margin-right: 3%;}
 	}
 
 	@include bp(tb) {
