@@ -231,7 +231,6 @@ img.icon { width:10%; @include center-block();}
 		background-color: $white; @include shadow();
 	}
 
-	#nav .logo {width:280px;}
 
 	h4.fancy {text-align: center; margin:40px 0 10px; position: relative; font-weight: bold; color: darken($blue, 5%); font-size: 20px;
 		&::before, &::after {content: ""; width: 10%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
@@ -361,6 +360,7 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(dt) {
+		#nav .logo {width:280px;}
 		.home-hero {height:650px; padding:100px;
 			.title-block{width: 40%; }
 			h1 {font-size: 85px;
@@ -378,6 +378,12 @@ img.icon { width:10%; @include center-block();}
 		.home-hero {height:550px;
 			.title-block{width: 45%;
 				.content {padding-bottom:15px;}
+
+				.top h2{
+					&::before, &::after {width:10%;}
+				}
+						&::before{left:50px;}
+						&::after{right:50px;}
 			}
 			h1{font-size: 65px; margin-bottom: 0; line-height: .8em;
 				&::before {left:-20px; background-size: 75%; background-position: top center;}
@@ -428,6 +434,15 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
+	@include bp(pl) {
+		.banner-top{padding-top: 0;
+			.left-block h3{font-size: 25px;
+				span {font-size: 18px;}
+			}
+		}
+		.layout-mainb {padding-top: 15px;}
+	}
+
 	@include bp(mb) {
 		.home-hero{height:330px; padding-right: 5px;
 			h1 {font-size: 30px;
@@ -437,7 +452,27 @@ img.icon { width:10%; @include center-block();}
 				&::before, &::after {top: -5px}
 			}
 				h2 {font-size: 20px;}
+		}
 
+		.book-banner h3{font-size: 30px;}
+		.faq-sec .title-box .inside-round {padding: 0;
+			h3 {font-size: 25px;}
+		}
+	}
+
+	@include bp(sm) {
+		.home-hero { height:250px;
+			.title-block {
+				.content{ border-left: none; border-right: none; border-bottom: none;}
+				h1 {margin-top: 0; margin-bottom: 7px}
+				h2{margin-top: 0}
+			}
+				.top {h2::before, &::after {display: none;}}
+		}
+
+
+		.inner-sub {
+			.q-box {width:90%; @include center-block();}
 		}
 	}
 }
