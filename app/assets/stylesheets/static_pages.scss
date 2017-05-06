@@ -11,15 +11,17 @@
 .pages-header{
 	@include sec-default();
 	@include sec-bgimage();
-	padding: 40px 0;
 
 	h1 {font-size: 45px;font-weight: bold; color: $white;text-transform: uppercase;}
 	&.img {background-image: url(image_path('rolling.jpg')); background-position: bottom right; position: relative;z-index: 0;
 		&::before {@include before(); background-color: rgba($white, .3);}
 	}
-	&.blue {
-		background-color: $blue;
-	}
+	&.blue {background-color: $blue;}
+
+	@include bp(dt) {padding: 40px 0;}
+	@include bp(tb) {padding: 40px 0 30px;}
+	@include bp(pl) { padding: 30px 0 20px; h1 {font-size: 30px;}}
+	@include bp(ph) {padding: 40px 0 20px;}
 }
 
 .uk-modal-close i {margin:10px 10px 0 0; font-size: 16px;}
@@ -237,13 +239,13 @@ img.icon { width:10%; @include center-block();}
 		&::after{right:0;}
 	}
 
-	.home-hero{@include sec-default(); padding: 100px; background-color: $black;
+	.home-hero{@include sec-default(); padding: 60px; background-color: $black;
 		&.hero-img {@include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));}
 
-		.title-block {width: 40%; float: right; margin-top: 6%; text-align: center;
+		.title-block {float: right; margin-top: 6%; text-align: center;
 			.circles {width:100px;display: inline-block;}
 			.content{@include sec-default();padding-bottom: 30px; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid rgba($gray, .3);
-					@include sec-bgimage(); background-image: url(image_path('circles-header.png')); background-size: 25%;
+					// @include sec-bgimage(); background-image: url(image_path('circles-header.png')); background-size: 25%;
 			}
 
 			.top {@include sec-default();
@@ -257,7 +259,9 @@ img.icon { width:10%; @include center-block();}
 
 		h1, h2, h3 {font-weight: bold;@include tshadow(rgba($black, .8)); color:$white; }
 		h3 { line-height: .9em; margin:0;}
-		h1 {color: $black; @include tshadow($gray); line-height: 1.1em;  font-size: 85px;font-family: $open; margin-top: 5px;}
+		h1 {color: $black; @include tshadow($gray); line-height: 1em; font-family: $open; position: relative; z-index: 0;
+			&::before {@include before(); width:150px; height:200px;top:-20px; @include sec-bgimage(); background-image: url(image_path('circles-header.png'));}
+		}
 	}
 
 	.faq-sec {@include sec-default();background-color: $offwhite;
@@ -315,7 +319,6 @@ img.icon { width:10%; @include center-block();}
 	.banner-top { @include sec-default();
 		background-color: $white;
 		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
-		// background-position: bottom right;
 		.inner {width: 92%; @include center-block();}
 		.left-block {@include sec-default(); margin-bottom: 15px; text-align: center;}
 
@@ -345,9 +348,6 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 	.layout-mainb{@include sec-default(); padding:50px 0 0;
-		// background-color: #d7ecfa;
-
-		// @include sec-bgimage(); background-image: url(image_path('water-temp.png')); background-position: center center;
 	}
 	.inner-sub {@include center-block(); width: 90%; text-align: center;
 		background-color: $white;
@@ -359,20 +359,84 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
-
 	@include bp(dt) {
+		.home-hero {height:650px; padding:100px;
+			.title-block{width: 40%; }
+			h1 {font-size: 85px;
+				 &::before{left: -20px;}
+			}
+		}
+
 		.banner-top {
 			padding:20px 0 100px;
 			.left-block{margin-bottom: 50px;}
 		}
 
-		.home-hero {height:650px;}
 	}
 	@include bp(tb) {
 		.home-hero {height:550px;
-			.over-frame{padding: 55px 30px 0;left:15%;}
-			h1 {font-size: 90px; }
-			h3{font-size: 28px;}
+			.title-block{width: 45%;
+				.content {padding-bottom:15px;}
+			}
+			h1{font-size: 65px; margin-bottom: 0; line-height: .8em;
+				&::before {left:-20px; background-size: 75%; background-position: top center;}
+			}
+		}
+
+		.banner-top {
+			padding:30px 0 70px;
+			background-position: bottom right;
+		}
+
+		.inner-sub {width:94%; margin-top: 25px;
+			.q-box { margin: 0 5px; padding: 10px;
+				p {font-size: 16px;}
+			}
+		}
+
+		.faq-sec { background-image: url(image_path('oranges.jpg')); background-size: 30%;
+			.title-box h3{color: $white; @include tshadowl($black);}
+			.md-right {width: 70%; float: right;  margin-left: 0; padding:10px 10px 30px 10px;}
+		}
+	}
+
+	@include bp(md) {
+		.home-hero{height:430px; padding-right: 20px;
+			.title-block{width: 55%;}
+			h1 {font-size: 40px;
+				&::before {background-size: 55%; left:10px}
+			}
+			.top {
+				&::before, &::after {top: -5px}
+				h2 {font-size: 22px;
+				}
+			}
+		}
+
+		.inner-sub {
+			.q-box { width: 49%; margin:0;
+				&.first,&.two {border-bottom: 1px solid #dfdfdf;}
+				p {font-size: 16px;}
+			}
+		}
+
+		.faq-sec { background-image: url(image_path('orange-bg.jpg')); background-size: 100%;
+			.title-box {@include sec-default(); padding-top: 5px;.inside-round{margin-left: 0; padding:10px 0 20px;}}
+			.md-right {padding:10px;@include sec-default(); background-color: $offwhite;}
+			.faq-box{@include sec-default();}
+		}
+	}
+
+	@include bp(mb) {
+		.home-hero{height:330px; padding-right: 5px;
+			h1 {font-size: 30px;
+				&::before {background-size: 50%; left:10px}
+			}
+			.top {
+				&::before, &::after {top: -5px}
+			}
+				h2 {font-size: 20px;}
+
 		}
 	}
 }
@@ -597,10 +661,9 @@ img.icon { width:10%; @include center-block();}
 
 
 .plus {
-	.pages-header.img{background-color: #1341be; background-image: url(image_path('ekg.png')), url(image_path('ekg.png')); background-position:left bottom, right bottom; background-size: 20%; height:150px;
+	.pages-header.img{background-color: #1341be; background-image: url(image_path('ekg.png')), url(image_path('ekg.png')); background-position:left bottom, right bottom; background-size: 20%;
 		&::before{display: none;}
 	}
-
 	h1 {color: $white; font-family: $open; text-align: center; text-transform: none; }
 
 	.layout-main {
@@ -616,7 +679,7 @@ img.icon { width:10%; @include center-block();}
 			.block3 {width: 70%; float: left; margin-top: 20px;
 				h4 {text-align: left;}
 			}
-			.block4 {width: 30%; float: right; display: inline-block; text-align: center; background-color: $offwhite;
+			.block4 {float: right; display: inline-block; text-align: center; background-color: $offwhite;
 				h2 {font-weight: bold; color: $blue;}
 				.left{width: 50%; float: left;}
 				h4{text-transform: none; font-weight: bold; color: $comp;}
@@ -638,8 +701,6 @@ img.icon { width:10%; @include center-block();}
 		p {font-size: 16px;}
 	}
 
-	.full-sec {@include sec-default(); background-color: $light; padding: $padd; @include sec-bgimage(); background-image: url(image_path('kettle.jpg')); background-size: 60%; background-position: top right;
-	}
 
 	.weight-loss {text-align: center;display: inline-block;float: right;
 		.top {@include sec-default(); background-color: rgba($black, .3); width:65%; float: none; margin: auto;}
@@ -682,6 +743,7 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(dt) {
+		.pages-header.img{height:150px;}
 		.layout-main {
 			.content-box {width: 82%;
 
@@ -690,7 +752,6 @@ img.icon { width:10%; @include center-block();}
 
 				.weight-loss{margin-top: 20px;
 					width: 60%;float: left;
-					// width: 100%; @include center-block();
 					h4 span {font-size: 18px;}
 					h3 {line-height: 1.5em; font-size: 24px}
 					.inner { background-position: center center;
@@ -717,17 +778,24 @@ img.icon { width:10%; @include center-block();}
 		.layout-main { padding: 20px 5px;
 			.content-box {
 				.top {width: 85%; @include center-block();}
-				.plus-round {width: 175px; height: 175px;}
+				.block3 {width:90%; margin-bottom: 20px; display: block;}
+				.block4 {width:45%; float: left; margin:0;
+					p.fine{font-size: 15px; br{display: none;}}
+					hr{margin:10px 0;}
+					h2{margin-top: 10px; font-size: 23px;}
+				}
+				.weight-loss{width:52%; float: right; margin-top:20px;
+					.inner{padding:15px }
+				}
 			}
 		}
-		.final {
+		.final {padding:0 0 15px; &::before {display: none;}
 			.drip-box{width:95%;@include center-block();}
-			.left {width: 18%; float: left; height:195px; padding: 10px;}
-			.right{ width: 82%; float: right;}
-			.drip { height: 90px;}
-			h3, h3 span {font-size: 25px;}
-			h4 {font-size: 20px;}
-
+			.left, .last {@include sec-default(); height:auto; padding:12px; background-color: $blue;
+				h3 {margin-top: 0; font-size: 22px;}
+			}
+			.drip { width: 19.4%; height: 90px;}
+			.text{width:75%; @include center-block(); padding:15px 0 0; p {margin-bottom: 0; padding-bottom: 0;}}
 		}
 	}
 
@@ -738,28 +806,52 @@ img.icon { width:10%; @include center-block();}
 			.content-box {@include sec-default();
 				.block1{width:40%;}
 				.block2 {width:59%;}
-				.block3 {width:90%; @include center-block();}
-				.round-block{@include sec-default(); text-align: center; padding-top:15px;}
-				.plus-round {width: 160px; height: 155px; margin: 0 15px;}
+
+				.weight-loss{margin-top: 0; @include center-block(); width:85%;
+					.inner {background-color: $blue; padding: 5px; background-position: bottom center;}
+					.top {@include sec-default(); background-color: transparent;}
+					h4, h4 span {font-size: 16px;}
+					h3 {font-size: 19px;}
+					p.inc {font-size: 15px;}
+				}
+				.block4{@include sec-default();margin-bottom:20px;
+					p.less {width:85%; @include center-block();}}
 			}
 		}
-		.final { padding: 20px 10px;
-			.drip-box{width: 100%;}
-			.left {width:98%; height: auto; padding: 5px 0 15px; margin-bottom: 10px;
-				.md-hide {display: none;}
-			}
-			.link { background-color: transparent;
-				position: relative; z-index: 0;
-				&::before {@include before(); background-color: $blue; height:330px;}
-			}
-			.drip { height: 75px;
-				p {margin-top: 20px; font-size: 18px;}
+		.final { padding: 0px 10px;
+			.text {padding-bottom: 14px;}
+			// .drip-box{width: 100%;}
+			// .left {width:98%; height: auto; padding: 5px 0 15px; margin-bottom: 10px;
+			// 	.md-hide {display: none;}
+			// }
+			.last {text-align: center;}
+			.drip { height: 75px;width:19%; margin: 3px;
+				p {margin-top: 20px; font-size: 17px;}
 			}
 		}
 	}
 
-	@include bp(ph) {
+	@include bp(pl) {
+		.layout-main { padding-top:0;
+			.content-box {@include sec-default();
+				.block1{width:40%;}
+				.block2 {width:59%;}
+				// .block4{@include sec-default();margin-bottom:20px;}
+				// .weight-loss{@include center-block(); width:85%;}
+			}
+		}
+	}
 
+	@include bp(mb) {
+		.final {
+			.drip-box {@include sec-default();}
+			.drip {width: 18.6%;}
+			.left, .last {h3 {font-size: 18px;}}
+		}
+	}
+
+	@include bp(ph) {
+		.pages-header.img{height: auto; h1{font-size: 25px; margin-top: 25px;}}
 		.layout-main {
 			.content-box {
 				.top{@include sec-default();}
@@ -769,15 +861,9 @@ img.icon { width:10%; @include center-block();}
 			}
 		}
 		.final {
-			h3{font-size: 20px;}
-			h4 {font-size: 18px;}
-			.link { background-color: transparent;
-				position: relative; z-index: 0;
-				&::before {@include before(); background-color: $blue; height:215px;}
-			}
-			.drip { height: 75px;
-				width: 30%; height:50px; margin:0 3px 5px;
-				p {margin-top: 10px; font-size: 15px;}
+			.drip {width: 48%; height:55px;
+				p{font-size: 16px;}
+				&.immune {p{margin-top: 10px;}}
 			}
 		}
 	}
@@ -786,17 +872,12 @@ img.icon { width:10%; @include center-block();}
 		.layout-main {padding:0;
 			.content-box {
 				hr{margin:10px 0;}
-				.round-block{padding: 5px 0 10px;}
-				.plus-round { width:145px; height: 145px;}
+				.weight-loss {@include sec-default();}
 			}
 		}
 
 		.final {
-			.drip-box {@include sec-default();}
-			.right, .left, .link {@include sec-default();}
-			.link{height: auto; background-color: $blue; &::before {display: none;}}
-
-			.drip {width:48%; height:50px;}
+			.text {@include sec-default();}
 		}
 	}
 
@@ -810,7 +891,7 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(xx) {
 		.final {
-			.drip {width:100%; height:30px; br{display: none;}}
+			.drip {width:100%; height:50px; p{margin-top: 10px;}}
 		}
 	}
 }
@@ -829,14 +910,15 @@ img.icon { width:10%; @include center-block();}
 
 .menu {
 	.pages-header{background-color: $comp; height:auto;
-		// @include sec-bgimage(); background-image: url(image_path('slices-bg.jpg'));
-		// background-position: center center;
 	}
 		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
 		h1 { @include tshadow($gray); margin-bottom:0; line-height: 1em;}
 		h3 {margin-top: 5px; line-height: 1.4em;}
 
-	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite; }
+	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite;
+		 // @include sec-bgimage();	background-image: url(image_path('preview2.png'));  position: relative;z-index: 0;
+			// &::before {@include before(); background-color: rgba($offwhite, .6);}
+	}
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
 
 	.direct { @include center-block(); border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; text-align: center; padding: 12px 10px 5px; margin-bottom: 20px;
@@ -847,41 +929,19 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	.sidebar { display: inline-block; float: right;
-
 			margin-top: -65px;
 			background-color: $white; @include shadow-dk(); text-align: center;
-			// @include sec-bgimage(); background-image: url(image_path('jump-pool.jpg'));  position: relative;z-index: 0;
-			// &::before {@include before(); background-color: rgba($white,.7);}
 			.icon {width: 60px; margin-bottom: 0;}
 
-			.title {color: $comp; font-weight: bold; font-size: 24px; line-height: 1em; font-family: $open; text-transform: uppercase; text-align: center; margin-top: 0; margin-bottom: 15px;}
-			h3 {color: $gray;font-size: 20px; margin-bottom: 0; line-height: 1.3em;}
-			h4 {font-weight: normal; text-transform: none; color: $gray; font-family: $karla; line-height: 1.3em; font-size: 17px; margin-top: 3px;}
-			.title-line {@include center-block(); width: 45%; background-color: rgba($gray, .1); margin-bottom: 20px;}
-
-
-
-
-
-
-
-		// background-color: $white; border: 1px solid rgba($blue, .4);
+		.title {color: $comp; font-weight: bold; font-size: 24px; line-height: 1em; font-family: $open; text-transform: uppercase; text-align: center; margin-top: 0; margin-bottom: 15px;}
+		h3 {color: $gray;font-size: 20px; margin-bottom: 0; line-height: 1.3em;}
+		h4 {font-weight: normal; text-transform: none; color: $gray; font-family: $karla; line-height: 1.3em; font-size: 17px; margin-top: 3px;}
+		.title-line {@include center-block(); width: 45%; background-color: rgba($gray, .1); margin-bottom: 20px;}
 		br.md-br {display: none;}
 		hr{width:85%; @include center-block();}
 		.pricing, .add-ons, .platform, .plan, .nonmember {@include sec-default(); padding: 20px 15px;}
-			// border: 1px solid rgba($gray, .2);
-
 		.border {@include sec-default(); height: 1px; border-top: 1px dotted $offwhite; margin-top: 15px; }
-		// h3{ color: $comp; font-weight: bold; font-size: 22px;
-		// 	span {text-shadow:none; font-size: 17px; color: $gray;}
-		// }
-		// h4 {font-size: 17px; margin-bottom: 20px; line-height: 1.2em; font-weight: bold; padding-left: 20px;
-		//   padding-bottom:15px;border-bottom: 1px dotted #eaeaea;
-		//   &.noborder{border-bottom: none;}
-		// 	span {font-weight: normal; font-size: 15px; color:$font; font-style: italic; }
-		// }
 		p span { font-style: italic; }
-
 
 		.pricing { text-align: left;
 			@include sec-bgimage(); background-image: url(image_path('slices-bg.jpg'));  position: relative;z-index: 0;
@@ -916,7 +976,6 @@ img.icon { width:10%; @include center-block();}
 		}
 
 		.add-ons { background-color: lighten($lt-blue, 23%);
-
 			h3 {color: $gray; font-weight: bold; margin-bottom: 0;line-height: 1em}
 			h4{font-weight: bold; color: $comp;
 				span { font-weight: normal; color: $black;}
@@ -962,7 +1021,7 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(tb) {
 		.direct {display: block; width:75%;}
-		.sidebar {width: 28%;}
+		.sidebar {width: 28%; margin-top: 40px;}
 
 		.ch-grid {
 			li {
@@ -998,22 +1057,12 @@ img.icon { width:10%; @include center-block();}
 
 		.ch-grid { @include sec-default(); text-align: center;
 			li {
-				// width: 255px;
-				// height: 255px;
 				margin: 10px 5px;
 			}
-
-			// .ch-info-wrap{
-			// 	width: 250px;
-			// 	height: 250px;
-			// 	top:2.5px;
-			// 	left: 2.5px;
-			// }
 
 			.ch-info {
 				.ch-info-front {
 					h3 {font-size: 18px; margin: 0 10px 15px;}
-					// h4, p {font-size: 15px;}
 				}
 				.ch-info-back {padding-top: 65px;
 					p { padding: 0 5px;}

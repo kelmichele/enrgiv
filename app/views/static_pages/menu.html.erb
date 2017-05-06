@@ -11,11 +11,13 @@
 
 	<div class="treatment-content">
 		<div class="container-fluid no-padding-xs">
-			<div class="direct"><p><span>Select</span> any option from the menu below for more information.</p></div>
+			<div class="direct">
+				<p><span>Select</span> any option from the menu below for more information.</p>
+			</div>
 			<%= render 'static_pages/cocktails'%>
 
       <div class="sidebar">
-	      	<div class="pricing">
+	      	<div id="prices" class="pricing">
 						<%= image_tag('menu-circlesblue.png', class: 'img-responsive icon', alt: 'enrG Plus Logo') %>
 						<h4>IV Drips...<br class="md-br"> <span>$149</span></h4>
 						<h4>B12 Boost Shot...<br class="md-br"> <span>$25</span></h4>
@@ -46,7 +48,7 @@
 				 		<p><b>No Membership Required!</b></p>
 				 	</div>
 
-					<div class="add-ons">
+					<div id="add" class="add-ons">
 						<h3>Add to any IV:</h3>
 					 	<div class="title-line"></div>
 						<div id="accordeon" class="col-md-12">
