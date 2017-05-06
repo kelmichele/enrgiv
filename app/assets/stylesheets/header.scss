@@ -71,15 +71,15 @@ header {@include sec-default(); height:100px; background-color: $white;}
 }
 
 #offcanvas-toggler {
-    width: 40px;
+    width: 35px;
     float:right;
     margin-top: 25px;
     background-color:$blue;
-    padding: 10px 0 5px;
+    padding: 6px 0 2px;
     text-align: center;
     border-radius: 4px;
     border: 1px solid $white;
-    margin-right:20px;
+    margin-right:10%;
     // border: 1px solid rgba($gray, .5);
     display:none;
 
@@ -91,11 +91,11 @@ header {@include sec-default(); height:100px; background-color: $white;}
         @include center-block ();
         display: block;
         margin-bottom: 4px;
-        width: 25px;
-        height: 3px;
+        width: 20px;
+        height: 2px;
         border-radius: 4px;
         background-color: $white;
-        border: 1px solid rgba($black, .1);
+        // border: 1px solid rgba($black, .1);
     }
 }
 .offcanvas-menu .offcanvas-inner .module ul > li > a:hover{color:$white;}
@@ -150,15 +150,41 @@ h3.module-title{color: $white;}
 }
 
 @include bp(md) {
+    #nav .logo{width:200px; padding-top: 14px}
+
     .book-bar {padding: 6px 25px 5px;
         .contact-info {@include sec-default();text-align: center;
-            h4, ul.social { float: none; margin: 0 10px;
-                // &.phone{float: left;}
-                // &.book {float: none;}
-                // &.wiw {float: none;}
-            }
+            h4, ul.social { float: none; margin: 0 10px;}
         }
     }
-    #offcanvas-toggler { display:inline-block; }
-    #nav nav {display: none;}
 }
+
+@include bp(pl) {
+    header {height:75px; }
+    #offcanvas-toggler { display:inline-block; }
+    #nav {
+        nav {display: none;}
+
+        .logo{width:150px; margin-left: 10%; padding-top: 4px;}
+        #offcanvas-toggler {margin-top: 15px;}
+
+        &.stuck {
+        }
+
+    }
+    .book-bar {padding:3px 15px 3px;
+        h4 {font-size: 15px; text-shadow:none;}
+        ul.social li {font-size: 15px;
+            i {text-shadow: none;}
+        }
+    }
+    .sm-pad {padding:0 30px}
+}
+
+@include bp(sm) {
+    .book-bar {
+        h4, h4 a {text-shadow:none;}
+    }
+}
+
+
