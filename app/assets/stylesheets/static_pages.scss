@@ -950,17 +950,16 @@ img.icon { width:10%; @include center-block();}
 }
 
 .menu {
-	.pages-header{background-color: $comp; height:auto;
-			@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
-			// background-position: top right; background-size: 35%;
-	}
+	.pages-header{
+		background-image:url(image_path('lemon-full.jpg'));background-position: bottom center; position: relative; z-index: 0;
+		&::before {background-color:rgba($comp, .65);}}
 		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
 		h1 { @include tshadow($gray); margin-bottom:0; line-height: 1em; }
 		h3 {margin-top: 5px; line-height: 1.4em;}
 
 	.treatment-content{ @include sec-default(); padding: 20px 0px 0; background-color: $offwhite;
-		 @include sec-bgimage();background-repeat: repeat; background-size: 50%;	background-image: url(image_path('molecules.png'));  position: relative;z-index: 0;
-			&::before {@include before(); background-color: rgba($offwhite, .7);}
+		 @include sec-bgimage();background-repeat: repeat; background-size: 90%;	background-image: url(image_path('molecules-ov.png'));  position: relative;z-index: 0;
+			&::before {@include before(); background-color: rgba($offwhite, .4);}
 	}
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
 
@@ -1230,9 +1229,9 @@ img.icon { width:10%; @include center-block();}
 }
 
 #members, #members.uk-modal{
-	.content{@include sec-default();background-color: $offwhite;
+	.content{@include sec-default();background-color: #66e1e3;
 		text-align: center; padding:10px 5px;
-		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
+		// @include sec-bgimage(); background-image: url(image_path('lemon-bg.jpg'));
 		// background-position: center bottom;
 		// position: relative;z-index: 0;
 		// &::before {@include before(); background-color: rgba($white,.45);}
@@ -1265,17 +1264,17 @@ img.icon { width:10%; @include center-block();}
 		h3 {color: $gray; font-weight: bold; text-align: center; font-size: 19px; padding: 0 10px;}
 	}
 
-	@include bp(tb) {
-		.content{ background-image: url(image_path('water-mob.png'));}
-	}
+	// @include bp(tb) {
+	// 	.content{ background-image: url(image_path('water-mob.png'));}
+	// }
 
 	@include bp(md) {
-		.content{background-color: $offwhite;}
+		// .content{background-color: $offwhite;}
 		.mem-box {margin-top: 20px; width:90%;}
 	}
 
 	@include bp(mb) {
-		.content .sec1 h4.xsbg {background-color: rgba($offwhite, .85); font-size: 15px;}
+		.content .sec1 h4.xsbg {font-size: 15px;}
 		.mem-box {
 			.title-line{margin-bottom: 10px;}
 			p {
