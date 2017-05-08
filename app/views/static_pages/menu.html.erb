@@ -13,6 +13,12 @@
 		<div class="container-fluid no-padding-xs">
 			<div class="direct">
 				<p><span>Select</span> any option from the menu below for more information.</p>
+				<div class="page-linksec">
+				<p>Or</p>
+					<%= link_to '#prices', class: 'page-links' do %> <h4>See Prices</h4> <% end %>
+					<%= link_to '#pkgs', class: 'page-links' do %> <h4>Membership Packages</h4><% end %>
+					<%= link_to '#add', class: 'page-links' do %> <h4>Add Ons</h4> <% end %>
+				</div>
 			</div>
 			<%= render 'static_pages/cocktails'%>
 
@@ -33,7 +39,6 @@
 
 					<div class="plan">
 						<div class="side-link">
-						<!-- <a data-uk-modal="{center:true}" class="modal3 side-link" href="#members"> -->
 							<div class="inner">
 								<p>Look Below For Our</p> <h3>Membership Plans</h3>
 							</div>
@@ -82,17 +87,17 @@
 					</div>
       </div>
 		</div>
-	</div>
+	<!-- </div> -->
 
     <div id="members">
-      <div class="content">
+      <div id="pkgs" class="content">
       	<div class="container">
 	      	<div class="col-md-7">
 		      	<div class="sec1">
 		      		<%= image_tag('menu-circlesblue.png', class: 'img-responsive icon', alt: 'enrG Plus Logo') %>
 		      		<h2>Join the Club</h2>
 		      		<h3>enrG IV Members save big!</h3>
-		      		<h4>We offer <b>3 Month</b>, <b>6 Month</b>, and <b>12 Month</b> Membership Packages.<br> Choose a plan today, and boost your savings as you boost your health! </h4>
+		      		<h4 class="xsbg">We offer <b>3 Month</b>, <b>6 Month</b>, and <b>12 Month</b> Membership Packages.<br> Choose a plan today, and boost your savings as you boost your health! </h4>
 		      		<div class="title-line"></div>
 		      	<!-- </div> -->
 
@@ -118,3 +123,4 @@
 
 </div>
 
+</div>

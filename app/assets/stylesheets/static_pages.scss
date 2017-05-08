@@ -239,7 +239,7 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	.home-hero{@include sec-default(); padding: 60px;
-		&.hero-img {@include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));}
+		&.hero-img {@include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));background-position: center center;}
 
 		.title-block {float: right; margin-top: 6%; text-align: center;
 			.circles {width:100px;display: inline-block;}
@@ -359,6 +359,11 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
+	// @include bp(su) {
+	// 	.home-hero.hero-img {
+	// 		background-position: center center;
+	// 	}
+	// }
 	@include bp(dt) {
 		#nav .logo {width:280px;}
 		.home-hero {height:650px; padding:100px;
@@ -946,20 +951,26 @@ img.icon { width:10%; @include center-block();}
 
 .menu {
 	.pages-header{background-color: $comp; height:auto;
+			@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
+			// background-position: top right; background-size: 35%;
 	}
 		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
-		h1 { @include tshadow($gray); margin-bottom:0; line-height: 1em;}
+		h1 { @include tshadow($gray); margin-bottom:0; line-height: 1em; }
 		h3 {margin-top: 5px; line-height: 1.4em;}
 
-	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite;
-		 // @include sec-bgimage();background-repeat: repeat;	background-image: url(image_path('molecules.jpg'));  position: relative;z-index: 0;
-			// &::before {@include before(); background-color: rgba($offwhite, .7);}
+	.treatment-content{ @include sec-default(); padding: 20px 0px 0; background-color: $offwhite;
+		 @include sec-bgimage();background-repeat: repeat; background-size: 50%;	background-image: url(image_path('molecules.png'));  position: relative;z-index: 0;
+			&::before {@include before(); background-color: rgba($offwhite, .7);}
 	}
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
 
-	.direct { @include center-block(); border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; text-align: center; padding: 12px 10px 5px; margin-bottom: 20px;
-		p{ font-size: 20px; font-family: $open;font-weight: bold;
+	.direct { @include center-block(); width:99%; border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; text-align: center; padding: 12px 10px 5px; margin-bottom: 20px;
+		p{ font-size: 18px; font-family: $open;font-weight: bold;
 			span {color: $comp;font-family: $open;font-weight: bold;}
+		}
+
+		.page-linksec {display: block;
+			.page-links {display: inline-block; float: left;font-weight: bold; width:32%; h4{font-weight: bold; }}
 		}
 		display: none;
 	}
@@ -975,7 +986,7 @@ img.icon { width:10%; @include center-block();}
 		.title-line {@include center-block(); width: 45%; background-color: rgba($gray, .1); margin-bottom: 20px;}
 		br.md-br {display: none;}
 		hr{width:85%; @include center-block();}
-		.pricing, .add-ons, .platform, .plan, .nonmember {@include sec-default(); padding: 20px 15px;}
+		.pricing, .add-ons, .platform, .plan, .nonmember {@include sec-default(); padding: 12px 15px;}
 		.border {@include sec-default(); height: 1px; border-top: 1px dotted $offwhite; margin-top: 15px; }
 		p span { font-style: italic; }
 
@@ -985,7 +996,7 @@ img.icon { width:10%; @include center-block();}
 			h3{ color: $font; font-weight: bold; font-size: 22px;
 				span {text-shadow:none; font-size: 17px; color: $gray;}
 			}
-			h4 {color:$comp; font-family: $open;font-weight: bold; margin-left: 30px;
+			h4 {color:$comp; font-family: $open;font-weight: bold; margin-left: 10px;
 				span { font-size: 15px; color:$gray; text-shadow: none;  }
 			}
 		}
@@ -1032,15 +1043,11 @@ img.icon { width:10%; @include center-block();}
 
 	.ch-grid {width: 70%; float: left;
 		li {
-			// width: 290px;
-			// height: 290px;
 			width: 275px;
 			height: 275px;
 		}
 
 		.ch-info-wrap{
-			// width: 280px;
-			// height: 280px;
 			width: 265px;
 			height: 265px;
 		}
@@ -1056,12 +1063,16 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(xl) {
-		.pages-header {padding: 30px 0 15px;}
-		.container-fluid {padding-left: 0;}
-		.ch-grid {width: 72%; }
-		.sidebar { width:26%; margin-top: 25px;margin-left: 2%;
+		.pages-header {padding: 45px 0 30px;}
+		// .ch-grid {width: 72%; margin-left: 2%; }
+		.sidebar { width:26%;
 			.pricing h4 {margin-left: 5px;}
 		}
+	}
+
+	@include bp(cm) {
+		.container-fluid {padding-left: 0;}
+		.ch-grid {margin-left: 5%; width:65%;}
 	}
 
 	@include bp(dt) {
@@ -1069,17 +1080,22 @@ img.icon { width:10%; @include center-block();}
 		.direct {display: none;}
 		br.md-br {display: none;}
 
-		.ch-grid{margin-left: 2%;
-			li {margin-left: 5px; margin-right: 5px;}
-		}
-		.sidebar {width:22%;
-			.pricing h4 {margin-left: 15px;}
+		// .ch-grid{
+		// 	// float: none;
+		// 	// margin-left: 2%;
+		// 	li {margin-left: 5px; margin-right: 5px;}
+		// }
+		.sidebar {width:22%; margin-top: -65px;
+			// float: right;
+			.pricing h4 {margin-left: 5px;}
 		}
 	}
 
 	@include bp(tb) {
-		.direct {display: block; width:75%;}
-		.sidebar {width: 28%; margin-top: 40px; margin-right: 2%;}
+		.direct {display: block; width:75%; .page-linksec{display: none;}}
+		.sidebar {width: 28%; margin-top: 40px; margin-right: 2%;
+		.pricing, .add-ons, .platform, .plan, .nonmember { padding: 20px 15px;}
+		}
 
 		.ch-grid {
 			li {
@@ -1101,11 +1117,23 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(md) {
-		.direct{width: 95%;}
+		.direct{width: 100%; text-align: center; .page-linksec{display: block}}
 
 		.sidebar { @include sec-default();
+			.pricing, .platform, .nonmember { width: 50%; display: inline-block; padding:10px;}
+			.plan {display: none;}
 			.pricing {
 				h3 {font-size: 18px;line-height: 1.3em; display: inline-block; width: 45%; text-align: center;}
+			}
+
+			.platform {
+				h4{font-size: 15px; span {font-size: 17px;}}
+				p {font-size: 15px;}
+			}
+			.nonmember {background-color: $offwhite;
+				.title-line {margin-bottom: 10px;}
+				h3 {font-size: 18px;}
+				p, h4 {font-size: 15px;}
 			}
 			.add-ons {padding-top:10px;
 				h3 {margin-bottom: 5px;}
@@ -1128,9 +1156,33 @@ img.icon { width:10%; @include center-block();}
 				}
 			}
 		}
+	}
 
+	@include bp(pl) {
+		.sidebar {
+			.platform, .nonmember {padding: 5px 5px 0;	}
+		}
+	}
 
+	@include bp(ph) {
 
+		.direct {width: 100%;
+			p{font-size: 16px;}
+			.page-linksec .page-links{ width: 33%;
+				h4 {font-size: 14px;}
+			}
+		}
+		.sidebar {
+			.platform, .nonmember, .pricing {@include sec-default();}
+		}
+	}
+
+	@media (min-width:1200px){
+		.ch-grid{ width: 65%; margin-left: 4%;}
+	}
+
+	@media (min-width:1285px){
+		.ch-grid{ width: 74%; margin-left: 0;}
 	}
 }
 
@@ -1178,10 +1230,12 @@ img.icon { width:10%; @include center-block();}
 }
 
 #members, #members.uk-modal{
-	.content{@include sec-default();
+	.content{@include sec-default();background-color: $offwhite;
 		text-align: center; padding:10px 5px;
-		@include sec-bgimage(); background-image: url(image_path('jump-full.jpg')); background-position: center bottom; position: relative;z-index: 0;
-		&::before {@include before(); background-color: rgba($white,.45);}
+		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
+		// background-position: center bottom;
+		// position: relative;z-index: 0;
+		// &::before {@include before(); background-color: rgba($white,.45);}
 
 		.icon {width: 80px;}
 		h2 {color: $comp; font-weight: bold; font-family: $open; @include tshadowl ($gray); text-transform: uppercase; margin-top: 0; margin-bottom: 10px;}
@@ -1200,9 +1254,8 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	.mem-box { @include sec-default(); margin-top: 18%; padding: 10px;
-		// width:80%; @include center-block();
 		border: 1px solid rgba($blue, .5);
-		background-color: rgba($white, .8);
+		background-color: rgba($white, .95);
 		p {color: $gray;
 			&.pleft {color: $blue; font-weight: bold; margin-bottom: 5px;}
 			span {font-weight: bold; text-transform: uppercase; color: $comp; @include tshadowl($gray); font-size: 18px}
@@ -1210,6 +1263,32 @@ img.icon { width:10%; @include center-block();}
 		}
 		i {font-size: 14px;}
 		h3 {color: $gray; font-weight: bold; text-align: center; font-size: 19px; padding: 0 10px;}
+	}
+
+	@include bp(tb) {
+		.content{ background-image: url(image_path('water-mob.png'));}
+	}
+
+	@include bp(md) {
+		.content{background-color: $offwhite;}
+		.mem-box {margin-top: 20px; width:90%;}
+	}
+
+	@include bp(mb) {
+		.content .sec1 h4.xsbg {background-color: rgba($offwhite, .85); font-size: 15px;}
+		.mem-box {
+			.title-line{margin-bottom: 10px;}
+			p {
+				&.pleft {font-size: 15px;}
+				span {font-size: 17px}
+				span.print { font-size: 14px; }
+			}
+		}
+	}
+
+	@include bp(ph) {
+		.content {background-image: none;}
+		.mem-box{margin-top: 5px; width:100%;}
 	}
 }
 
