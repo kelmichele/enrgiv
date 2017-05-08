@@ -67,7 +67,7 @@ img.icon { width:10%; @include center-block();}
 	list-style: none;
 	display: inline-block;
 	width: 75%;
-	font: left;
+	float: left;
 	&::before, &::after { content: ''; display: table; }
 	&::after { clear: both;}
 
@@ -108,7 +108,7 @@ img.icon { width:10%; @include center-block();}
 		top: 5px;
 		left: 5px;
 		background-color: $gray;
-		box-shadow: 0 0 0 20px rgba($white,0.2), inset 0 0 3px rgba(115,114, 23, 0.8);
+		box-shadow: 0 0 0 10px rgba($white,0.2), inset 0 0 3px rgba(115,114, 23, 0.8);
 	}
 
 	.ch-info{
@@ -952,8 +952,8 @@ img.icon { width:10%; @include center-block();}
 		h3 {margin-top: 5px; line-height: 1.4em;}
 
 	.treatment-content{ @include sec-default(); padding: 20px 0px; background-color: $offwhite;
-		 // @include sec-bgimage();	background-image: url(image_path('preview2.png'));  position: relative;z-index: 0;
-			// &::before {@include before(); background-color: rgba($offwhite, .6);}
+		 // @include sec-bgimage();background-repeat: repeat;	background-image: url(image_path('molecules.jpg'));  position: relative;z-index: 0;
+			// &::before {@include before(); background-color: rgba($offwhite, .7);}
 	}
 	img.icon { width:12%; @include center-block(); margin-bottom: 10px;}
 
@@ -964,10 +964,10 @@ img.icon { width:10%; @include center-block();}
 		display: none;
 	}
 
-	.sidebar { display: inline-block; float: right;
-			margin-top: -65px;
-			background-color: $white; @include shadow-dk(); text-align: center;
-			.icon {width: 60px; margin-bottom: 0;}
+	.sidebar { display: inline-block; float: none;
+		margin-top: -65px;
+		background-color: $white; @include shadow-dk(); text-align: center;
+		.icon {width: 60px; margin-bottom: 0;}
 
 		.title {color: $comp; font-weight: bold; font-size: 24px; line-height: 1em; font-family: $open; text-transform: uppercase; text-align: center; margin-top: 0; margin-bottom: 15px;}
 		h3 {color: $gray;font-size: 20px; margin-bottom: 0; line-height: 1.3em;}
@@ -1030,36 +1030,56 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
-	.ch-grid {width: 70%;
+	.ch-grid {width: 70%; float: left;
 		li {
-			width: 290px;
-			height: 290px;
+			// width: 290px;
+			// height: 290px;
+			width: 275px;
+			height: 275px;
 		}
 
 		.ch-info-wrap{
-			width: 280px;
-			height: 280px;
+			// width: 280px;
+			// height: 280px;
+			width: 265px;
+			height: 265px;
 		}
 
 		.ch-info {
 			.ch-info-front {padding-top:55px;}
 			.ch-info-back.less {padding-top:60px;}
 
-			h3 {font-size: 19px; margin: 0 10px 30px;}
+			hr{margin: 12px auto;}
+			h3 {font-size: 19px; margin: 0 10px 20px;}
+			p {font-size: 15px;}
+		}
+	}
+
+	@include bp(xl) {
+		.pages-header {padding: 30px 0 15px;}
+		.container-fluid {padding-left: 0;}
+		.ch-grid {width: 72%; }
+		.sidebar { width:26%; margin-top: 25px;margin-left: 2%;
+			.pricing h4 {margin-left: 5px;}
 		}
 	}
 
 	@include bp(dt) {
+		.pages-header {padding: 30px 0;}
 		.direct {display: none;}
 		br.md-br {display: none;}
 
-		.ch-grid{margin-left: 2%;}
-		.sidebar {width:22%; margin-right: 3%;}
+		.ch-grid{margin-left: 2%;
+			li {margin-left: 5px; margin-right: 5px;}
+		}
+		.sidebar {width:22%;
+			.pricing h4 {margin-left: 15px;}
+		}
 	}
 
 	@include bp(tb) {
 		.direct {display: block; width:75%;}
-		.sidebar {width: 28%; margin-top: 40px;}
+		.sidebar {width: 28%; margin-top: 40px; margin-right: 2%;}
 
 		.ch-grid {
 			li {

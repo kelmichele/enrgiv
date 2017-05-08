@@ -147,11 +147,12 @@
 
 @mixin bp($point) {
     @if $point == dt {
-        @media (min-width: 1200px) { @content ; }
+        @media (min-width: 1190px) { @content ; }
     }
 
     @else if $point == xl {
         @media (min-width: 1025px) { @content ; }
+        // @media (min-width: 1025px) and (max-width: 1278px) { @content ; }
     }
 
     @else if $point == tb {
