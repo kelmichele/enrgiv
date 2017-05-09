@@ -305,26 +305,15 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
-	.banner3 {
-		@include sec-default(); background-color: $offwhite;text-align: center; padding: 60px 10px 30px;
-		.inner {width:95%;@include center-block();}
-		.top {@include sec-default(); margin-bottom:20px; }
-		.banner-mid {width:35%; @include center-block(); position: relative; z-index: 5;
-			.img-responsive {width:55%; @include center-block();}
-			.box{@include sec-default(); margin-bottom: 10px; background-color: $offwhite; text-align: center;border-radius: 50%; padding-top: 35px; margin-top: -90px; height:180px;}
-			h3 {font-weight: bold; margin: 0; color:$lt-blue; font-size: 30px; text-transform: uppercase; letter-spacing: 5px;}
-		}
-	}
-
 	.banner-top { @include sec-default();
 		background-color: $white;
-		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
+		@include sec-bgimage(); background-image: url(image_path('water-bg-tall.png'));
 		.inner {width: 92%; @include center-block();}
 		.left-block {@include sec-default(); margin-bottom: 15px; text-align: center;}
 
 		h3 {font-weight: 800; font-family: $open; font-size: 35px;
 			b{color: $blue; }
-			span {font-weight: normal; font-size: 20px;}
+			span {font-weight: normal; font-size: 20px; color:$blue;}
 			.fa {font-size: 6px; vertical-align: middle;}
 		}
 		h4 {font-weight: bold; margin-bottom: 10px; line-height: 1.3em;
@@ -347,18 +336,28 @@ img.icon { width:10%; @include center-block();}
 			}
 		}
 	}
-	.layout-mainb{@include sec-default(); padding:50px 0 0;
-	}
-	.inner-sub {@include center-block(); width: 90%; text-align: center;
-		background-color: $white;
-		.qcon {width: 12%; @include center-block();}
-		.top-bar {@include sec-default(); text-align: center; margin-bottom: 25px;}
-		.q-box {display: inline-block; float: none; margin:0 10px; padding: 15px 10px 15px 15px; width: 23%; text-align: left; position: relative; z-index: 0;
-			border-right:1px solid #dfdfdf;
-			&.last {margin-right: 0;border-right: 0;}
-		}
-	}
+	.layout-mainb{@include sec-default();
+		padding:50px 0 0;
+		// margin-top:90px; background-color: $comp;
 
+			.inner-sub {@include center-block(); width: 90%; text-align: center;
+				background-color: $white;
+				.qcon {width: 12%; @include center-block();}
+				.top-bar {@include sec-default(); text-align: center; margin-bottom: 25px;}
+				.q-box {display: inline-block; float: none; margin:0 10px; padding: 15px 10px 15px 15px; width: 23%; text-align: left; position: relative; z-index: 0;
+					border-right:1px solid #dfdfdf;
+					&.last {margin-right: 0;border-right: 0;}
+				}
+			}
+
+			.inner-alt {display: inline-block;float: left; text-align: center; width: 70%; background-color: $white;
+				.qcon {width: 12%; @include center-block();}
+				.top-bar {@include sec-default(); text-align: center; margin-bottom: 25px;}
+				.q-box {display: inline-block; float: left; width: 47%; padding: 15px 20px; text-align: left;}
+			}
+
+			.book-banner {float: right;display: inline-block; width: 30%;}
+	}
 	// @include bp(su) {
 	// 	.home-hero.hero-img {
 	// 		background-position: center center;
@@ -375,7 +374,7 @@ img.icon { width:10%; @include center-block();}
 
 		.banner-top {
 			padding:20px 0 100px;
-			.left-block{margin-bottom: 50px;}
+			// .left-block{margin-bottom: 50px;}
 		}
 
 	}
@@ -1379,6 +1378,390 @@ img.icon { width:10%; @include center-block();}
 			.monthly {width:110px; height:110px;}
 			.mem-box{margin-top: 15px;}
 
+		}
+	}
+}
+
+
+
+
+.home-ff {
+	.shadow{@include sec-default();
+		background-color: $white; @include shadow();
+	}
+
+
+	h4.fancy {text-align: center; margin:40px 0 10px; position: relative; font-weight: bold; color: darken($blue, 5%); font-size: 20px;
+		&::before, &::after {content: ""; width: 10%; height: 1px; background-color: rgba($gray, .3); top:10px; position: absolute;}
+		&::before{left:0;}
+		&::after{right:0;}
+	}
+
+	.home-hero{@include sec-default(); padding: 60px;
+		&.hero-img {@include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));background-position: center center;}
+
+		.title-block {float: right; margin-top: 6%; text-align: center;
+			.circles {width:100px;display: inline-block;}
+			.content{@include sec-default();padding-bottom: 30px; border-left: 1px solid #dfdfdf; border-right: 1px solid #dfdfdf; border-bottom: 1px solid rgba($gray, .3);
+			}
+
+			.top {@include sec-default();
+				h2 { margin: 0; line-height: 1em; color:$white; position: relative;
+					&::before, &::after {content: ""; width: 15%; height: 1px; background-color: rgba($gray, .3); top:15px; position: absolute;}
+					&::before{left:30px;}
+					&::after{right:30px;}
+				}
+			}
+		}
+
+		h1, h2, h3 {font-weight: bold;@include tshadow(rgba($black, .8)); color:$white; }
+		h3 { line-height: .9em; margin:0;}
+		h1 {color: $black; @include tshadow($gray); line-height: 1em; font-family: $open;}
+	}
+
+	.faq-sec {@include sec-default();background-color: $offwhite;
+		@include sec-bgimage(); background-size: 32%; background-image: url(image_path('juice.jpg'));
+		&.white {background-color: $white; @include shadow();}
+		h3 {font-weight: bold; font-family: $open; padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; margin-bottom: 10px;}
+
+		.title-box {display: inline-block; float: left; width: 25%; padding-top: 20px; padding-left: 20px;
+			.inside-round {
+				margin-left: 35px; text-align: center; padding: 50px 20px 0; display: block;
+				h3 {font-family: $open; font-weight: bold; font-size: 35px; @include tshadow($light);}
+			}
+		}
+
+		.md-right {width: 64%; display: inline-block; float: none; margin-left: 6%; padding:20px 0 30px 40px;}
+		.faq-box {
+			display: inline-block; width: 49%; float: left; padding:10px 15px 0;
+			h3 {font-size: 20px;}
+			p{padding-left:10px; }
+			.faq-link {width: 80%; @include center-block(); background-color: $comp; color: $white; font-weight: bold; font-size: 16px; text-align: center; font-family: $karla; margin-top: 20px; padding: 10px;}
+			b{color: $comp}
+			&.right {float: right;}
+			&.full {width:100%;}
+		}
+		.drip {margin:10px 0 10px 5px; width: 24%; height: 100px; float: left;
+			&::before{@include before(); background-color: rgba($black, .1);}
+			p{font-size: 18px; color: $white; @include tshadow($black); }
+		}
+	}
+
+	.book-banner {@include sec-default(); padding:10px 0 0; text-align: center;background-color: $comp;
+		h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); font-family: $open; color: $white;}
+		h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;
+			span{color: $blue;@include tshadowl(rgba($gray, .6)); font-family: $open;}
+		}
+		h4 {font-size: 25px; margin-bottom: 0px;}
+
+		.cta {display: inline-block; width:20%; float: none; margin-left:5%; margin-top: 15px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
+			@include tshadowl(rgba($gray, .4));
+			span {color: $gray; font-size: 18px;}
+		}
+	}
+
+	.banner-top { @include sec-default();
+		background-color: $white;
+		@include sec-bgimage(); background-image: url(image_path('water-bg-tall.png'));
+		.inner {width: 92%; @include center-block();}
+		.left-block {@include sec-default(); margin-bottom: 15px; text-align: center;}
+
+		h3 {font-weight: 800; font-family: $open; font-size: 35px;
+			b{color: $blue; }
+			span {font-weight: normal; font-size: 20px; color:$blue;}
+			.fa {font-size: 6px; vertical-align: middle;}
+		}
+		h4 {font-weight: bold; margin-bottom: 10px; line-height: 1.3em;
+			b {color: $blue;}
+		}
+
+		.ch-grid.h-menu{
+			@include sec-default(); text-align: center;
+			li {width: 180px; height: 180px; margin: 10px 15px;
+				.ch-info-wrap { background-color: #191970; padding-top: 25px;
+					width: 170px; height: 170px;
+					&.alt{background-color: #44dba7; }
+					&.alt2{background-color: #9900cc; padding-top: 10px;}
+				}
+				h4 { color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 22px; @include ease(); margin-top: 0;
+					span {font-size: 18px;}
+				}
+				.icon {width: 25%; }
+				&:hover h4 {color: $comp;}
+			}
+		}
+	}
+	.layout-mainb{@include sec-default();
+		padding:50px 0 0;
+
+			.inner-sub {@include center-block(); width: 90%; text-align: center;
+				.qcon {width: 10%; @include center-block();}
+				.top-bar {@include sec-default(); text-align: center; margin-bottom: 25px;}
+				.q-box {display: inline-block; float: none; margin:0 5px; padding: 15px 10px 15px 15px; width: 23%; text-align: center; position: relative; z-index: 0;background-color: $white;
+					border-right:1px solid #dfdfdf;
+					&.last {margin-right: 0;border-right: 0;}
+				}
+			}
+
+			.book-banner {float: right;display: inline-block; width: 30%;}
+	}
+
+	.faq-alt {@include sec-default();background-color: $comp;
+			h3 {font-weight: bold; font-family: $open; margin-bottom: 10px;}
+		.book-banner {display: inline-block; float: left; width: 30%; padding-top: 8%;
+			.img-banner {margin-top: 40px;}
+		}
+
+		.md-right {width: 70%; display: inline-block; float: none; background-color: $offwhite;
+			padding:0 10px 20px;
+			.title-box {@include sec-default(); text-align: center; margin-top: 5px;
+				h3 {color: $blue; font-size: 30px;}
+			}
+		}
+
+		.faq-box {
+			display: inline-block; width: 49%; float: left; padding:0px 20px 0;
+			h3 {font-size: 20px;padding: 10px 0;border-top: 1px solid #dfdfdf;border-bottom: 1px solid #dfdfdf; }
+			p{padding-left:10px; }
+			b{color: $comp}
+			&.right {float: right;}
+			&.full {width:100%;}
+		}
+	}
+
+	@include bp(dt) {
+		#nav .logo {width:280px;}
+		.home-hero {height:650px; padding:100px;
+			.title-block{width: 40%; }
+			h1 {font-size: 85px;
+				 &::before{left: -20px;}
+			}
+		}
+
+		.banner-top {
+			padding:20px 0 100px;
+		}
+
+	}
+	@include bp(tb) {
+		.home-hero {height:550px;
+			.title-block{width: 45%;
+				.content {padding-bottom:15px;}
+
+				.top h2{
+					&::before, &::after {width:10%;}
+				}
+						&::before{left:50px;}
+						&::after{right:50px;}
+			}
+			h1{font-size: 65px; margin-bottom: 0; line-height: .8em;
+				&::before {left:-20px; background-size: 75%; background-position: top center;}
+			}
+		}
+
+		.banner-top {
+			padding:30px 0 70px;
+			background-position: bottom right;
+		}
+
+		.inner-sub {width:98%;
+			.q-box { padding: 10px;
+				p {font-size: 16px;}
+			}
+		}
+
+		.faq-alt {
+			.book-banner{
+				h3{font-size: 40px; margin: 15px 0;}
+				h4 {font-size: 20px; margin-bottom: 0px;}
+			}
+
+			.faq-box {padding: 0 10px;}
+		}
+	}
+
+	@include bp(md) {
+		.home-hero{height:430px; padding-right: 20px;
+			.title-block{width: 55%;}
+			h1 {font-size: 40px;
+				&::before {background-size: 55%; left:10px}
+			}
+			.top {
+				&::before, &::after {top: -5px}
+				h2 {font-size: 22px;
+				}
+			}
+		}
+
+		.banner-top{padding-bottom: 30px;background-image: url(image_path('water-mob.png'));}
+		.layout-mainb {padding-top: 10px;
+			.inner-sub { @include sec-default();
+				.q-box { width: 44%; margin: 10px;border-bottom: 1px solid #dfdfdf;
+					p {font-size: 16px;}
+				}
+			}
+		}
+
+		.faq-alt {
+			.book-banner {@include sec-default(); padding:10px 0 0;
+				.img-banner{margin-top: 10px;}
+			}
+			.md-right {padding:10px 20px 20px;@include sec-default(); background-color: $offwhite;}
+			.faq-box{@include sec-default();}
+		}
+	}
+
+	@include bp(pl) {
+		.home-hero .title-block {
+			.top h2, .content h2 { font-size: 24px; }
+			.content {
+				h1, h2 {margin-top: 5px;}
+			}
+		}
+
+		.banner-top{padding-top: 0;
+			.left-block h3{font-size: 25px;
+				span {font-size: 18px;}
+			}
+		}
+	}
+
+	@include bp(mb) {
+		.home-hero{height:330px; padding-right: 5px;
+			h1 {font-size: 30px;}
+			.top {
+				&::before, &::after {top: -5px}
+			}
+			.top, .content {h2 {font-size: 20px;}}
+		}
+
+		.banner-top {
+			.ch-grid.h-menu{
+				li {width: 160px; height: 160px; margin: 5px 10px;
+					.ch-info-wrap { width: 150px; height: 150px;}
+					h4 { font-size: 18px;
+						span {font-size: 16px;}
+					}
+				}
+			}
+		}
+
+		.layout-mainb {
+			.inner-sub .q-box {width:47%; padding: 7px; margin:8px 5px; p{font-size: 15px;}}
+		}
+
+		.faq-alt {
+			.book-banner h3{font-size: 30px; margin-top: 5px;
+				.img-banner {display: none;}
+			}
+			.md-right{ padding-top: 0;
+				.title-box h3 {font-size: 25px; margin-bottom:0px; }
+				.faq-box h3 {font-size: 18px;}
+			}
+		}
+	}
+
+	@include bp(ph) {
+		.home-hero { height:250px;
+			.title-block { margin-top: 0px;
+				.content{ border-left: none; border-right: none; border-bottom: none;
+					h1 {width: 85%; margin-top: 0; }
+				}
+				h2{margin-top: 0}
+				.top {h2::before, h2::after {display: none;}}
+				.top, .content {h2 {font-size: 19px}}
+			}
+		}
+
+		.banner-top {
+			.ch-grid.h-menu{
+				li {width: 140px; height: 140px; margin: 5px;
+					.ch-info-wrap { width: 130px; height: 130px; padding-top: 20px;}
+					h4 { font-size: 16px;
+						span {font-size: 15px;}
+					}
+				}
+			}
+		}
+
+		.layout-mainb .inner-sub {
+			.q-box { width:75%; @include center-block(); padding:15px 10px 0px;
+				&.last {margin-right: auto;}
+			}
+			.qcon {display: none;}
+		}
+
+		.faq-alt {
+			.book-banner {
+				.img-responsive {display: none;}
+			}
+			.md-right {
+				.title-box h3 {font-size: 22px; margin-top: 10px;}
+				.faq-box {
+					h3 {margin-top: 10px; font-size: 16px;}
+					p {font-size: 15px;}
+				}
+			}
+		}
+	}
+
+	@include bp(sm) {
+		.home-hero {
+			.title-block {width:60%;
+				.top, .content {h2 {font-size: 17px}}
+			}
+		}
+
+		.banner-top {
+			.ch-grid.h-menu{ margin-bottom: 0;
+				li { margin:0px 2px;width: 130px; height: 130px;
+					.ch-info-wrap { width: 120px; height: 120px; }
+				}
+			}
+		}
+
+		.layout-mainb{padding-top: 0;
+			.inner-sub {
+				.q-box {width:95%;}
+			}
+		}
+	}
+
+	@include bp(xs) {
+		.home-hero {
+			.title-block {width:65%;
+				.top, .content {h2 {font-size: 16px}}
+			}
+		}
+
+		.banner-top {
+			.inner .left-block {
+				h3 {font-size: 22px;
+					span {font-size: 16px;}
+				}
+			}
+		}
+
+		.layout-mainb{padding-top: 0;
+			.inner-sub {
+				.q-box {width:95%;}
+			}
+		}
+
+		.faq-alt {
+			.md-right {padding:0 8px 10px;
+				.title-box{margin-bottom: 5px;}
+			}
+		}
+	}
+
+	@include bp(xx) {
+		.banner-top {
+			.inner .left-block {
+				h3 {font-size: 20px;
+					span {font-size: 15px;}
+				}
+			}
 		}
 	}
 }
