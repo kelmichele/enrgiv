@@ -226,7 +226,7 @@ img.icon { width:10%; @include center-block();}
 	&.full {background-color: $comp; &::before {display: none;}}
 }
 
-.home {
+.home-firstlive {
 	.shadow{@include sec-default();
 		background-color: $white; @include shadow();
 	}
@@ -1385,7 +1385,7 @@ img.icon { width:10%; @include center-block();}
 
 
 
-.home-ff {
+.home {
 	.shadow{@include sec-default();
 		background-color: $white; @include shadow();
 	}
