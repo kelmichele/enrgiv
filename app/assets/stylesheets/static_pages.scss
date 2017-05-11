@@ -1331,8 +1331,9 @@ img.icon { width:10%; @include center-block();}
 
 .menu {
 	.pages-header{
-		background-image:url(image_path('lemon-full.jpg'));background-position: bottom center; position: relative; z-index: 0;
-		&::before {background-color:rgba($comp, .65);}}
+		background-image:url(image_path('molecules.png'));background-size: 60%; background-repeat:repeat; position: relative; z-index: 0;
+		&::before {@include before(); background-color:rgba($comp, .85);}
+	}
 		.header-icon {width:8%; display: inline-block; float: none; margin-left: 40px;}
 		h1 { @include tshadow($gray); margin-bottom:0; line-height: 1em; }
 		h3 {margin-top: 5px; line-height: 1.4em;}
@@ -1443,7 +1444,6 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(xl) {
 		.pages-header {padding: 45px 0 30px;}
-		// .ch-grid {width: 72%; margin-left: 2%; }
 		.sidebar { width:26%;
 			.pricing h4 {margin-left: 5px;}
 		}
@@ -1459,13 +1459,7 @@ img.icon { width:10%; @include center-block();}
 		.direct {display: none;}
 		br.md-br {display: none;}
 
-		// .ch-grid{
-		// 	// float: none;
-		// 	// margin-left: 2%;
-		// 	li {margin-left: 5px; margin-right: 5px;}
-		// }
 		.sidebar {width:22%; margin-top: -65px;
-			// float: right;
 			.pricing h4 {margin-left: 5px;}
 		}
 	}
@@ -1650,7 +1644,6 @@ img.icon { width:10%; @include center-block();}
 	}
 }
 
-
 #package.uk-modal,
 #deal.uk-modal  {
 	.content{padding-bottom:50px; text-align: center;}
@@ -1664,12 +1657,10 @@ img.icon { width:10%; @include center-block();}
 }
 
 #members, #members.uk-modal{
-	.content{@include sec-default();background-color: #66e1e3;
+	.content{@include sec-default();
+		background-color: $offwhite;
+		// background-color: #66e1e3;
 		text-align: center; padding:10px 5px;
-		// @include sec-bgimage(); background-image: url(image_path('lemon-bg.jpg'));
-		// background-position: center bottom;
-		// position: relative;z-index: 0;
-		// &::before {@include before(); background-color: rgba($white,.45);}
 
 		.icon {width: 80px;}
 		h2 {color: $comp; font-weight: bold; font-family: $open; @include tshadowl ($gray); text-transform: uppercase; margin-top: 0; margin-bottom: 10px;}
@@ -1699,12 +1690,8 @@ img.icon { width:10%; @include center-block();}
 		h3 {color: $gray; font-weight: bold; text-align: center; font-size: 19px; padding: 0 10px;}
 	}
 
-	// @include bp(tb) {
-	// 	.content{ background-image: url(image_path('water-mob.png'));}
-	// }
 
 	@include bp(md) {
-		// .content{background-color: $offwhite;}
 		.mem-box {margin-top: 20px; width:90%;}
 	}
 
