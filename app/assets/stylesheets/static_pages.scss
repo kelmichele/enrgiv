@@ -1568,12 +1568,16 @@ img.icon { width:10%; @include center-block();}
 .contact {
 
 	.contact-sec {@include sec-default(); text-align: center; padding: $padd; background-color: $offwhite;
+		position: relative;z-index: 0;
+			@include sec-bgimage(); background-image: url(image_path('molecules-ov.png'));
+			background-size: 85%; background-repeat: repeat;
+		&::before {@include before(); background-color: rgba($offwhite, .6);}
 		.title-line {@include center-block();}
 
 		h4 { margin-bottom:20px; line-height: 1.6em; font-family: $lora; span {font-family: $lora; color:$blue; font-weight: bold;}}
 
-		.link-box {width: 85%; float: right; @include sec-bgimage(); background-image: url(image_path('placeholder.jpg')); position: relative; z-index: 0; margin: 0px 0 15px; padding: 10px;
-			&::before {@include before(); background-color: rgba($blue, .85);}
+		.link-box {width: 80%; float: right; @include sec-bgimage(); background-image: url(image_path('vitamin.jpg')); position: relative; z-index: 0; margin: 10px 0; padding: 10px;
+			&::before {@include before(); background-color: rgba($blue, .9);}
 			.inside {@include sec-default(); text-align: center; border: 1px dotted $gray; padding-top:10px;}
 
 			h4 {color: $gray; margin-top:0; font-weight: bold; @include tshadowl(rgba($gray,.6)); @include ease(); margin-bottom: 5px; font-size: 16px;
@@ -1591,17 +1595,8 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	.combo-header { @include sec-default(); background-color: $offwhite; @include sec-bgimage(); background-image: url(image_path('contact-coll.jpg'));
-		// &::before {@include before(); background-color: rgba($comp, .7); height: 85%;
-			// @include sec-bgimage(); background-image: url(image_path('molecules-ov.png')); background-size: 45%; background-repeat: repeat;
-		// }
-
-		h1 {font-weight: bold; font-size: 40px; font-family: $lora;}
-		.text-box {
-			width: 40%; @include center-block(); margin-top: 250px; background-color: $offwhite; text-align: center; padding: 1px 0 15px;
-			// width: 25%; float: left; display: inline-block;
-		}
-
-		.h-img {display: inline-block; float: right; width: 65%;}
+		h1 {font-weight: bold; font-size: 40px; font-family: $lora;padding: 8px 0 4px;}
+		.text-box {width: 40%; @include center-block(); margin-top: 235px; background-color: $offwhite; text-align: center; }
 	}
 }
 
