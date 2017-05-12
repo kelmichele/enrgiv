@@ -2,82 +2,90 @@
 <% @page_description = "enrG IV is a Vitamin IV Bar & Functional Medicine Clinic located in Orange Beach, Al. Stop by today for some IV therapy, or an appointment with our professional medical staff. Walk-ins welcome!" %>
 
 <div class="pages-wrap less">
-		<section class="home-cover">
-		  <div class="title-block">
-		  	<div class="content">
-					<!-- <h2> Optimal Health</h2> -->
-					<h1><%= image_tag('header-hometext.png', alt: 'Enrg-IV site intro text', class: 'img-responsive') %> </h1>
-			  	<h2>Vitamin IV <span>&amp;</span> Functional Medicine Clinic</h2>
-					<h3>3099 Loop Rd <i class="fa fa-circle"></i> Orange Beach, Alabama</h3>
-			  </div>
+	<section class="home-cover">
+	  <div class="title-block">
+	  	<div class="content">
+				<h1><%= image_tag('cover-text.png', alt: 'Enrg-IV site intro text', class: 'img-responsive') %> </h1>
+					<div class="drop"></div>
+					<div class="drop"></div>
+					<div class="drop"></div>
+		  	<h2>Vitamin IV Lounge <span>&amp;</span></h2>
+		  	<h2>Functional Medicine Clinic</h2>
+				<h3>3099 Loop Rd <i class="fa fa-circle"></i> Orange Beach, Alabama</h3>
 		  </div>
-		</section>
+	  </div>
+	</section>
 
-		<div class="banner-top">
-			<div class="inner">
-				<div class="left-block">
-					<h3>Health Through Hydration</h3>
-				</div>
+	<div class="banner-top">
+		<div class="inner">
+			<div class="left-block">
+				<h3>Health Through Hydration</h3>
+			</div>
 
-				<div class="block2">
-					<div class="top-intro">
-						<%= image_tag('enrg-img4b.jpg', class: 'img-responsive left', alt: '') %>
+			<div class="block2">
+				<div class="top-intro">
+					<%= image_tag('enrg-img4b.jpg', class: 'img-responsive left', alt: '') %>
+					<%= image_tag('enrg-img4-mob.jpg', class: 'img-responsive mob', alt: '') %>
 
-						<div class="text">
-							<p>Relax and rehydrate in the comfort of a private room, or socializing in the lounge, and at the oxygen bar. <b>Walk-ins and appointments welcome!</b></p>
+					<div class="text">
+						<p>Relax and rehydrate in the comfort of a private room, or socializing in the lounge, and at the oxygen bar. <b>Walk-ins and appointments welcome!</b></p>
 
-						 	<p>Our intravenous vitamin and electrolyte cocktails, "drips," contain only the purest nutrients. Drip sessions typically last 20-60 minutes.</p>
-							<p>Clients enjoy our signature enrG cocktails kicked back in luxurious recliners, in front of flatscreen TVs, and surfing the internet.</p>
-						</div>
-
-						<%= image_tag('enrg-img6b.jpg', class: 'img-responsive right', alt: '') %>
+					 	<p>Our intravenous vitamin and electrolyte cocktails, "drips," contain only the purest nutrients. Drip sessions typically last 20-60 minutes.</p>
+						<p>Clients enjoy our signature enrG cocktails kicked back in luxurious recliners, in front of flatscreen TVs, and surfing the internet.</p>
 					</div>
+
+					<%= image_tag('enrg-img6b.jpg', class: 'img-responsive right', alt: '') %>
 				</div>
 			</div>
 		</div>
+	</div>
 
-			<div class="book-banner">
-		 		<div class="intro">
-		 			<h4>Don't hesitate to hydrate</h4>
-		 			<h3>Call Now!<br>
-		 			<span><%= number_to_phone(2512400842, delimiter: '.', class: 'phone-cta') %></span></h3>
-			 	</div>
+	<div class="book-banner">
+ 		<div class="intro">
+ 			<h4>Don't hesitate to hydrate</h4>
+ 			<h3>Call Now!<br>
+ 			<span><%= number_to_phone(2512400842, delimiter: '.', class: 'phone-cta') %></span></h3>
+	 	</div>
 
-				<ul class="ch-grid h-menu">
-					<li class="link">
-						<div class="ch-item alt">
-							<div class="ch-info-wrap alt">
-								<%= link_to "/menu", class: 'round-link' do %>
-									<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
-									<h4><span>enrG IV</span><br> Signature Cocktails</h4>
-								<% end %>
-							</div>
-						</div>
-					</li>
+		<ul class="ch-grid h-menu">
+			<li class="link">
+				<div class="ch-item alt">
+					<div class="ch-info-wrap alt">
+						<%= link_to "/menu", class: 'round-link' do %>
+							<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
+							<h4><span>enrG IV</span><br> Signature Cocktails</h4>
+						<% end %>
+					</div>
+				</div>
+			</li>
 
-					<li class="link">
-						<div class="ch-item">
-							<div class="ch-info-wrap">
-								<%= link_to "/menu#membership", class: 'round-link' do %>
-									<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
-									<h4><span>enrG IV</span><br> Membership<br> Plans</h4>
-								<% end %>
-							</div>
-						</div>
-					</li>
+			<li class="link">
+				<div class="ch-item">
+					<div class="ch-info-wrap">
+						<%= link_to "/menu#membership", class: 'round-link' do %>
+							<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
+							<h4><span>enrG IV</span><br> Membership<br> Plans</h4>
+						<% end %>
+					</div>
+				</div>
+			</li>
 
-					<li class="link">
-						<div class="ch-item">
-							<div class="ch-info-wrap alt2">
-								<%= link_to "/enrg-plus", class: 'round-link' do %>
-									<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
-									<h4><span>enrG+</span><br> Functional Medicine</h4>
-								<% end %>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
+			<li class="link">
+				<div class="ch-item">
+					<div class="ch-info-wrap alt2">
+						<%= link_to "/enrg-plus", class: 'round-link' do %>
+							<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
+							<h4><span>enrG+</span><br> Functional Medicine</h4>
+						<% end %>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="newsletter">
+		<%= render 'chimp' %>
+	</div>
 
 	<div class="faq-alt">
 		<div class="md-right">
@@ -105,10 +113,7 @@
 			<%= image_tag('enrg-img5.jpg', class: 'img-responsive', alt: '') %>
 			<p>The professional medical staff at enrG IV includes experts, who have been specially trained in IV Vitamin Therapies. They are leaders in the industry.</p>
 		</div>
-
 	</div>
-
-
 
 	</div>
 </div>

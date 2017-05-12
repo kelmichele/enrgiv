@@ -207,6 +207,16 @@ img.icon { width:10%; @include center-block();}
 	}
 }
 
+.newsletter {@include sec-default(); background-color: #042f62; padding:20px 0;
+	h3.head{color: $white; line-height: 1em; margin-top: 0; font-weight: bold;}
+	#mc_embed_signup {
+		input.email{border: 0; height:35px;}
+		input.button {background-color:$blue;  font-weight: bold; @include ease(); font-size: 14px; height: 35px;
+			&:hover {background-color: #010428;}
+		}
+	}
+}
+
 .drip {display: inline-block; float: none; margin:10px 0 10px 10px; width: 30%; height: 110px; text-align: center; @include sec-bgimage(); background-image: url(image_path('slices-bg.jpg')); position: relative;z-index: 0;
 	&::before{@include before(); background-color: rgba($black, .45);}
 	p{font-size: 20px; font-weight: bold; color: $white; @include tshadow($gray); }
@@ -1817,19 +1827,28 @@ img.icon { width:10%; @include center-block();}
 		&::after{right:0;}
 	}
 
-	.home-cover{@include sec-default(); padding: 60px; @include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));background-position: center center;
-		height:600px;
+	.home-cover{@include sec-default(); padding: 40px; @include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));background-position: center center;
+		height:650px;
 		.title-block {float: right; margin-top: 6%; text-align: center; width:40%;
-			.content{@include sec-default();padding-bottom: 30px;}
+		// @include sec-bgimage(); background-image: url(image_path('bubble-op.png'));
+			.content{@include sec-default(); padding: 0px 0 30px; position: relative; z-index: 0;
+				&::before {@include before(); width: 1px; height:75%; top:25px; left: 49.5%; background-color: rgba($gray, .1); z-index: -1;}
+
+				.drop{@include sec-default(); position: relative;z-index: 0;height: 50px; margin:20px 0;
+					&::before{ @include before(); left: 48%;width:100px; @include sec-bgimage();background-image: url(image_path('drip1.png')); background-size: 23%;}
+				}
+
+			}
 		}
 
-		h1, h2 {font-weight: bold;@include tshadow(rgba($black, .8)); color:$white; }
-		h1 {color: $black; @include tshadow($gray); line-height: 1em; font-family: $open; width: 85%; @include center-block();}
-		h2 {font-weight: 800; font-family: $open;
+		h1, h2 {font-weight: bold;@include tshadow(rgba($black, .6)); color:$white; margin: 0;}
+		h1 { width: 85%; @include center-block(); margin: -5px auto 5px;}
+		h2 {font-family: $lora;
+			// font-size: 28px;
 			b{color: $blue; }
 		}
-		h3 {font-weight: bold; font-size: 18px;}
-		.fa {font-size: 7px; vertical-align: middle;}
+		h3 {font-weight: bold; font-size: 18px; margin-top: 8px;}
+		.fa {font-size: 6px; vertical-align: middle;}
 	}
 
 	.hs1 {
@@ -1854,10 +1873,9 @@ img.icon { width:10%; @include center-block();}
 		.block2 {@include sec-default(); padding-bottom: 20px;}
 
 		.top-intro, .btm-intro { @include sec-default();
-			.text, img {display: inline-block; float: left; width: 32%;
-				&.right {float: right;}
-			}
-			.text { width: 30%; margin-left: 2%; padding:10px 10px 10px 20px; text-align: center;}
+			.text, img {display: inline-block; float: left; width: 32%;}
+			.text { padding:10px 10px 10px 20px; text-align: center;}
+			img.mob {display: none;}
 		}
 	}
 
@@ -1880,7 +1898,7 @@ img.icon { width:10%; @include center-block();}
 
 	.book-banner {@include sec-default(); padding:40px 0 60px; text-align: center;
 		background-color: $white;
-	 @include shadow();
+	 	@include shadow();
 		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
 		h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); font-family: $open; color: #042f62;}
 		h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;
@@ -1896,7 +1914,7 @@ img.icon { width:10%; @include center-block();}
 
 	.faq-alt {@include sec-default(); background-color: $offwhite; position: relative; z-index: 0;
 		@include sec-bgimage(); background-image: url(image_path('molecules-ov.png')); background-size: 71%;
-		&::after {@include after(); background-color: rgba($blue, .3); width: 29%;}
+		&::after {@include after(); background-color: rgba($blue, .5); width: 29%;}
 
 		h3 {font-weight: bold; font-family: $open; margin-bottom: 10px;}
 		.book-banner {display: inline-block; float: left; width: 30%; padding-top: 8%;
@@ -1927,6 +1945,147 @@ img.icon { width:10%; @include center-block();}
 			}
 		}
 	}
+
+	@include bp(dt) {
+		.top-intro, .btm-intro {
+			.text, img {
+				&.right {float: right;}
+			}
+			.text { width: 30%; margin-left: 2%; }
+		}
+	}
+
+	@include bp(tb) {
+		.banner-top {
+			.inner {width: 95%;}
+
+			h3 {font-size: 30px;
+				&::before, &::after {width: 29%; }
+				&::before{left:0;}
+				&::after{right:0;}
+			}
+
+			.top-intro, .btm-intro {
+				img {float: left; width: 35%; margin-left: 5%;
+					&.right {display: none;}
+				}
+				.text { width: 55%; float: none; text-align: left; margin-left: 2%; }
+			}
+		}
+
+		.faq-alt {
+			.faq-box {width: 49.5%; padding:0px 10px 0;
+				h3 {font-size: 18px;}
+			}
+
+			.sec2 {
+				display: inline-block;width:28%; float: right;
+				img {margin-top: 30%;}
+			}
+		}
+	}
+
+	@include bp(md) {
+		.banner-top { padding: 0px;
+			.inner {width: 100%;}
+			h3 {font-size: 25px;
+				&::before, &::after {width: 25%; }
+			}
+
+			.top-intro, .btm-intro { padding:10px;
+				img {float: left; width: 35%; margin-left: 0;
+					&.right {display: none;}
+				}
+				.text { width: 65%; float: right; margin-left: 0; padding: 0 10px 0 20px; }
+				p {font-size: 15px;}
+			}
+		}
+
+		.book-banner { padding: 20px 0;
+			h3{font-size: 35px;}
+			h4 {font-size: 20px;}
+		}
+
+		.faq-alt {background-size: 100%;
+			&::after {display: none;}
+			.faq-box {@include sec-default();}
+
+			.md-right {@include sec-default();}
+			.sec2 {@include sec-default(); background-color: rgba($blue, .3);
+				img, p {display: inline-block; width: 50%; float: left; margin-left: 5%;}
+				img {margin: 10px 0; width: 30%; margin-left: 10%; }
+				p {margin-top: 40px;}
+			}
+		}
+	}
+
+	@include bp(pl) {
+		.banner-top {
+			h3 {font-size: 22px;
+				&::before, &::after {width: 28%; top:11px}
+			}
+
+			.top-intro, .btm-intro { padding:0 10px;
+				img {width: 30%; padding-right: 10px;
+					&.mob {display: inline-block;}
+					&.left{display: none;}
+				}
+
+
+				.text { width: 70%; padding: 0 10px; }
+			}
+		}
+
+		.book-banner { padding-bottom: 0;
+			h3{font-size: 28px;}
+			h4 {font-size: 16px;}
+		}
+
+		.ch-grid.h-menu{
+			li {width: 140px; height: 140px; margin: 10px;
+				.ch-info-wrap { background-color: #9900ff; padding-top: 10px;
+					width: 135px; height: 135px;
+				}
+				h4 { font-size: 16px;
+					span {font-size: 15px;}
+				}
+				.icon {width: 30%; }
+				&:hover h4 {color: $blue;}
+			}
+		}
+
+		.faq-alt {
+			.title-box h3 {margin: 10px 0 5px; font-size: 24px;}
+			.faq-box h3 {margin-top: 10px;}
+		}
+	}
+
+	@include bp(ph) {
+		.banner-top {
+			h3 {
+				&::before, &::after {width: 20%;}
+				&::before {left: 5px}
+				&::after {right:5px}
+			}
+
+			.top-intro {
+				img.mob {display: none;}
+				.text { width: 100%; text-align: center; padding: 0; }
+			}
+		}
+
+		.book-banner { padding-top: 0;}
+
+		.faq-alt {
+			.sec2 {padding: 10px 20px;
+				img {margin: 0; width:35%;}
+				p {margin-top: 30px; width:65%; font-size: 15px; margin-left: 0; float: right;}
+			}
+		}
+	}
+
+	// @include bp() {}
+	// @include bp() {}
 }
 
 
