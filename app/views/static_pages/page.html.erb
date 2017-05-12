@@ -2,27 +2,46 @@
 <% @page_description = "enrG IV is a Vitamin IV Bar & Functional Medicine Clinic located in Orange Beach, Al. Stop by today for some IV therapy, or an appointment with our professional medical staff. Walk-ins welcome!" %>
 
 <div class="pages-wrap less">
-		<section class="home-hero hero-img">
+		<section class="home-cover">
 		  <div class="title-block">
-		  	<div class="top">
-					<h2> Optimal Health</h2>
-				</div>
 		  	<div class="content">
+					<!-- <h2> Optimal Health</h2> -->
 					<h1><%= image_tag('header-hometext.png', alt: 'Enrg-IV site intro text', class: 'img-responsive') %> </h1>
-			  	<!-- <h1>enrG IV</h1> -->
-			  	<h2> Through Natural Means</h2>
+			  	<h2>Vitamin IV <span>&amp;</span> Functional Medicine Clinic</h2>
+					<h3>3099 Loop Rd <i class="fa fa-circle"></i> Orange Beach, Alabama</h3>
 			  </div>
 		  </div>
 		</section>
 
-
-	<div class="shadow">
 		<div class="banner-top">
-
 			<div class="inner">
 				<div class="left-block">
-					<h3>Vitamin IV <br>&amp;<br> Functional Medicine Clinic <br><span>3099 Loop Rd <i class="fa fa-circle"></i> Orange Beach, Alabama</span></h3>
+					<h3>Health Through Hydration</h3>
 				</div>
+
+				<div class="block2">
+					<div class="top-intro">
+						<%= image_tag('enrg-img4b.jpg', class: 'img-responsive left', alt: '') %>
+
+						<div class="text">
+							<p>Relax and rehydrate in the comfort of a private room, or socializing in the lounge, and at the oxygen bar. <b>Walk-ins and appointments welcome!</b></p>
+
+						 	<p>Our intravenous vitamin and electrolyte cocktails, "drips," contain only the purest nutrients. Drip sessions typically last 20-60 minutes.</p>
+							<p>Clients enjoy our signature enrG cocktails kicked back in luxurious recliners, in front of flatscreen TVs, and surfing the internet.</p>
+						</div>
+
+						<%= image_tag('enrg-img6b.jpg', class: 'img-responsive right', alt: '') %>
+					</div>
+				</div>
+			</div>
+		</div>
+
+			<div class="book-banner">
+		 		<div class="intro">
+		 			<h4>Don't hesitate to hydrate</h4>
+		 			<h3>Call Now!<br>
+		 			<span><%= number_to_phone(2512400842, delimiter: '.', class: 'phone-cta') %></span></h3>
+			 	</div>
 
 				<ul class="ch-grid h-menu">
 					<li class="link">
@@ -30,7 +49,7 @@
 							<div class="ch-info-wrap alt">
 								<%= link_to "/menu", class: 'round-link' do %>
 									<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
-									<h4><span>View Our Full</span><br> IV Menu</h4>
+									<h4><span>enrG IV</span><br> Signature Cocktails</h4>
 								<% end %>
 							</div>
 						</div>
@@ -41,7 +60,7 @@
 							<div class="ch-info-wrap">
 								<%= link_to "/menu#membership", class: 'round-link' do %>
 									<%= image_tag('menu-circles.png', alt: '', class: 'img-responsive icon') %>
-									<h4><span>enrG IV</span><br> Membership</h4>
+									<h4><span>enrG IV</span><br> Membership<br> Plans</h4>
 								<% end %>
 							</div>
 						</div>
@@ -60,55 +79,7 @@
 				</ul>
 			</div>
 
-			<div class="layout-mainb">
-			 	<div class="inner-sub">
-				 	<div class="q-row">
-				 		<div class="q-box first">
-				 			<%= image_tag('bag-iconflow-dk.png', alt: '', class: 'img-responsive qcon') %>
-				 			<p>Our professional medical staff includes experts, who have been specially trained in IV Vitamin Therapies. They are leaders in the industry.</p>
-				 		</div>
-
-				 		<div class="q-box two">
-				 			<%= image_tag('bag-iconflow-bl.png', alt: '', class: 'img-responsive qcon') %>
-				 		 	<p>Our intravenous vitamin and electrolyte cocktails, "drips," contain only the purest nutrients. Drip sessions typically last 20-60 minutes.</p>
-				 		</div>
-
-				 		<div class="q-box">
-				 			<%= image_tag('bag-iconflow-comp.png', alt: '', class: 'img-responsive qcon') %>
-				 			<p>Clients enjoy our signature enrG cocktails kicked back in luxurious recliners, in front of flatscreen TVs, and surfing the internet.</p>
-				 		</div>
-
-				 		<div class="q-box last">
-				 			<%= image_tag('bag-iconflow-alt.png', alt: '', class: 'img-responsive qcon') %>
-				 			<p>Relax and rehydrate in the comfort of a private room, or socializing in the lounge, and at the oxygen bar. <b>Walk-ins and appointments welcome!</b></p>
-				 		</div>
-				 	</div>
-			 	</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- <div class="book-banner">
- 		<div class="intro">
- 			<h4>Don't hesitate to hydrate</h4>
- 			<h3>Call Now!<br>
- 			<span><%= number_to_phone(2512400842, delimiter: '.', class: 'phone-cta') %></span></h3>
-	 	</div>
-	</div> -->
-
-	<div class="faq-alt ">
-
-		<div class="book-banner">
-	 		<div class="intro">
-				<!-- <%= image_tag('collage-full.png', alt: 'Enrg-IV image banner', class: 'img-responsive img-banner') %>  -->
-	 			<h4>Don't hesitate to hydrate</h4>
-	 			<h3>Call Now!<br>
-	 			<span><%= number_to_phone(2512400842, delimiter: '.', class: 'phone-cta') %></span></h3>
-				<%= image_tag('collage-full.png', alt: 'Enrg-IV image banner', class: 'img-responsive img-banner') %>
-		 	</div>
-		</div>
-
-
+	<div class="faq-alt">
 		<div class="md-right">
 			<div class="title-box">
 				<h3>IV Vitamin Therapy</h3>
@@ -130,8 +101,10 @@
 			</div>
 	  </div>
 
-
-
+	  <div class="sec2">
+			<%= image_tag('enrg-img5.jpg', class: 'img-responsive', alt: '') %>
+			<p>The professional medical staff at enrG IV includes experts, who have been specially trained in IV Vitamin Therapies. They are leaders in the industry.</p>
+		</div>
 
 	</div>
 
