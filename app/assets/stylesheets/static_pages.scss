@@ -255,23 +255,18 @@ img.icon { width:10%; @include center-block();}
 	.home-cover{@include sec-default(); padding: 40px; @include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));background-position: center center;
 		height:650px;
 		.title-block {float: right; margin-top: 6%; text-align: center; width:40%;
-			.content{@include sec-default(); padding: 0px 0 30px; position: relative; z-index: 0;
-				&::before {@include before(); width: 1px; height:75%; top:25px; left: 49.5%; background-color: rgba($gray, .1); z-index: -1;}
-
+			.content{@include sec-default(); padding: 0px 0 30px;
 				.drop{@include sec-default(); position: relative;z-index: 0;height: 50px; margin:20px 0;
 					&::before{ @include before(); left: 48%;width:100px; @include sec-bgimage();background-image: url(image_path('drip1.png')); background-size: 23%;}
 				}
-
 			}
 		}
 
 		h1, h2 {font-weight: bold;@include tshadow(rgba($black, .6)); color:$white; margin: 0;}
 		h1 { width: 85%; @include center-block(); margin: -5px auto 5px;}
 		h2 {font-family: $lora;
-			// font-size: 28px;
 			b{color: $blue; }
 		}
-		h3 {font-weight: bold; font-size: 18px; margin-top: 8px;}
 		.fa {font-size: 6px; vertical-align: middle;}
 	}
 
@@ -284,7 +279,7 @@ img.icon { width:10%; @include center-block();}
 		.inner {width: 92%; @include center-block();}
 		.left-block {@include sec-default(); margin-bottom: 15px; text-align: center;}
 
-		h3 {font-family: $lora; position: relative; font-size: 30px; color: $gray;
+		h3 {font-family: $lora; position: relative; font-size: 30px; color: $blue;
 			&::before, &::after {content: ""; width: 38%; height: 1px; background-color: rgba($gray, .3); top:15px; position: absolute;}
 			&::before{left:-4%;}
 			&::after{right:-4%;}
@@ -293,34 +288,40 @@ img.icon { width:10%; @include center-block();}
 		h4 {font-weight: normal; font-size: 20px; color:$blue;}
 		.fa {font-size: 5px; vertical-align: middle;}
 
+		.block2 {width:85%; @include center-block(); padding-bottom: 20px;}
 
-		.block2 {@include sec-default(); padding-bottom: 20px;}
-
-		.top-intro, .btm-intro { @include sec-default();
-			.text, img {display: inline-block; float: left; width: 32%;}
-			.text { padding:10px 10px 10px 20px; text-align: center;}
+		.top-intro {@include sec-default();
+			.text {display: inline-block; float: right; width: 55%; padding-left:20px;
+				h4 {font-family: $open; b{color: $comp;}}
+			}
 			img.mob {display: none;}
+		}
+
+		.homepage.slider {
+			width: 44%; display: inline-block; float: left;
+		  button.slick-next.slick-arrow{display: none;}
+			.slick-prev::before, .slick-next::before {display: none;}
 		}
 	}
 
-	.ch-grid.h-menu{
-		@include sec-default(); text-align: center;
-		li {width: 165px; height: 165px; margin: 10px;
-			.ch-info-wrap { background-color: #9900ff; ; padding-top: 20px;
+	.ch-grid.h-menu{ text-align: center;
+		// @include sec-default();
+		li {width: 155px; height: 155px; margin: 10px 5px 0;
+			.ch-info-wrap { background-color: #9900ff; padding-top: 20px;
 				top:2.5px; left: 2.5px;
-				width: 160px; height: 160px;
+				width: 150px; height: 150px;
 				&.alt{background-color: $teal; }
 				&.alt2{ background-color: $comp;}
 			}
-			h4 { color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 18px; line-height: 1.2em; @include ease(); margin-top: 0;
+			h4 {font-family: $karla; color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 18px; line-height: 1.2em; @include ease(); margin-top: 0;
 				span {font-size: 16px;}
 			}
-			.icon {width: 30%; }
+			.icon {width: 25%; }
 			&:hover h4 {color: $blue;}
 		}
 	}
 
-	.book-banner {@include sec-default(); padding:40px 0 60px; text-align: center;
+	.book-banner {@include sec-default(); padding:30px 0 120px; text-align: center;
 		background-color: $white;
 	 	@include shadow();
 		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
@@ -329,11 +330,6 @@ img.icon { width:10%; @include center-block();}
 			span{color: $blue;@include tshadowl(rgba($gray, .6)); font-family: $open;}
 		}
 		h4 {font-size: 25px; margin-bottom: 0px;}
-
-		.cta {display: inline-block; width:20%; float: none; margin-left:5%; margin-top: 15px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
-			@include tshadowl(rgba($gray, .4));
-			span {color: $gray; font-size: 18px;}
-		}
 	}
 
 	.faq-alt {@include sec-default(); background-color: $offwhite; position: relative; z-index: 0;
@@ -418,30 +414,25 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(dt) {
-		.top-intro, .btm-intro {
-			.text, img {
-				&.right {float: right;}
-			}
-			.text { width: 30%; margin-left: 2%; }
+		.banner-top{
+			.ch-grid.h-menu{display: inline-block; float: right; width: 55%; padding-left:20px;}
 		}
 	}
 
 	@include bp(tb) {
 		.banner-top {
 			.inner {width: 95%;}
-
-			h3 {font-size: 30px;
-				&::before, &::after {width: 29%; }
+			h3 {
+				&::before, &::after {content: ""; width: 25%; }
 				&::before{left:0;}
 				&::after{right:0;}
 			}
+			.block2 {width:99%; }
+			.ch-grid.h-menu{@include sec-default(); margin-top: 25px;}
+		}
 
-			.top-intro, .btm-intro {
-				img {float: left; width: 35%; margin-left: 5%;
-					&.right {display: none;}
-				}
-				.text { width: 55%; float: none; text-align: left; margin-left: 2%; }
-			}
+		.book-banner {@include sec-default();
+			background-image: url(image_path('water-bg-mob.png'));
 		}
 
 		.faq-alt {
@@ -471,23 +462,17 @@ img.icon { width:10%; @include center-block();}
 			h3 {font-size: 16px;}
 		}
 
-
 		.banner-top { padding: 0px;
 			.inner {width: 100%;}
-			h3 {font-size: 25px;
-				&::before, &::after {width: 25%; }
-			}
+			h3 {font-size: 25px;}
+			h4{margin-top: 0; font-size: 18px;}
+			p{font-size: 16px;}
 
-			.top-intro, .btm-intro { padding:10px;
-				img {float: left; width: 35%; margin-left: 0;
-					&.right {display: none;}
-				}
-				.text { width: 65%; float: right; margin-left: 0; padding: 0 10px 0 20px; }
-				p {font-size: 15px;}
-			}
+			.ch-grid.h-menu {margin-top: 5px;}
 		}
 
-		.book-banner { padding: 20px 0;
+		.book-banner { padding: 40px 0 60px;
+			// background-image: url(image_path('water-bg.png'));
 			h3{font-size: 35px;}
 			h4 {font-size: 20px;}
 		}
@@ -518,26 +503,17 @@ img.icon { width:10%; @include center-block();}
 			.fa {font-size: 5px;}
 		}
 
-
 		.banner-top {
 			h3 {font-size: 22px;
-				&::before, &::after {width: 28%; top:11px}
+				&::before, &::after {top:11px}
 			}
 
-			.top-intro, .btm-intro { padding:0 10px;
-				img {width: 30%; padding-right: 10px;
-					&.mob {display: inline-block;}
-					&.left{display: none;}
-				}
-
-
-				.text { width: 70%; padding: 0 10px; }
+			.top-intro {
+				.homepage.slider {width: 36%; }
+				.text { width: 64%; }
+				h4 {font-size: 17px;}
+				p {font-size: 14px;}
 			}
-		}
-
-		.book-banner { padding-bottom: 0;
-			h3{font-size: 28px;}
-			h4 {font-size: 16px;}
 		}
 
 		.ch-grid.h-menu{
@@ -549,7 +525,6 @@ img.icon { width:10%; @include center-block();}
 					span {font-size: 15px;}
 				}
 				.icon {width: 30%; }
-				&:hover h4 {color: $blue;}
 			}
 		}
 
@@ -561,7 +536,6 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(mb) {
 		.home-cover{ padding-right: 10px;
-			// height:400px;
 			.title-block { width:60%;}
 		}
 	}
@@ -580,8 +554,8 @@ img.icon { width:10%; @include center-block();}
 			}
 
 			.top-intro {
-				img.mob {display: none;}
-				.text { width: 100%; text-align: center; padding: 0; }
+				.text { width: 90%;@include center-block(); text-align: center; padding: 0; }
+				.homepage.slider {display: none;}
 			}
 		}
 
@@ -607,8 +581,19 @@ img.icon { width:10%; @include center-block();}
 			}
 		}
 
-		.book-banner {
-			background-position: bottom center;
+		.ch-grid.h-menu{
+			li {
+				width: 90%; @include center-block(); height: 100px;
+				.ch-item {border-radius: 0; top:0; right:0; @include sec-default(); height:auto; }
+				.ch-info-wrap { padding: 10px; border-radius: 0;
+					@include sec-default(); height: auto;
+				}
+				h4 { font-size: 16px;
+					span {font-size: 15px;}
+					br.xs {display: none;}
+				}
+				.icon {width: 15%; }
+			}
 		}
 
 		.faq-alt {
@@ -625,10 +610,9 @@ img.icon { width:10%; @include center-block();}
 			h1 {margin-bottom: 10px;}
 			h3 {font-size: 14px;}
 		}
-	}
 
-	// @include bp() {}
-	// @include bp() {}
+		.book-banner {padding-top: 20px; background-image: url(image_path('water-bg-xs.png'));}
+	}
 }
 
 .plus {
@@ -1281,31 +1265,6 @@ img.icon { width:10%; @include center-block();}
 		&::after{right:0;}
 	}
 
-	.home-cover{@include sec-default(); padding: 40px; @include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));background-position: center center;
-		height:650px;
-		.title-block {float: right; margin-top: 6%; text-align: center; width:40%;
-			.content{@include sec-default(); padding: 0px 0 30px; position: relative; z-index: 0;
-
-				.drop{@include sec-default(); position: relative;z-index: 0;height: 50px; margin:20px 0;
-					&::before{ @include before(); left: 48%;width:100px; @include sec-bgimage();background-image: url(image_path('drip1.png')); background-size: 23%;}
-				}
-
-			}
-		}
-
-		h1, h2 {font-weight: bold;@include tshadow(rgba($black, .6)); color:$white; margin: 0;}
-		h1 { width: 85%; @include center-block(); margin: -5px auto 5px;}
-		h2 {font-family: $lora;
-			b{color: $blue; }
-		}
-		h3 {font-weight: bold; font-size: 18px; margin-top: 8px;}
-		.fa {font-size: 6px; vertical-align: middle;}
-	}
-
-	.hs1 {
-		@include sec-default();
-	}
-
 	.banner-top { @include sec-default();
 		background-color: $offwhite; padding: 25px 0;
 		.inner {width: 92%; @include center-block();}
@@ -1320,11 +1279,12 @@ img.icon { width:10%; @include center-block();}
 		h4 {font-weight: normal; font-size: 20px; color:$blue;}
 		.fa {font-size: 5px; vertical-align: middle;}
 
-
 		.block2 {width:85%; @include center-block(); padding-bottom: 20px;}
 
 		.top-intro, .btm-intro { @include sec-default();
-			.text {display: inline-block; float: right; width: 55%; padding-left:20px }
+			.text {display: inline-block; float: right; width: 55%; padding-left:20px;
+				h4 {font-family: $open; b{color: $comp;}}
+			}
 			img.mob {display: none;}
 		}
 
@@ -1337,14 +1297,14 @@ img.icon { width:10%; @include center-block();}
 
 	.ch-grid.h-menu{
 		@include sec-default(); text-align: center;
-		li {width: 160px; height: 160px; margin: 10px 5px 0;
+		li {width: 155px; height: 155px; margin: 10px 5px 0;
 			.ch-info-wrap { background-color: #9900ff; padding-top: 20px;
 				top:2.5px; left: 2.5px;
-				width: 155px; height: 155px;
+				width: 150px; height: 150px;
 				&.alt{background-color: $teal; }
 				&.alt2{ background-color: $comp;}
 			}
-			h4 { color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 18px; line-height: 1.2em; @include ease(); margin-top: 0;
+			h4 {font-family: $karla; color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 18px; line-height: 1.2em; @include ease(); margin-top: 0;
 				span {font-size: 16px;}
 			}
 			.icon {width: 25%; }
@@ -1655,8 +1615,6 @@ img.icon { width:10%; @include center-block();}
 	// @include bp() {}
 	// @include bp() {}
 }
-
-
 
 .staff {
 	.pages-header{
