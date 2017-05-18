@@ -1654,3 +1654,37 @@ img.icon { width:10%; @include center-block();}
 	// @include bp() {}
 	// @include bp() {}
 }
+
+
+
+.staff {
+	.pages-header{
+		background-image: url(image_path('staff.jpg'));
+		// background-position: center center;background-attachment: fixed;
+		position: relative; z-index: 0; &::before {@include before(); background-color: rgba($gray, .2);}
+		h1{@include tshadow(rgba($black, .6)); color: $white; font-family: $open; }
+	}
+
+	.med-link {@include sec-default(); @include sec-bgimage(); background-image: url(image_path('meds.jpg')); text-align: center; padding: 30px 0;
+		position: relative; z-index: 0; &::before {@include before(); background-color: rgba($comp, .7);}
+		h3 a{@include tshadowl(rgba($black, .6)); color: $white; font-family: $open; font-weight: bold; }
+
+		.container {border: 2px solid $comp;padding: 20px 0;background-color: rgba($blue, .4);}
+	}
+
+	.full-section{@include sec-default(); background-color: $offwhite; padding: $padd; }
+	.title-line{width:45%; @include center-block(); background-color: rgba($gray, .3); margin: 15px auto 25px;}
+
+	.doctor {margin-top: 25px; @include center-block(); width:90%;
+		h3 {font-weight: bold; font-family: $lora; color: $blue; }
+		.bio{padding-left: 40px;}
+	}
+}
+
+
+
+
+
+
+
+
