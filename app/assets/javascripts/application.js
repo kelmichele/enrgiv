@@ -26,6 +26,8 @@
 //= require nav
 //= require offcanvas-menu
 //= require static_pages
+//= require slick-init
+//= require slick.min
 //= require uikit.min
 //= require up
 //= require touch

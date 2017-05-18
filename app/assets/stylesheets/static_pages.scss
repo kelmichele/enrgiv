@@ -219,7 +219,6 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(tb) {
 		#mc_embed_signup {width:80%; @include center-block();}
-
 	}
 }
 
@@ -1520,45 +1519,14 @@ img.icon { width:10%; @include center-block();}
 			&::before {@include before(); background-color: rgba($white,.7);}
 
 			.icon {width: 80px;}
-			// h2 {color: $comp; font-weight: bold; font-family: $open; @include tshadowl ($gray); text-transform: uppercase; margin-top: 0; margin-bottom: 15px;}
-			// h3 {color: $gray;font-size: 20px; margin-bottom: 0; line-height: 1em;}
 			h4 {font-weight: normal; text-transform: none; color: $gray; font-family: $karla; line-height: 1.3em; text-align: center; font-size: 17px; margin-top: 3px;}
 
 			.sec1 {@include sec-default(); background-color: rgba($white, .3);}
 			.title-line {@include center-block(); width: 45%; background-color: rgba($gray, .1); margin-bottom: 20px;}
 		}
 
-		// .monthly {display: inline-block; margin:0 0 15px;
-		// 	width:120px; height:120px; border-radius: 50%; background-color:$comp;
-		// 	h4{font-weight: bold; color: $white; padding: 30px 0px 0; span{font-weight: normal; color:$lt-blue}}
-		// 	&.two {background-color: $gray;}
-		// 	&.last {background-color: $teal; h4 span{color:$gray}}
-		// }
-
-		// .mem-box { width:80%; @include center-block();
-		// 	border: 1px solid rgba($blue, .5);
-		// 	background-color: rgba($white, .2);
-		// 	p {color: $gray;
-		// 		&.pleft {color: $blue; font-weight: bold; margin-bottom: 5px;}
-		// 		span {font-weight: bold; text-transform: uppercase; color: $comp; @include tshadowl($gray); font-size: 18px}
-		// 		span.print {color: $font; font-style: italic; font-size: 15px; font-weight: normal; text-shadow: none; }
-		// 	}
-		// 	i {font-size: 14px;}
-		// 	h3 {color: $gray; font-weight: bold; text-align: center; font-size: 19px; padding: 0 10px;}
-		// }
-
-
-		// #accordeon, #solo {@include sec-default();
-		// 	.cbp-item.round { @include sec-default();
-		// 		.cbp-caption {display: inline-block; width: 24%;}
-		// 		.cbp-caption-defaultWrap {width: 140px; height: 140px; border-radius: 50%; border: 1px solid $blue; padding: 0; padding-top: 20%;
-		// 			h4 {font-size: 17px; text-align: center;}
-		// 		}
-		// 	}
-		// }
 		@include bp(dt) {
 			.iv-main { padding:0;
-				// background-color: $white; @include shadow();
 				.inner{padding:20px 20px 40px 25px; background-image: none;}
 
 				.left {width: 64%; padding-top:35px; margin-bottom: 0;}
@@ -1569,7 +1537,6 @@ img.icon { width:10%; @include center-block();}
 				.right {width:32%; float: right; margin-left: 35px; padding-bottom: 25px;}
 				.monthly {width:110px; height:110px;}
 				.mem-box{margin-top: 15px;}
-
 			}
 		}
 }
@@ -1624,50 +1591,39 @@ img.icon { width:10%; @include center-block();}
 		.fa {font-size: 5px; vertical-align: middle;}
 
 
-		.block2 {@include sec-default(); padding-bottom: 20px;}
+		.block2 {width:85%; @include center-block(); padding-bottom: 20px;}
 
 		.top-intro, .btm-intro { @include sec-default();
-			.text, img {display: inline-block; float: left; width: 32%;}
-			.text { padding:10px 10px 10px 20px; text-align: center;}
+			.text {display: inline-block; float: right; width: 55%; padding-left:20px }
 			img.mob {display: none;}
+		}
+
+		.homepage.slider {
+			width: 44%; display: inline-block; float: left;
+		  button.slick-next.slick-arrow{display: none;}
+			.slick-prev::before, .slick-next::before {display: none;}
 		}
 	}
 
 	.ch-grid.h-menu{
 		@include sec-default(); text-align: center;
-		li {width: 165px; height: 165px; margin: 10px;
-			.ch-info-wrap { background-color: #9900ff; ; padding-top: 20px;
+		li {width: 160px; height: 160px; margin: 10px 5px 0;
+			.ch-info-wrap { background-color: #9900ff; padding-top: 20px;
 				top:2.5px; left: 2.5px;
-				width: 160px; height: 160px;
+				width: 155px; height: 155px;
 				&.alt{background-color: $teal; }
 				&.alt2{ background-color: $comp;}
 			}
 			h4 { color: $white; font-weight: bold; @include tshadowl ($gray); font-size: 18px; line-height: 1.2em; @include ease(); margin-top: 0;
 				span {font-size: 16px;}
 			}
-			.icon {width: 30%; }
+			.icon {width: 25%; }
 			&:hover h4 {color: $blue;}
 		}
 	}
 
-	.book-banner {@include sec-default(); padding:40px 0 60px; text-align: center;
-		background-color: $white;
-	 	@include shadow();
-		@include sec-bgimage(); background-image: url(image_path('water-bg.png'));
-		h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); font-family: $open; color: #042f62;}
-		h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;
-			span{color: $blue;@include tshadowl(rgba($gray, .6)); font-family: $open;}
-		}
-		h4 {font-size: 25px; margin-bottom: 0px;}
-
-		.cta {display: inline-block; width:20%; float: none; margin-left:5%; margin-top: 15px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
-			@include tshadowl(rgba($gray, .4));
-			span {color: $gray; font-size: 18px;}
-		}
-	}
-
 	.faq-alt {@include sec-default(); background-color: $offwhite; position: relative; z-index: 0;
-		@include sec-bgimage(); background-image: url(image_path('molecules-ov.png')); background-size: 71%;
+		// @include sec-bgimage(); background-image: url(image_path('molecules-ov.png')); background-size: 71%;
 		&::after {@include after(); background-color: rgba($blue, .5); width: 29%;}
 
 		h3 {font-weight: bold; font-family: $open; margin-bottom: 10px;}
@@ -1700,15 +1656,23 @@ img.icon { width:10%; @include center-block();}
 		}
 	}
 
-	.newsletter{@include sec-bgimage(); background-image: url(image_path('splash-still.png')); background-attachment: fixed; background-repeat: repeat;}
-		// background-position: center center;
+	.book{display: inline-block; float: left; width: 35%;background-color: rgba($white, .7); padding: 40px 0;
+			h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); font-family: $open; color: #042f62;}
+			h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;
+				span{color: $blue;@include tshadowl(rgba($gray, .6)); font-family: $open;}
+			}
+			h4 {font-size: 25px; margin-bottom: 0px;}
+	}
 
+	.newsletter{background-color: transparent; display: inline-block; float: left; width: 55%; margin-top: 30px;
 
+		#mc_embed_signup {width:80%; float: left;}
+	}
 
 	.book-banner-video { background-color: #f5ffff;
-		@include sec-default(); padding:40px 0 60px; text-align: center;overflow: hidden;
+		@include sec-default(); padding:0px 0 60px; text-align: center;overflow: hidden;
     position: relative;
-    height: 80vh;
+    height: 65vh;
 
     .video-over, .video-holder, .video-frame{
       @include sec-default ();
@@ -1720,32 +1684,30 @@ img.icon { width:10%; @include center-block();}
       z-index: 0;
     }
 
-    .video-holder {
-      overflow: hidden;
-      top:60px;
-    }
-
+    .video-holder {overflow: hidden;}
     .over-holder {
       @include sec-default ();
       width: 100%;
       padding-top: 45px;
-      h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); font-family: $open; color: #042f62;}
-      h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;
-      	span{color: $blue;@include tshadowl(rgba($gray, .6)); font-family: $open;}
-      }
-      h4 {font-size: 25px; margin-bottom: 0px;}
+		}
 
-      .cta {display: inline-block; width:20%; float: none; margin-left:5%; margin-top: 15px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
-      	@include tshadowl(rgba($gray, .4));
-      	span {color: $gray; font-size: 18px;}
-      }
+    &.news {height: 30vh; padding:0;
+			.over-holder {padding-top: 0;}
+    }
+
+		.title-block { padding:50px;text-align: center;
+			.content{@include sec-default(); padding: 0px 0 30px;}
+			h2 {font-weight: bold;font-family: $lora;@include tshadow(rgba($black, .6)); color:$white; margin: 0; font-size: 38px;}
+			h1 { width: 450px; @include center-block(); }
+			h3 {font-weight: bold; font-size: 18px; margin-top: 8px;}
+			.fa {font-size: 6px; vertical-align: middle;}
 		}
 
 		.ab-list{
 			@include sec-default();
 			h4 {font-weight: bold; font-size: 22px; margin-bottom: 15px;
 				display: inline-block; float: none; text-align: center;
-				margin: 0 20px 15px;
+				margin: 30px 20px 15px;
 				opacity: .3;
 				// &.left {float: left;}
 				// &.right {float: right;}
@@ -1754,12 +1716,6 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(dt) {
-		.top-intro, .btm-intro {
-			.text, img {
-				&.right {float: right;}
-			}
-			.text { width: 30%; margin-left: 2%; }
-		}
 	}
 
 	@include bp(tb) {
