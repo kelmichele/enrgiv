@@ -254,7 +254,7 @@ img.icon { width:10%; @include center-block();}
 
 	.home-cover{@include sec-default(); padding: 40px; @include sec-bgimage(); background-image: url(image_path('beach-couple.jpg'));background-position: center center;
 		height:650px;
-		.title-block {float: right; margin-top: 6%; text-align: center; width:40%;
+		.title-block {float: right; margin-top: 8%; text-align: center; width:45%;
 			.content{@include sec-default(); padding: 0px 0 30px;
 				.drop{@include sec-default(); position: relative;z-index: 0;height: 50px; margin:20px 0;
 					&::before{ @include before(); left: 48%;width:100px; @include sec-bgimage();background-image: url(image_path('drip1.png')); background-size: 23%;}
@@ -262,11 +262,17 @@ img.icon { width:10%; @include center-block();}
 			}
 		}
 
-		h1, h2 {font-weight: bold;@include tshadow(rgba($black, .6)); color:$white; margin: 0;}
-		h1 { width: 85%; @include center-block(); margin: -5px auto 5px;}
-		h2 {font-family: $lora;
-			b{color: $blue; }
-		}
+		// h2 {font-weight: bold;@include tshadow(rgba($black, .6)); color:$white; margin: 0;}
+		// h1 { width: 75%; @include center-block(); margin: -5px auto 5px;}
+		// h2 {font-family: $lora;
+		// 	b{color: $blue; }
+		// }
+		h2 {font-weight: bold;font-family: $open;@include tshadow(rgba($black, .6)); color:$white; font-size: 30px;}
+		h1 .img-text{ width: 330px; @include center-block(); }
+		h1 .img-xs{display: none}
+		// h1 {display: inline-block; margin-left: -25px;}
+		h3 {font-weight: bold; font-size: 20px; margin-top: 10px;@include tshadow(rgba($black, .4)); color:$comp; }
+		h4 {font-weight: bold; font-family: $open; color: $light;@include tshadow(rgba($gray, .9));}
 		.fa {font-size: 6px; vertical-align: middle;}
 	}
 
@@ -293,8 +299,8 @@ img.icon { width:10%; @include center-block();}
 		.top-intro {@include sec-default();
 			.text {display: inline-block; float: right; width: 55%; padding-left:20px;
 				h4 {font-family: $open; b{color: $comp;}}
+				p span.fp{font-size: 15px; color: $font; font-style: italic;}
 			}
-			img.mob {display: none;}
 		}
 
 		.homepage.slider {
@@ -371,49 +377,10 @@ img.icon { width:10%; @include center-block();}
 		h4 {font-weight: bold; font-size: 22px; margin-bottom: 15px;}
 	}
 
-
-	.book-banner-video { background-color: #f5ffff;
-		// @include sec-bgimage(); background-image: url(image_path('enrg-img16.jpg'));
-		@include sec-default(); padding:40px 0 60px; text-align: center;overflow: hidden;
-    position: relative;
-    height: 80vh;
-
-    .video-over, .video-holder, .video-frame{
-      @include sec-default ();
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 0;
-    }
-
-    .video-holder {
-    	// opacity: .4;
-      overflow: hidden;
-      top:60px;
-    }
-
-    .over-holder {
-      @include sec-default ();
-      width: 100%;
-      padding-top: 45px;
-      h3, h4 {font-weight: bold; @include tshadowl(rgba($gray, .6)); font-family: $open; color: #042f62;}
-      h3{font-size: 50px; margin-top: 0; margin-bottom: 15px;
-      	span{color: $blue;@include tshadowl(rgba($gray, .6)); font-family: $open;}
-      }
-      h4 {font-size: 25px; margin-bottom: 0px;}
-
-      .cta {display: inline-block; width:20%; float: none; margin-left:5%; margin-top: 15px; background-color: lighten($blue, 10%); font-size: 23px; font-weight: bold; color: $white; padding: 10px 15px;
-      	@include tshadowl(rgba($gray, .4));
-      	span {color: $gray; font-size: 18px;}
-      }
-		}
-
-      .banner-top {background-color: rgba($offwhite, .6);}
-	}
-
 	@include bp(dt) {
+		.home-cover {
+			.title-block{margin-top: 10%;}
+		}
 		.banner-top{
 			.ch-grid.h-menu{display: inline-block; float: right; width: 55%; padding-left:20px;}
 		}
@@ -451,15 +418,10 @@ img.icon { width:10%; @include center-block();}
 		.home-cover{
 			padding: 40px;background-position: top left;
 			height:500px;
-			.title-block {width:50%;
-				.content{
-					.drop{height: 35px; margin:10px 0;
-						&::before{width:85px;background-size: 23%;}
-					}
-				}
-			}
+			.title-block {width:55%;}
 			h2 {font-size: 25px;}
-			h3 {font-size: 16px;}
+			h3 {font-size: 16px; color:$white;}
+			h4 {color:$white;}
 		}
 
 		.banner-top { padding: 0px;
@@ -492,7 +454,7 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(pl) {
 		.home-cover{height:400px;
-			.title-block { margin-top: 10%;
+			.title-block { margin-top: 5%;
 				.content{
 					&::before {display: none;}
 					.drop{margin:5px 0; display: none;}
@@ -542,6 +504,8 @@ img.icon { width:10%; @include center-block();}
 
 	@include bp(ph) {
 		.home-cover{ height:320px;
+			.title-block{margin-top: 2%;}
+			h1 .img-text{ width: 250px; }
 			h2 {font-size: 20px;}
 			h3 {font-size: 15px;}
 		}
@@ -570,9 +534,12 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(sm) {
-		.home-cover{ background-image: url(image_path('beach-couple-sm.jpg'));
-			.title-block{margin-top: 15%;}
-			h2 {font-size: 15px;}
+		.home-cover{ height:300px; background-image: url(image_path('beach-couple-sm.jpg')); position: relative; z-index: 0;
+			&::before {@include before(); background-color: rgba($blue, .5);}
+			.title-block{margin-top: 3%; width:95%; @include center-block();}
+			h1 .img-text{ display: none;}
+			h1 .img-xs{display: block; @include center-block(); width:250px;}
+			// h2 {font-size: 15px;}
 		}
 
 		.banner-top {
@@ -605,13 +572,21 @@ img.icon { width:10%; @include center-block();}
 	}
 
 	@include bp(xs) {
-		.home-cover{height:230px;
-			.title-block{margin-top: 10%;}
-			h1 {margin-bottom: 10px;}
+		.home-cover{ height: 270px;
+			h1 .img-xs{ width: 200px; }
 			h3 {font-size: 14px;}
 		}
 
 		.book-banner {padding-top: 20px; background-image: url(image_path('water-bg-xs.png'));}
+	}
+
+	@include bp(xx) {
+		.home-cover{ height: 250px; padding: 30px 0;
+			&::before {background-color: rgba($blue, .7);}
+			.title-block{margin-top: 0;}
+			h1 .img-xs{ width: 200px; }
+			h3 {font-size: 14px;}
+		}
 	}
 }
 
@@ -1365,7 +1340,6 @@ img.icon { width:10%; @include center-block();}
     height: 65vh;
 			// &.reg{ top: -10px;}
 
-
     .video-over, .video-holder, .video-frame{
       @include sec-default ();
       position: absolute;
@@ -1402,8 +1376,6 @@ img.icon { width:10%; @include center-block();}
 				display: inline-block; float: none; text-align: center;
 				margin: 30px 20px 15px;
 				opacity: .3;
-				// &.left {float: left;}
-				// &.right {float: right;}
 			}
 		}
 	}

@@ -150,7 +150,10 @@ h3.module-title{color: $white;}
 }
 
 @include bp(md) {
-    #nav .logo{width:200px; padding-top: 14px}
+    #nav{
+        .logo{width:185px; padding-top: 25px}
+        nav li {margin-right: 15px;}
+    }
 
     .book-bar {padding: 6px 25px 5px;
         .contact-info {@include sec-default();text-align: center;
