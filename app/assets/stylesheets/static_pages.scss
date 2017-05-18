@@ -1403,7 +1403,7 @@ img.icon { width:10%; @include center-block();}
 		@include sec-default(); padding:0px 0 60px; text-align: center;overflow: hidden;
     position: relative;
     height: 65vh;
-			&.reg{ top: -10px;}
+			// &.reg{ top: -10px;}
 
 
     .video-over, .video-holder, .video-frame{
@@ -1425,6 +1425,7 @@ img.icon { width:10%; @include center-block();}
 
     &.news {height: 30vh; padding:0;
 			.over-holder {padding-top: 0;}
+			.video-holder{top: -30px;}
     }
 
 		.title-block { padding:50px;text-align: center;
