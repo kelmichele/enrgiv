@@ -9,11 +9,20 @@ header {@include sec-default(); height:100px; background-color: $white;}
     ul.social {margin-bottom: 0; display: inline-block;
         li {display: inline-block;font-size: 17px; padding-left: 10px; i {color: $white;  @include tshadowl($gray);}}
     }
-    .contact-info {width:80%; float: right; }
-    h4, h4 a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
+    br.xs {display: none;}
+
+    &.reg h4, h4 a {display: inline-block; margin: 0 15px; color: $white; font-weight: bold; @include tshadowl($gray);
+        .contact-info {width:80%; float: right; }
         &.wiw {color: $comp; @include tshadowl(rgba($gray, .3));}
-        // &.phone span {color: $offwhite; text-shadow:none; }
     }
+
+    .contact-info { width:60%; float:right}
+    .block {display: inline-block; margin: 0 15px;
+       h4, a {color: $white; font-weight: bold; font-size: 17px;}
+       h4.wiw span {color: $gray;}
+        // &.wiw {color: $comp; @include tshadowl(rgba($gray, .3));}
+    }
+
 }
 
 #nav {
@@ -25,9 +34,8 @@ header {@include sec-default(); height:100px; background-color: $white;}
     z-index: 555;
     padding-bottom: 10px;
 
-    // .logo-block {display: inline-block;float: left; width: 35%;}
     .logo-block {display: inline-block;float: left; }
-    .logo {@include ease2(); width: 250px; padding:5px 0 0;}
+    .logo {@include ease2(); width: 260px; padding:8px 0 0;}
 
     nav { display: inline-block; float: right;
         ul.megamenu-parent {margin-top:55px}
@@ -135,13 +143,17 @@ h3.module-title{color: $white;}
 
 @include bp(dt) {
     header {height:120px; }
-    .book-bar {
-        .contact-info {width:50%; }
-    }
 }
 
 
 @include bp(tb) {
+    .book-bar {
+        .contact-info { width:90%; @include center-block();}
+        .block { margin: 0 10px;
+            &.three {float: right; }
+        }
+    }
+
     #nav {
         nav{
             li a {font-size: 16px;}
@@ -155,9 +167,10 @@ h3.module-title{color: $white;}
         nav li {margin-right: 15px;}
     }
 
-    .book-bar {padding: 6px 25px 5px;
-        .contact-info {@include sec-default();text-align: center;
-            h4, ul.social { float: none; margin: 0 10px;}
+    .book-bar {
+        .contact-info { @include sec-default(); padding: 0 10px}
+        .block{ margin: 0 5px;
+            h4, a {font-size: 16px;}
         }
     }
 }
@@ -175,19 +188,37 @@ h3.module-title{color: $white;}
         }
 
     }
-    .book-bar {padding:3px 15px 3px;
-        h4 {font-size: 15px; text-shadow:none;}
-        ul.social li {font-size: 15px;
+    .book-bar {
+        .contact-info { @include sec-default(); padding: 0 5px}
+        .block {
+            h4 {font-size: 15px; }
+            &.one, &.two{ margin: 0 2px;}
+        }
+        ul.social li a{font-size: 15px;
             i {text-shadow: none;}
         }
     }
     .sm-pad {padding:0 30px}
 }
 
-@include bp(sm) {
-    .book-bar {
-        h4, h4 a {text-shadow:none;}
+@include bp(ph) {
+    .book-bar {padding:10px 0;text-align: center;
+        .block {
+            h4 {margin: 0;}
+            &.one, &.two{ margin: 0 2px;}
+            &.three {@include sec-default(); margin-top: 5px}
+        }
+        ul.social li a{font-size: 15px;
+            i {text-shadow: none;}
+        }
     }
+}
+@include bp(sm) {
+    .book-bar{
+        br.xs {display: block;}
+    }
+
+
 }
 
 

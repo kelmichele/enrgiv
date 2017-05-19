@@ -1,15 +1,55 @@
-<header>
+<!-- <header>
 	<div id="nav" class="stick">
 
-		<div class="book-bar">
+		<div class="book-bar reg">
 			<div class="contact-info">
 				<h4 class="phone"><span>Call for Appointment:</span> <%= number_to_phone(2512400842, delimiter: '.') %></h4>
-				<!-- <h4 class="book"><a data-uk-modal="{center:true}" class="modal3" href="#appt">Book Online Now</a></h4> -->
 				<h4 class="wiw">Walk-Ins Welcome</h4>
 				<ul class="social">
 					<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
 					<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
 				</ul>
+			</div>
+		</div>
+
+		<div class="container sm-pad">
+			<% unless current_page?(enrg_plus_path) %>
+		    <div class="logo-block"><%= link_to(image_tag( 'enrg-web.png', alt: 'enrG IV Logo', class: 'img-responsive logo'), root_path ) %></div>
+
+		    <% else %>
+			    <div class="logo-block"><%= link_to(image_tag( 'nrg-plus.png', alt: 'enrG Plus Logo', class: 'img-responsive logo'), root_path ) %></div>
+	    <% end %>
+			<nav>
+				<ul class="megamenu-parent menu-zoom hidden-xs">
+			    <%= render 'layouts/nav' %>
+				</ul>
+			</nav>
+
+				<div>
+			    <a href="#" id="offcanvas-toggler">
+			        <span></span>
+			        <span></span>
+			        <span></span>
+			    </a>
+			  </div>
+		</div>
+	</div>
+</header>
+ -->
+
+<header>
+	<div id="nav" class="stick">
+
+		<div class="book-bar new">
+			<div class="contact-info">
+				<div class="block one"><h4 class="phone"><span>Call Us:</span> <%= number_to_phone(2512400842, delimiter: '.') %></h4></div>
+				<div class="block two">
+					<ul class="social">
+						<li><%= link_to '/fb' do %> <i class="fa fa-facebook"></i> <% end %></li>
+						<li><%= link_to '/insta' do %> <i class="fa fa-instagram"></i> <% end %></li>
+					</ul>
+				</div>
+				<div class="block three"><h4 class="wiw">We Have a Professional Medical Staff. &nbsp;<br class="xs"> <span>Walk-Ins Welcome!</span></h4></div>
 			</div>
 		</div>
 
